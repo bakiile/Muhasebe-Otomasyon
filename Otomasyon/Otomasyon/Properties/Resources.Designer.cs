@@ -63,6 +63,16 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Ara32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Ara32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Stok_Grup16x16 {
             get {
                 object obj = ResourceManager.GetObject("Stok_Grup16x16", resourceCulture);

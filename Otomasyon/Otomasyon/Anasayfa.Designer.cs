@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btn_StokKarti = new DevExpress.XtraBars.BarButtonItem();
             this.btn_StokGruplari = new DevExpress.XtraBars.BarButtonItem();
@@ -35,11 +36,14 @@
             this.btn_StokHareketleri = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Stok = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.BackColor = System.Drawing.Color.Aqua;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -75,6 +79,7 @@
             this.btn_StokListesi.Id = 3;
             this.btn_StokListesi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Stok_Liste32x32;
             this.btn_StokListesi.Name = "btn_StokListesi";
+            this.btn_StokListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_StokListesi_ItemClick);
             // 
             // btn_StokHareketleri
             // 
@@ -99,17 +104,25 @@
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // frm_Anasayfa
             // 
+            this.Appearance.BackColor = System.Drawing.Color.White;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 360);
+            this.ClientSize = new System.Drawing.Size(758, 414);
             this.Controls.Add(this.ribbonControl1);
+            this.IsMdiContainer = true;
             this.Name = "frm_Anasayfa";
             this.Ribbon = this.ribbonControl1;
             this.ShowIcon = false;
             this.Text = "Anasayfa";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,6 +137,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_StokGruplari;
         private DevExpress.XtraBars.BarButtonItem btn_StokListesi;
         private DevExpress.XtraBars.BarButtonItem btn_StokHareketleri;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 

@@ -15,5 +15,22 @@ namespace Otomasyon
         {
             InitializeComponent();
         }
+
+        private void Btn_StokListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bool secim = false;
+
+            StokModul.frm_StokListesi frm = new StokModul.frm_StokListesi();
+            if (secim)
+            {
+                frm.MdiParent = frm_Anasayfa.ActiveForm;
+                frm.Show();
+            }
+            else
+            {
+                frm.ShowDialog();
+            }
+            
+        }
     }
 }
