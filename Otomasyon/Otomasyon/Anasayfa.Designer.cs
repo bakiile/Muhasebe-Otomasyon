@@ -72,6 +72,7 @@
             this.btn_StokGruplari.Id = 2;
             this.btn_StokGruplari.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Stok_Grup32x32;
             this.btn_StokGruplari.Name = "btn_StokGruplari";
+            this.btn_StokGruplari.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_StokGruplari_ItemClick);
             // 
             // btn_StokListesi
             // 
@@ -120,6 +121,7 @@
             this.Name = "frm_Anasayfa";
             this.Ribbon = this.ribbonControl1;
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();

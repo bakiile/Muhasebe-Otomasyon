@@ -13,7 +13,7 @@ namespace Otomasyon.StokModul
 {
     public partial class frm_StokListesi : DevExpress.XtraEditors.XtraForm
     {
-        StokDatabaseDataContext db = new StokDatabaseDataContext();
+        Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
         public frm_StokListesi()
         {
             InitializeComponent();
@@ -21,10 +21,10 @@ namespace Otomasyon.StokModul
 
         private void Frm_StokListesi_Load(object sender, EventArgs e)
         {
-            VeriListele();
+            stokListele();
         }
 
-        void VeriListele()
+        void stokListele()
         {
             var veriListe = from t in db.TBL_STOKLAR select t;
             gridControl1.DataSource = veriListe;

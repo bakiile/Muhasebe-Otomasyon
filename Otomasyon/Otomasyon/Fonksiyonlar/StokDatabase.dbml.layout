@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="StokDatabase">
+  <DataContextMoniker Name="/StokDatabaseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b5dff50f-fd4b-4742-bc78-9adf5ff7b4fc" isExpanded="false" absoluteBounds="1.75, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_GRUPLAR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b7c5c8d-c74c-4935-a5d2-b35e73574f76" absoluteBounds="1.7649999999999997, 1.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e9a9f6c-5514-4334-9635-03f56119d776" isExpanded="false" absoluteBounds="1.75, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_STOKLAR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d87189e9-f38e-48b5-bd72-fb9d093919cd" absoluteBounds="1.7650000000000001, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

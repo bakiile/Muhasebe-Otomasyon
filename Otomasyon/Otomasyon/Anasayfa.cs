@@ -11,6 +11,11 @@ namespace Otomasyon
 {
     public partial class frm_Anasayfa : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        Fonksiyonlar.FormYonetici formYonetici = new Fonksiyonlar.FormYonetici();
+
+        public static int userID = -1;
+        public static int AktarilanID = -1;
+        public bool secim = false;
         public frm_Anasayfa()
         {
             InitializeComponent();
@@ -18,19 +23,12 @@ namespace Otomasyon
 
         private void Btn_StokListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            bool secim = false;
+            formYonetici.StokListesiAc(secim);
+        }
 
-            StokModul.frm_StokListesi frm = new StokModul.frm_StokListesi();
-            if (secim)
-            {
-                frm.MdiParent = frm_Anasayfa.ActiveForm;
-                frm.Show();
-            }
-            else
-            {
-                frm.ShowDialog();
-            }
-            
+        private void Btn_StokGruplari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formYonetici.GrupListesiAc(secim);
         }
     }
 }
