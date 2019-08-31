@@ -9,9 +9,9 @@ namespace Otomasyon.Fonksiyonlar
 {
     class Mesajlar
     {
-        public static DialogResult Kaydedilsinmi()
+        public static DialogResult OnayMesaj()
         {
-            return MessageBox.Show("Kaydetme İşlemini Onaylıyor musunuz?","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            return MessageBox.Show("İşlemi Onaylıyor musunuz?","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
         }
 
         public static DialogResult MesajGoster(string mesaj)

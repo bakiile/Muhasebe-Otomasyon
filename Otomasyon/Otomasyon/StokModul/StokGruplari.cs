@@ -15,6 +15,8 @@ namespace Otomasyon.StokModul
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
         public bool secim = false;
+        bool guncelleme = false;
+        int secilenID = -1;
         public frm_StokGruplari()
         {
             InitializeComponent();
@@ -31,12 +33,15 @@ namespace Otomasyon.StokModul
 
         private void Btn_Kaydet_Click(object sender, EventArgs e)
         {
-            Kaydet();
+            if (guncelleme == false)
+                Kaydet();
+            else
+                Guncelle();
         }
 
         private void Btn_Sil_Click(object sender, EventArgs e)
         {
-
+            Sil();
         }
 
         void Kaydet()
@@ -50,41 +55,87 @@ namespace Otomasyon.StokModul
                 yeniGrup.GRUPSAVEUSER = frm_Anasayfa.userID;
 
                 //Uyarı Mesajı onaylanırsa veritabanına kayıt işlemi gerçekleşecektir.
-                if (Fonksiyonlar.Mesajlar.Kaydedilsinmi() == DialogResult.Yes)
+                if (Fonksiyonlar.Mesajlar.OnayMesaj() == DialogResult.Yes)
                 {
                     db.TBL_GRUPLAR.InsertOnSubmit(yeniGrup);
                     db.SubmitChanges();
                     Fonksiyonlar.Mesajlar.MesajGoster("Kayıt Başarılı!");
-                    Temizle();
-                    grupListele();
                 }
             }
             catch (Exception err)
             {
                 Fonksiyonlar.Mesajlar.HataMesaj(err);
             }
-            
 
+            grupListele();
+            Temizle();
         }
 
         void Guncelle()
         {
+            try
+            {
+                Fonksiyonlar.TBL_GRUPLAR secilenGrup = db.TBL_GRUPLAR.First(t => t.GRUPID == secilenID);
+                secilenGrup.GRUPADI = txt_GrupAdi.Text;
+                secilenGrup.GRUPKODU = txt_GrupKodu.Text;
+                secilenGrup.GRUPEDITDATE = DateTime.Now;
+                secilenGrup.GRUPEDITUSER = frm_Anasayfa.userID;
 
+                if (Fonksiyonlar.Mesajlar.OnayMesaj() == DialogResult.Yes)
+                {
+                    db.SubmitChanges();
+                    Fonksiyonlar.Mesajlar.MesajGoster("Güncelleme işlemi başarılı.");
+                }
+
+
+            }
+            catch (Exception err)
+            {
+                Fonksiyonlar.Mesajlar.HataMesaj(err);
+            }
+
+            grupListele();
+            Temizle();
         }
 
         void Sil()
         {
+            try
+            {
+                if (guncelleme == true)
+                {
+                    Fonksiyonlar.TBL_GRUPLAR secilenGrup = db.TBL_GRUPLAR.First(t => t.GRUPID == secilenID);
+                    db.TBL_GRUPLAR.DeleteOnSubmit(secilenGrup);
 
+                    if (Fonksiyonlar.Mesajlar.OnayMesaj() == DialogResult.Yes)
+                    {
+                        db.SubmitChanges();
+                        Fonksiyonlar.Mesajlar.MesajGoster("Silme işlemi başarılı.");
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                Fonksiyonlar.Mesajlar.HataMesaj(err);
+            }
+
+            grupListele();
+            Temizle();
         }
 
         private void Btn_Ara_Click(object sender, EventArgs e)
         {
             Ara();
         }
+        private void GridControl1_DoubleClick(object sender, EventArgs e)
+        {
+            Sec();
+            guncelleme = true;
+        }
 
         void grupListele()
         {
-            var liste = from t in db.TBL_GRUPLAR select t;
+            var liste = from t in Fonksiyonlar.TBL_GRUPLAR select t;
             gridControl1.DataSource = liste;
         }
 
@@ -96,10 +147,21 @@ namespace Otomasyon.StokModul
             gridControl1.DataSource = sonuc;
         }
 
+        void Sec()
+        {
+            secilenID = Convert.ToInt16(gridView1.GetFocusedRowCellValue("GRUPID"));
+            string grupAdi = gridView1.GetFocusedRowCellValue("GRUPADI").ToString();
+            string grupKodu = gridView1.GetFocusedRowCellValue("GRUPKODU").ToString();
+            txt_GrupAdi.Text = grupAdi;
+            txt_GrupKodu.Text = grupKodu;
+        }
+
         void Temizle()
         {
             txt_GrupAdi.Text = "";
             txt_GrupKodu.Text = "";
+            guncelleme = false;
+            secilenID = -1;
         }
 
        

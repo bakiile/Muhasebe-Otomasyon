@@ -131,6 +131,7 @@
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.GridControl1_DoubleClick);
             // 
             // gridView1
             // 
@@ -153,6 +154,7 @@
             this.GRUPKODU.Caption = "GRUPKODU";
             this.GRUPKODU.FieldName = "GRUPKODU";
             this.GRUPKODU.Name = "GRUPKODU";
+            this.GRUPKODU.OptionsColumn.AllowEdit = false;
             this.GRUPKODU.Visible = true;
             this.GRUPKODU.VisibleIndex = 0;
             // 
@@ -161,6 +163,7 @@
             this.GRUPADI.Caption = "GRUPADI";
             this.GRUPADI.FieldName = "GRUPADI";
             this.GRUPADI.Name = "GRUPADI";
+            this.GRUPADI.OptionsColumn.AllowEdit = false;
             this.GRUPADI.Visible = true;
             this.GRUPADI.VisibleIndex = 1;
             // 
