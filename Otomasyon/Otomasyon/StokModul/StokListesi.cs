@@ -14,6 +14,7 @@ namespace Otomasyon.StokModul
     public partial class frm_StokListesi : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        public bool secim = false;
         public frm_StokListesi()
         {
             InitializeComponent();
@@ -51,6 +52,21 @@ namespace Otomasyon.StokModul
         {
             Ara();
             Temizle();
+        }
+
+        private void GridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (secim == true)
+                Secim();
+                
+        }
+
+        void Secim()
+        {
+            int secilenID = Convert.ToInt16(gridView1.GetFocusedRowCellValue("STOKID"));
+            frm_Anasayfa.AktarilanID = secilenID;
+            secim = false;
+            this.Close();
         }
     }
 }

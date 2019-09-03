@@ -47,6 +47,7 @@
             this.STOKBIRIM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.STOKALISFIYAT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.STOKSATISFIYAT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STOKKDV = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_BarkodNumarasi.Properties)).BeginInit();
@@ -187,10 +188,12 @@
             this.STOKADI,
             this.STOKBIRIM,
             this.STOKALISFIYAT,
-            this.STOKSATISFIYAT});
+            this.STOKSATISFIYAT,
+            this.STOKKDV});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick);
             // 
             // STOKID
             // 
@@ -239,6 +242,7 @@
             this.STOKALISFIYAT.Caption = "STOKALISFIYAT";
             this.STOKALISFIYAT.FieldName = "STOKALISFIYAT";
             this.STOKALISFIYAT.Name = "STOKALISFIYAT";
+            this.STOKALISFIYAT.OptionsColumn.AllowEdit = false;
             this.STOKALISFIYAT.Visible = true;
             this.STOKALISFIYAT.VisibleIndex = 4;
             // 
@@ -251,6 +255,15 @@
             this.STOKSATISFIYAT.Visible = true;
             this.STOKSATISFIYAT.VisibleIndex = 5;
             // 
+            // STOKKDV
+            // 
+            this.STOKKDV.Caption = "STOKKDV";
+            this.STOKKDV.FieldName = "STOKKDV";
+            this.STOKKDV.Name = "STOKKDV";
+            this.STOKKDV.OptionsColumn.AllowEdit = false;
+            this.STOKKDV.Visible = true;
+            this.STOKKDV.VisibleIndex = 6;
+            // 
             // frm_StokListesi
             // 
             this.Appearance.BorderColor = System.Drawing.Color.Black;
@@ -262,6 +275,7 @@
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_StokListesi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StokListesi";
             this.Load += new System.EventHandler(this.Frm_StokListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -298,5 +312,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn STOKBIRIM;
         private DevExpress.XtraGrid.Columns.GridColumn STOKALISFIYAT;
         private DevExpress.XtraGrid.Columns.GridColumn STOKSATISFIYAT;
+        private DevExpress.XtraGrid.Columns.GridColumn STOKKDV;
     }
 }

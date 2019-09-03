@@ -92,3 +92,4 @@ C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasy
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.StokModul.frm_StokListesi.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.StokModul.frm_StokGruplari.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.StokModul.frm_StokKarti.resources

@@ -65,6 +65,7 @@
             this.btn_StokKarti.Id = 1;
             this.btn_StokKarti.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Stok_Kartı32x32;
             this.btn_StokKarti.Name = "btn_StokKarti";
+            this.btn_StokKarti.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_StokKarti_ItemClick);
             // 
             // btn_StokGruplari
             // 

@@ -33,10 +33,12 @@ namespace Otomasyon.StokModul
 
         private void Btn_Kaydet_Click(object sender, EventArgs e)
         {
-            if (guncelleme == false)
-                Kaydet();
-            else
-                Guncelle();
+            Kaydet();
+        }
+
+        private void Btn_Guncelle_Click(object sender, EventArgs e)
+        {
+            Guncelle();
         }
 
         private void Btn_Sil_Click(object sender, EventArgs e)
@@ -129,13 +131,22 @@ namespace Otomasyon.StokModul
         }
         private void GridControl1_DoubleClick(object sender, EventArgs e)
         {
-            Sec();
-            guncelleme = true;
+            if(secim == false)
+            {
+                Sec();
+                guncelleme = true;
+            }
+            else
+            {
+                secilenID = Convert.ToInt16(gridView1.GetFocusedRowCellValue("GRUPID"));
+                frm_Anasayfa.AktarilanID = secilenID;
+                this.Close();
+            }
         }
 
         void grupListele()
         {
-            var liste = from t in Fonksiyonlar.TBL_GRUPLAR select t;
+            var liste = from t in db.TBL_GRUPLAR select t;
             gridControl1.DataSource = liste;
         }
 
@@ -154,6 +165,8 @@ namespace Otomasyon.StokModul
             string grupKodu = gridView1.GetFocusedRowCellValue("GRUPKODU").ToString();
             txt_GrupAdi.Text = grupAdi;
             txt_GrupKodu.Text = grupKodu;
+            btn_Guncelle.Enabled = true;
+            btn_Sil.Enabled = true;
         }
 
         void Temizle()
@@ -162,6 +175,8 @@ namespace Otomasyon.StokModul
             txt_GrupKodu.Text = "";
             guncelleme = false;
             secilenID = -1;
+            btn_Guncelle.Enabled = false;
+            btn_Sil.Enabled = false;
         }
 
        

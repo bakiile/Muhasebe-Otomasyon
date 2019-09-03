@@ -8,24 +8,31 @@ namespace Otomasyon.Fonksiyonlar
 {
     class FormYonetici
     {
-        public void StokListesiAc(bool secim)
+        public static void StokListesiAc(bool secim)
         {
-            StokModul.frm_StokListesi frm = new StokModul.frm_StokListesi();
+            StokModul.frm_StokListesi form = new StokModul.frm_StokListesi();
+            form.secim = secim;
             if (secim == false)
             {
-                frm.MdiParent = frm_Anasayfa.ActiveForm;
-                frm.Show();
+                form.MdiParent = frm_Anasayfa.ActiveForm;
+                form.Show();
             }
             else
             {
-                frm.ShowDialog();
+                form.ShowDialog();
             }
         }
 
-        public void GrupListesiAc(bool secim)
+        public static void GrupListesiAc(bool secim)
         {
             StokModul.frm_StokGruplari form = new StokModul.frm_StokGruplari();
             form.secim = secim;
+            form.ShowDialog();
+        }
+
+        public static void StokKartiAc()
+        {
+            StokModul.frm_StokKarti form = new StokModul.frm_StokKarti();
             form.ShowDialog();
         }
     }

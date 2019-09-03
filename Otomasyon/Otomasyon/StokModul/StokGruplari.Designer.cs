@@ -44,6 +44,7 @@
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btn_Cikis = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Sil = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Kaydet = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -67,14 +68,14 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(384, 93);
+            this.groupControl1.Size = new System.Drawing.Size(404, 93);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Grup Bilgileri";
             // 
             // btn_Ara
             // 
             this.btn_Ara.ImageOptions.Image = global::Otomasyon.Properties.Resources.Ara32x32;
-            this.btn_Ara.Location = new System.Drawing.Point(297, 33);
+            this.btn_Ara.Location = new System.Drawing.Point(317, 33);
             this.btn_Ara.Name = "btn_Ara";
             this.btn_Ara.Size = new System.Drawing.Size(75, 40);
             this.btn_Ara.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(153, 33);
+            this.labelControl2.Location = new System.Drawing.Point(165, 33);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(45, 13);
             this.labelControl2.TabIndex = 1;
@@ -99,7 +100,7 @@
             // 
             // txt_GrupAdi
             // 
-            this.txt_GrupAdi.Location = new System.Drawing.Point(153, 52);
+            this.txt_GrupAdi.Location = new System.Drawing.Point(165, 52);
             this.txt_GrupAdi.Name = "txt_GrupAdi";
             this.txt_GrupAdi.Size = new System.Drawing.Size(133, 20);
             this.txt_GrupAdi.TabIndex = 1;
@@ -117,7 +118,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 93);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(384, 198);
+            this.groupControl2.Size = new System.Drawing.Size(404, 198);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Grup Listesi";
             // 
@@ -127,7 +128,7 @@
             this.gridControl1.Location = new System.Drawing.Point(2, 20);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(380, 176);
+            this.gridControl1.Size = new System.Drawing.Size(400, 176);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -171,18 +172,19 @@
             // 
             this.groupControl3.Controls.Add(this.btn_Cikis);
             this.groupControl3.Controls.Add(this.btn_Sil);
+            this.groupControl3.Controls.Add(this.btn_Guncelle);
             this.groupControl3.Controls.Add(this.btn_Kaydet);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 291);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(384, 69);
+            this.groupControl3.Size = new System.Drawing.Size(404, 69);
             this.groupControl3.TabIndex = 2;
             this.groupControl3.Text = "İşlemler";
             // 
             // btn_Cikis
             // 
             this.btn_Cikis.ImageOptions.Image = global::Otomasyon.Properties.Resources.Kapat24x24;
-            this.btn_Cikis.Location = new System.Drawing.Point(284, 24);
+            this.btn_Cikis.Location = new System.Drawing.Point(305, 24);
             this.btn_Cikis.Name = "btn_Cikis";
             this.btn_Cikis.Size = new System.Drawing.Size(94, 40);
             this.btn_Cikis.TabIndex = 2;
@@ -191,18 +193,30 @@
             // 
             // btn_Sil
             // 
+            this.btn_Sil.Enabled = false;
             this.btn_Sil.ImageOptions.Image = global::Otomasyon.Properties.Resources.Sil24x24;
-            this.btn_Sil.Location = new System.Drawing.Point(184, 23);
+            this.btn_Sil.Location = new System.Drawing.Point(205, 24);
             this.btn_Sil.Name = "btn_Sil";
             this.btn_Sil.Size = new System.Drawing.Size(94, 40);
             this.btn_Sil.TabIndex = 1;
             this.btn_Sil.Text = "Sil";
             this.btn_Sil.Click += new System.EventHandler(this.Btn_Sil_Click);
             // 
+            // btn_Guncelle
+            // 
+            this.btn_Guncelle.Enabled = false;
+            this.btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Guncelle.ImageOptions.Image")));
+            this.btn_Guncelle.Location = new System.Drawing.Point(105, 24);
+            this.btn_Guncelle.Name = "btn_Guncelle";
+            this.btn_Guncelle.Size = new System.Drawing.Size(94, 40);
+            this.btn_Guncelle.TabIndex = 0;
+            this.btn_Guncelle.Text = "Güncelle";
+            this.btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
+            // 
             // btn_Kaydet
             // 
             this.btn_Kaydet.ImageOptions.Image = global::Otomasyon.Properties.Resources.Kaydet24x24;
-            this.btn_Kaydet.Location = new System.Drawing.Point(84, 23);
+            this.btn_Kaydet.Location = new System.Drawing.Point(5, 24);
             this.btn_Kaydet.Name = "btn_Kaydet";
             this.btn_Kaydet.Size = new System.Drawing.Size(94, 40);
             this.btn_Kaydet.TabIndex = 0;
@@ -213,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 360);
+            this.ClientSize = new System.Drawing.Size(404, 360);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
@@ -255,5 +269,6 @@
         private DevExpress.XtraEditors.SimpleButton btn_Cikis;
         private DevExpress.XtraEditors.SimpleButton btn_Sil;
         private DevExpress.XtraEditors.SimpleButton btn_Kaydet;
+        private DevExpress.XtraEditors.SimpleButton btn_Guncelle;
     }
 }
