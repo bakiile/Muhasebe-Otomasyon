@@ -73,6 +73,56 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Cari_Grup32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Grup32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cari_Hareket32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Hareket32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cari_Kart32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Kart32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cari_Liste32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Liste32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cari32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Cari32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Kapat24x24 {
             get {
                 object obj = ResourceManager.GetObject("Kapat24x24", resourceCulture);
@@ -156,6 +206,16 @@ namespace Otomasyon.Properties {
         internal static System.Drawing.Bitmap Stok_Liste32x32 {
             get {
                 object obj = ResourceManager.GetObject("Stok_Liste32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stok32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Stok32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

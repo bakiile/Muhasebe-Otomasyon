@@ -36,6 +36,9 @@ namespace Otomasyon.Fonksiyonlar
     partial void InsertTBL_STOKLAR(TBL_STOKLAR instance);
     partial void UpdateTBL_STOKLAR(TBL_STOKLAR instance);
     partial void DeleteTBL_STOKLAR(TBL_STOKLAR instance);
+    partial void InsertTBL_CARIGRUPLAR(TBL_CARIGRUPLAR instance);
+    partial void UpdateTBL_CARIGRUPLAR(TBL_CARIGRUPLAR instance);
+    partial void DeleteTBL_CARIGRUPLAR(TBL_CARIGRUPLAR instance);
     #endregion
 		
 		public StokDatabaseDataContext() : 
@@ -81,6 +84,14 @@ namespace Otomasyon.Fonksiyonlar
 			get
 			{
 				return this.GetTable<TBL_STOKLAR>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_CARIGRUPLAR> TBL_CARIGRUPLAR
+		{
+			get
+			{
+				return this.GetTable<TBL_CARIGRUPLAR>();
 			}
 		}
 	}
@@ -640,6 +651,212 @@ namespace Otomasyon.Fonksiyonlar
 					this._STOKEDITDATE = value;
 					this.SendPropertyChanged("STOKEDITDATE");
 					this.OnSTOKEDITDATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_CARIGRUPLAR")]
+	public partial class TBL_CARIGRUPLAR : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _CARIGRUPID;
+		
+		private string _CARIGRUPKODU;
+		
+		private string _CARIGRUPADI;
+		
+		private System.Nullable<System.DateTime> _CARIGRUPSAVEDATE;
+		
+		private System.Nullable<int> _CARIGRUPSAVEUSER;
+		
+		private System.Nullable<System.DateTime> _CARIGRUPEDITDATE;
+		
+		private System.Nullable<int> _CARIGRUPEDITUSER;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCARIGRUPIDChanging(int value);
+    partial void OnCARIGRUPIDChanged();
+    partial void OnCARIGRUPKODUChanging(string value);
+    partial void OnCARIGRUPKODUChanged();
+    partial void OnCARIGRUPADIChanging(string value);
+    partial void OnCARIGRUPADIChanged();
+    partial void OnCARIGRUPSAVEDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnCARIGRUPSAVEDATEChanged();
+    partial void OnCARIGRUPSAVEUSERChanging(System.Nullable<int> value);
+    partial void OnCARIGRUPSAVEUSERChanged();
+    partial void OnCARIGRUPEDITDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnCARIGRUPEDITDATEChanged();
+    partial void OnCARIGRUPEDITUSERChanging(System.Nullable<int> value);
+    partial void OnCARIGRUPEDITUSERChanged();
+    #endregion
+		
+		public TBL_CARIGRUPLAR()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIGRUPID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int CARIGRUPID
+		{
+			get
+			{
+				return this._CARIGRUPID;
+			}
+			set
+			{
+				if ((this._CARIGRUPID != value))
+				{
+					this.OnCARIGRUPIDChanging(value);
+					this.SendPropertyChanging();
+					this._CARIGRUPID = value;
+					this.SendPropertyChanged("CARIGRUPID");
+					this.OnCARIGRUPIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIGRUPKODU", DbType="VarChar(15)")]
+		public string CARIGRUPKODU
+		{
+			get
+			{
+				return this._CARIGRUPKODU;
+			}
+			set
+			{
+				if ((this._CARIGRUPKODU != value))
+				{
+					this.OnCARIGRUPKODUChanging(value);
+					this.SendPropertyChanging();
+					this._CARIGRUPKODU = value;
+					this.SendPropertyChanged("CARIGRUPKODU");
+					this.OnCARIGRUPKODUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIGRUPADI", DbType="VarChar(25)")]
+		public string CARIGRUPADI
+		{
+			get
+			{
+				return this._CARIGRUPADI;
+			}
+			set
+			{
+				if ((this._CARIGRUPADI != value))
+				{
+					this.OnCARIGRUPADIChanging(value);
+					this.SendPropertyChanging();
+					this._CARIGRUPADI = value;
+					this.SendPropertyChanged("CARIGRUPADI");
+					this.OnCARIGRUPADIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIGRUPSAVEDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CARIGRUPSAVEDATE
+		{
+			get
+			{
+				return this._CARIGRUPSAVEDATE;
+			}
+			set
+			{
+				if ((this._CARIGRUPSAVEDATE != value))
+				{
+					this.OnCARIGRUPSAVEDATEChanging(value);
+					this.SendPropertyChanging();
+					this._CARIGRUPSAVEDATE = value;
+					this.SendPropertyChanged("CARIGRUPSAVEDATE");
+					this.OnCARIGRUPSAVEDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIGRUPSAVEUSER", DbType="Int")]
+		public System.Nullable<int> CARIGRUPSAVEUSER
+		{
+			get
+			{
+				return this._CARIGRUPSAVEUSER;
+			}
+			set
+			{
+				if ((this._CARIGRUPSAVEUSER != value))
+				{
+					this.OnCARIGRUPSAVEUSERChanging(value);
+					this.SendPropertyChanging();
+					this._CARIGRUPSAVEUSER = value;
+					this.SendPropertyChanged("CARIGRUPSAVEUSER");
+					this.OnCARIGRUPSAVEUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIGRUPEDITDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CARIGRUPEDITDATE
+		{
+			get
+			{
+				return this._CARIGRUPEDITDATE;
+			}
+			set
+			{
+				if ((this._CARIGRUPEDITDATE != value))
+				{
+					this.OnCARIGRUPEDITDATEChanging(value);
+					this.SendPropertyChanging();
+					this._CARIGRUPEDITDATE = value;
+					this.SendPropertyChanged("CARIGRUPEDITDATE");
+					this.OnCARIGRUPEDITDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIGRUPEDITUSER", DbType="Int")]
+		public System.Nullable<int> CARIGRUPEDITUSER
+		{
+			get
+			{
+				return this._CARIGRUPEDITUSER;
+			}
+			set
+			{
+				if ((this._CARIGRUPEDITUSER != value))
+				{
+					this.OnCARIGRUPEDITUSERChanging(value);
+					this.SendPropertyChanging();
+					this._CARIGRUPEDITUSER = value;
+					this.SendPropertyChanged("CARIGRUPEDITUSER");
+					this.OnCARIGRUPEDITUSERChanged();
 				}
 			}
 		}

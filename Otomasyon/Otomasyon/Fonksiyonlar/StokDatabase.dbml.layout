@@ -14,5 +14,11 @@
         <elementListCompartment Id="d87189e9-f38e-48b5-bd72-fb9d093919cd" absoluteBounds="1.7650000000000001, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="0a28fbf6-8a81-4f90-892c-e9a6c5f6bf6a" isExpanded="false" absoluteBounds="1.75, 2.25, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_CARIGRUPLAR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95176827-5d10-42e9-abee-95247f483e5b" absoluteBounds="1.7650000000000001, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

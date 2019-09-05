@@ -29,4 +29,15 @@
       <Column Name="STOKEDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TBL_CARIGRUPLAR" Member="TBL_CARIGRUPLAR">
+    <Type Name="TBL_CARIGRUPLAR">
+      <Column Name="CARIGRUPID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CARIGRUPKODU" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CARIGRUPADI" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CARIGRUPSAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CARIGRUPSAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARIGRUPEDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CARIGRUPEDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

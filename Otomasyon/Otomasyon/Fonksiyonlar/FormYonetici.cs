@@ -23,7 +23,7 @@ namespace Otomasyon.Fonksiyonlar
             }
         }
 
-        public static void GrupListesiAc(bool secim)
+        public static void StokGrupListesiAc(bool secim)
         {
             StokModul.frm_StokGruplari form = new StokModul.frm_StokGruplari();
             form.secim = secim;
@@ -33,6 +33,13 @@ namespace Otomasyon.Fonksiyonlar
         public static void StokKartiAc()
         {
             StokModul.frm_StokKarti form = new StokModul.frm_StokKarti();
+            form.ShowDialog();
+        }
+
+        public static void CariGrupListesiAc(bool secim)
+        {
+            CariModul.frm_CariGruplari form = new CariModul.frm_CariGruplari();
+            form.secim = secim;
             form.ShowDialog();
         }
     }

@@ -49,7 +49,7 @@ namespace Otomasyon.StokModul
 
         private void Txt_GrupKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.GrupListesiAc(true);
+            Fonksiyonlar.FormYonetici.StokGrupListesiAc(true);
             GrupID = frm_Anasayfa.AktarilanID;
 
             if (GrupID > -1)

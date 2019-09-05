@@ -62,6 +62,12 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="CariModul\CariGruplari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CariModul\CariGruplari.Designer.cs">
+      <DependentUpon>CariGruplari.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fonksiyonlar\FormYonetici.cs" />
     <Compile Include="Fonksiyonlar\Mesajlar.cs" />
     <Compile Include="Fonksiyonlar\StokDatabase.designer.cs">
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CariModul\CariGruplari.resx">
+      <DependentUpon>CariGruplari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -165,6 +174,24 @@
     <None Include="Resources\Kapat24x24.png" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Cari_Kart32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Grup32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Liste32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Hareket32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -118,34 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Stok_Grup16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stok_Grup16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sil24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sil24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stok_Grup32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Grup32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Stok_Grup16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok_Grup16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cari_Grup32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Grup32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Stok_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Stok_Kartı32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stok_Kartı32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sil24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sil24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Kaydet24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kaydet24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Stok_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stok_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Kapat24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kapat24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stok_Kartı16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Kartı16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Cari_Kart32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Kart32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stok_Kartı32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok_Kartı32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kaydet24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kaydet24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ara32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ara32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kapat24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kapat24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Stok32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stok_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cari_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cari32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cari_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

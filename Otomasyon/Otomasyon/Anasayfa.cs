@@ -13,7 +13,7 @@ namespace Otomasyon
     {
         public static int userID = -1;
         public static int AktarilanID = -1;
-        public bool secim = false;
+        bool secim = false;
         public frm_Anasayfa()
         {
             InitializeComponent();
@@ -26,12 +26,17 @@ namespace Otomasyon
 
         private void Btn_StokGruplari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.GrupListesiAc(secim);
+            Fonksiyonlar.FormYonetici.StokGrupListesiAc(secim);
         }
 
         private void Btn_StokKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Fonksiyonlar.FormYonetici.StokKartiAc();
+        }
+
+        private void Btn_CariGruplari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.CariGrupListesiAc(secim);
         }
     }
 }
