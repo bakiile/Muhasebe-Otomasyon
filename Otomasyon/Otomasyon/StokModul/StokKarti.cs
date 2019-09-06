@@ -16,7 +16,6 @@ namespace Otomasyon.StokModul
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
         OpenFileDialog Dosya = new OpenFileDialog();
-        bool guncelleme = false;
         bool resimSecildimi = false;
         int StokID = -1;
         int GrupID = -1;
@@ -32,7 +31,6 @@ namespace Otomasyon.StokModul
 
         private void Txt_StokKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Temizle();
             Fonksiyonlar.FormYonetici.StokListesiAc(true);
             StokID = frm_Anasayfa.AktarilanID;
 
@@ -90,7 +88,6 @@ namespace Otomasyon.StokModul
 
                 GrupID = Convert.ToInt32(secilenStok.STOKGRUPID);
 
-                guncelleme = true;
                 btn_Guncelle.Enabled = true;
                 btn_Sil.Enabled = true;
             }
@@ -147,8 +144,8 @@ namespace Otomasyon.StokModul
                 secilenStok.STOKSATISFIYAT = decimal.Parse(txt_SatisFiyat.Text);
                 secilenStok.STOKKDV = decimal.Parse(txt_KDV.Text);
                 secilenStok.STOKBIRIM = txt_Birim.Text;
-                secilenStok.STOKSAVEDATE = DateTime.Now;
-                secilenStok.STOKSAVEUSER = frm_Anasayfa.userID;
+                secilenStok.STOKEDITDATE = DateTime.Now;
+                secilenStok.STOKEDITUSER = frm_Anasayfa.userID;
 
                 if (Fonksiyonlar.Mesajlar.OnayMesaj() == DialogResult.Yes)
                 {
@@ -189,18 +186,26 @@ namespace Otomasyon.StokModul
 
         void Temizle()
         {
-            txt_StokKodu.Text = "";
-            txt_StokAdi.Text = "";
-            txt_StokBarkod.Text = "";
-            txt_GrupKodu.Text = "";
-            txt_GrupAdi.Text = "";
-            txt_AlisFiyat.Text = "";
-            txt_SatisFiyat.Text = "";
-            txt_KDV.Text = "";
+            foreach (Control control in groupControl1.Controls)
+            {
+                if (control is DevExpress.XtraEditors.TextEdit || control is DevExpress.XtraEditors.ButtonEdit)
+                    control.Text = "";
+            }
+            foreach (Control control in groupControl2.Controls)
+            {
+                if (control is DevExpress.XtraEditors.TextEdit || control is DevExpress.XtraEditors.ButtonEdit)
+                    control.Text = "";
+            }
+            foreach (Control control in groupControl3.Controls)
+            {
+                if (control is DevExpress.XtraEditors.TextEdit || control is DevExpress.XtraEditors.ButtonEdit)
+                    control.Text = "";
+            }
             txt_Birim.SelectedIndex = 0;
             pb_Resim.Image = null;
+            txt_StokKodu.Text = StokKodNumarasi();
 
-            guncelleme = false;
+
             frm_Anasayfa.AktarilanID = -1;
             btn_Guncelle.Enabled = false;
             btn_Sil.Enabled = false;

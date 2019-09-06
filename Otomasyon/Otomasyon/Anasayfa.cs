@@ -38,5 +38,15 @@ namespace Otomasyon
         {
             Fonksiyonlar.FormYonetici.CariGrupListesiAc(secim);
         }
+
+        private void Btn_CariKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.CariKartiAc();
+        }
+
+        private void Btn_CariListele_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.CariListesiAc(secim);
+        }
     }
 }

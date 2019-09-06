@@ -87,7 +87,7 @@
             this.btn_Ara.Location = new System.Drawing.Point(553, 12);
             this.btn_Ara.Name = "btn_Ara";
             this.btn_Ara.Size = new System.Drawing.Size(98, 44);
-            this.btn_Ara.TabIndex = 2;
+            this.btn_Ara.TabIndex = 3;
             this.btn_Ara.Text = "Ara";
             this.btn_Ara.Click += new System.EventHandler(this.Btn_Ara_Click);
             // 
@@ -135,7 +135,7 @@
             this.txt_BarkodNumarasi.Properties.Appearance.Options.UseFont = true;
             this.txt_BarkodNumarasi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txt_BarkodNumarasi.Size = new System.Drawing.Size(165, 22);
-            this.txt_BarkodNumarasi.TabIndex = 0;
+            this.txt_BarkodNumarasi.TabIndex = 2;
             // 
             // txt_StokKodu
             // 
@@ -145,7 +145,7 @@
             this.txt_StokKodu.Properties.Appearance.Options.UseFont = true;
             this.txt_StokKodu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txt_StokKodu.Size = new System.Drawing.Size(165, 22);
-            this.txt_StokKodu.TabIndex = 0;
+            this.txt_StokKodu.TabIndex = 1;
             // 
             // txt_StokAdi
             // 

@@ -20,5 +20,11 @@
         <elementListCompartment Id="95176827-5d10-42e9-abee-95247f483e5b" absoluteBounds="1.7650000000000001, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="09def57f-27e9-405e-86de-95918ed6a4cd" isExpanded="false" absoluteBounds="1.75, 3, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_CARILER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2812afcc-e2c0-4b8d-961b-add8638e389b" absoluteBounds="1.7649999999999997, 3.46, 1.9700000000000002, 4.4800211588541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

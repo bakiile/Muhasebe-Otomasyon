@@ -68,6 +68,18 @@
     <Compile Include="CariModul\CariGruplari.Designer.cs">
       <DependentUpon>CariGruplari.cs</DependentUpon>
     </Compile>
+    <Compile Include="CariModul\CariKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CariModul\CariKarti.Designer.cs">
+      <DependentUpon>CariKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CariModul\CariListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CariModul\CariListesi.Designer.cs">
+      <DependentUpon>CariListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fonksiyonlar\FormYonetici.cs" />
     <Compile Include="Fonksiyonlar\Mesajlar.cs" />
     <Compile Include="Fonksiyonlar\StokDatabase.designer.cs">
@@ -100,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CariModul\CariGruplari.resx">
       <DependentUpon>CariGruplari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CariModul\CariKarti.resx">
+      <DependentUpon>CariKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CariModul\CariListesi.resx">
+      <DependentUpon>CariListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

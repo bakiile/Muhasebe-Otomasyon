@@ -40,4 +40,30 @@
       <Column Name="CARIGRUPEDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TBL_CARILER" Member="TBL_CARILER">
+    <Type Name="TBL_CARILER">
+      <Column Name="CARIID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CARIKODU" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="CARIADI" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="VERGIDAIRESI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VERGINO" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CARIGRUPID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ULKE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SEHIR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ILCE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ADRES" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TELEFON1" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="TELEFON2" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="FAX1" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="FAX2" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="WEBADRES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MAILADRES" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YETKILI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="YETKILIMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CARISAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CARISAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARIEDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CARIEDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

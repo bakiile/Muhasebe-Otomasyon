@@ -355,7 +355,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_StokKarti";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Stok Kartı";
+            this.Text = "Stok Açılış Kartı";
             this.Load += new System.EventHandler(this.Frm_StokKarti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

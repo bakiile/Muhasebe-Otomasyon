@@ -94,3 +94,5 @@ C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasy
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.StokModul.frm_StokGruplari.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.StokModul.frm_StokKarti.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.CariModul.frm_CariGruplari.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.CariModul.frm_CariKarti.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.CariModul.frm_CariListesi.resources

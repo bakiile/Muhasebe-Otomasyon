@@ -42,5 +42,26 @@ namespace Otomasyon.Fonksiyonlar
             form.secim = secim;
             form.ShowDialog();
         }
+
+        public static void CariKartiAc()
+        {
+            CariModul.frm_CariKarti form = new CariModul.frm_CariKarti();
+            form.ShowDialog();
+        }
+
+        public static void CariListesiAc(bool secim)
+        {
+            CariModul.frm_CariListesi form = new CariModul.frm_CariListesi();
+            form.secim = secim;
+            if (secim == false)
+            {
+                form.MdiParent = frm_Anasayfa.ActiveForm;
+                form.Show();
+            }
+            else
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace Otomasyon.Fonksiyonlar
 
         public static DialogResult HataMesaj(Exception err)
         {
-            return MessageBox.Show(err.ToString(), "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return MessageBox.Show(err.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

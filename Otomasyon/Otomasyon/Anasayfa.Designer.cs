@@ -72,7 +72,7 @@
             // 
             // btn_StokKarti
             // 
-            this.btn_StokKarti.Caption = "Stok Kartı";
+            this.btn_StokKarti.Caption = "Stok Açılış Kartı";
             this.btn_StokKarti.Id = 1;
             this.btn_StokKarti.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Stok_Kartı32x32;
             this.btn_StokKarti.Name = "btn_StokKarti";
@@ -103,10 +103,11 @@
             // 
             // btn_CariKarti
             // 
-            this.btn_CariKarti.Caption = "Cari Kartı";
+            this.btn_CariKarti.Caption = "Cari Açılış Kartı";
             this.btn_CariKarti.Id = 5;
             this.btn_CariKarti.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Cari_Kart32x32;
             this.btn_CariKarti.Name = "btn_CariKarti";
+            this.btn_CariKarti.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CariKarti_ItemClick);
             // 
             // btn_CariGruplari
             // 
@@ -122,6 +123,7 @@
             this.btn_CariListele.Id = 7;
             this.btn_CariListele.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Cari_Liste32x32;
             this.btn_CariListele.Name = "btn_CariListele";
+            this.btn_CariListele.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CariListele_ItemClick);
             // 
             // btn_CariHareketleri
             // 
