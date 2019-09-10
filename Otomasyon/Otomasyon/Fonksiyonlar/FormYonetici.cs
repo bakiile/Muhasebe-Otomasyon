@@ -63,5 +63,11 @@ namespace Otomasyon.Fonksiyonlar
                 form.ShowDialog();
             }
         }
+
+        public static void BankaKartiAc()
+        {
+            BankaModul.frm_BankaKarti form = new BankaModul.frm_BankaKarti();
+            form.ShowDialog();
+        }
     }
 }

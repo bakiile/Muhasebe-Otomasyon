@@ -48,5 +48,10 @@ namespace Otomasyon
         {
             Fonksiyonlar.FormYonetici.CariListesiAc(secim);
         }
+
+        private void Btn_BankaKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.BankaKartiAc();
+        }
     }
 }

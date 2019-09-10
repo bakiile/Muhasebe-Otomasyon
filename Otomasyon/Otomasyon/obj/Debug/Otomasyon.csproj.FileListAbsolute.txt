@@ -96,3 +96,11 @@ C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasy
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.CariModul.frm_CariGruplari.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.CariModul.frm_CariKarti.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.CariModul.frm_CariListesi.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.BankaModul.frm_BankaKarti.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.BankaModul.frm_BankaIslem.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.BankaModul.frm_BankaListesi.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.BankaModul.frm_ParaTransferi.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.KasaModul.frm_KasaTahsilatOdeme.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.KasaModul.frm_KasaDevirIslem.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.KasaModul.KasaKarti.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.KasaModul.frm_KasaListesi.resources

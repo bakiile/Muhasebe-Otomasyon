@@ -62,22 +62,46 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="CariModul\CariGruplari.cs">
+    <Compile Include="Modul_Banka\BankaIslem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CariModul\CariGruplari.Designer.cs">
+    <Compile Include="Modul_Banka\BankaIslem.Designer.cs">
+      <DependentUpon>BankaIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\BankaKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\BankaKarti.Designer.cs">
+      <DependentUpon>BankaKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\BankaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\BankaListesi.Designer.cs">
+      <DependentUpon>BankaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\ParaTransferi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\ParaTransferi.Designer.cs">
+      <DependentUpon>ParaTransferi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Cari\CariGruplari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Cari\CariGruplari.Designer.cs">
       <DependentUpon>CariGruplari.cs</DependentUpon>
     </Compile>
-    <Compile Include="CariModul\CariKarti.cs">
+    <Compile Include="Modul_Cari\CariKarti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CariModul\CariKarti.Designer.cs">
+    <Compile Include="Modul_Cari\CariKarti.Designer.cs">
       <DependentUpon>CariKarti.cs</DependentUpon>
     </Compile>
-    <Compile Include="CariModul\CariListesi.cs">
+    <Compile Include="Modul_Cari\CariListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CariModul\CariListesi.Designer.cs">
+    <Compile Include="Modul_Cari\CariListesi.Designer.cs">
       <DependentUpon>CariListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="Fonksiyonlar\FormYonetici.cs" />
@@ -87,37 +111,85 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StokDatabase.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Modul_Kasa\KasaDevirIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaDevirIslem.Designer.cs">
+      <DependentUpon>KasaDevirIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaKarti.Designer.cs">
+      <DependentUpon>KasaKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaListesi.Designer.cs">
+      <DependentUpon>KasaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaTahsilatOdeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaTahsilatOdeme.Designer.cs">
+      <DependentUpon>KasaTahsilatOdeme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StokModul\StokGruplari.cs">
+    <Compile Include="Modul_Stok\StokGruplari.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StokModul\StokGruplari.Designer.cs">
+    <Compile Include="Modul_Stok\StokGruplari.Designer.cs">
       <DependentUpon>StokGruplari.cs</DependentUpon>
     </Compile>
-    <Compile Include="StokModul\StokKarti.cs">
+    <Compile Include="Modul_Stok\StokKarti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StokModul\StokKarti.Designer.cs">
+    <Compile Include="Modul_Stok\StokKarti.Designer.cs">
       <DependentUpon>StokKarti.cs</DependentUpon>
     </Compile>
-    <Compile Include="StokModul\StokListesi.cs">
+    <Compile Include="Modul_Stok\StokListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StokModul\StokListesi.Designer.cs">
+    <Compile Include="Modul_Stok\StokListesi.Designer.cs">
       <DependentUpon>StokListesi.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CariModul\CariGruplari.resx">
+    <EmbeddedResource Include="Modul_Banka\BankaIslem.resx">
+      <DependentUpon>BankaIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\BankaKarti.resx">
+      <DependentUpon>BankaKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\BankaListesi.resx">
+      <DependentUpon>BankaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\ParaTransferi.resx">
+      <DependentUpon>ParaTransferi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Cari\CariGruplari.resx">
       <DependentUpon>CariGruplari.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CariModul\CariKarti.resx">
+    <EmbeddedResource Include="Modul_Cari\CariKarti.resx">
       <DependentUpon>CariKarti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CariModul\CariListesi.resx">
+    <EmbeddedResource Include="Modul_Cari\CariListesi.resx">
       <DependentUpon>CariListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Kasa\KasaDevirIslem.resx">
+      <DependentUpon>KasaDevirIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Kasa\KasaKarti.resx">
+      <DependentUpon>KasaKarti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Kasa\KasaListesi.resx">
+      <DependentUpon>KasaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Kasa\KasaTahsilatOdeme.resx">
+      <DependentUpon>KasaTahsilatOdeme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -130,13 +202,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StokModul\StokGruplari.resx">
+    <EmbeddedResource Include="Modul_Stok\StokGruplari.resx">
       <DependentUpon>StokGruplari.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StokModul\StokKarti.resx">
+    <EmbeddedResource Include="Modul_Stok\StokKarti.resx">
       <DependentUpon>StokKarti.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StokModul\StokListesi.resx">
+    <EmbeddedResource Include="Modul_Stok\StokListesi.resx">
       <DependentUpon>StokListesi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
@@ -191,7 +263,9 @@
   <ItemGroup>
     <None Include="Resources\Kapat24x24.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Banka32x32.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cari_Kart32x32.png" />
   </ItemGroup>
@@ -209,6 +283,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cari_Hareket32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Kartı16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Kartı32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Liste32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Hareket32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Havale32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Islem32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Acilis_Karti.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Liste32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Devir32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Tahsilat32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Tahsilat32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Odeme32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatura32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Satis_Faturasi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Satis_Iade_Faturasi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatura_Alis32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatura_AlisIade32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Satis_Faturasi1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fatura_SatisIade32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modul_Fatura\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
