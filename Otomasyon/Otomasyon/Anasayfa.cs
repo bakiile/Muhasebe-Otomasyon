@@ -53,5 +53,15 @@ namespace Otomasyon
         {
             Fonksiyonlar.FormYonetici.BankaKartiAc();
         }
+
+        private void Btn_KasaListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.KasaListesiAc(secim);
+        }
+
+        private void Btn_KasaKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.KasaKartiAc();
+        }
     }
 }

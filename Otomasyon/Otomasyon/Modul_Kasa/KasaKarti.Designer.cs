@@ -35,19 +35,19 @@
             this.btn_Sil = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_KasaAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit7 = new DevExpress.XtraEditors.MemoEdit();
+            this.txt_Aciklama = new DevExpress.XtraEditors.MemoEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.txt_KasaKodu = new DevExpress.XtraEditors.ButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Aciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaKodu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl2
@@ -71,6 +71,7 @@
             this.btn_Cikis.Size = new System.Drawing.Size(94, 40);
             this.btn_Cikis.TabIndex = 7;
             this.btn_Cikis.Text = "Çıkış";
+            this.btn_Cikis.Click += new System.EventHandler(this.Btn_Cikis_Click);
             // 
             // btn_Kaydet
             // 
@@ -80,6 +81,7 @@
             this.btn_Kaydet.Size = new System.Drawing.Size(94, 40);
             this.btn_Kaydet.TabIndex = 4;
             this.btn_Kaydet.Text = "Kaydet";
+            this.btn_Kaydet.Click += new System.EventHandler(this.Btn_Kaydet_Click);
             // 
             // btn_Sil
             // 
@@ -90,6 +92,7 @@
             this.btn_Sil.Size = new System.Drawing.Size(94, 40);
             this.btn_Sil.TabIndex = 6;
             this.btn_Sil.Text = "Sil";
+            this.btn_Sil.Click += new System.EventHandler(this.Btn_Sil_Click);
             // 
             // btn_Guncelle
             // 
@@ -100,6 +103,7 @@
             this.btn_Guncelle.Size = new System.Drawing.Size(94, 40);
             this.btn_Guncelle.TabIndex = 5;
             this.btn_Guncelle.Text = "Güncelle";
+            this.btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
             // 
             // labelControl7
             // 
@@ -109,12 +113,12 @@
             this.labelControl7.TabIndex = 0;
             this.labelControl7.Text = "Açıklama :";
             // 
-            // textEdit6
+            // txt_KasaAdi
             // 
-            this.textEdit6.Location = new System.Drawing.Point(125, 57);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(198, 20);
-            this.textEdit6.TabIndex = 1;
+            this.txt_KasaAdi.Location = new System.Drawing.Point(125, 57);
+            this.txt_KasaAdi.Name = "txt_KasaAdi";
+            this.txt_KasaAdi.Size = new System.Drawing.Size(198, 20);
+            this.txt_KasaAdi.TabIndex = 1;
             // 
             // labelControl6
             // 
@@ -132,21 +136,21 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Kasa Kodu :";
             // 
-            // textEdit7
+            // txt_Aciklama
             // 
-            this.textEdit7.Location = new System.Drawing.Point(125, 85);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(198, 83);
-            this.textEdit7.TabIndex = 1;
+            this.txt_Aciklama.Location = new System.Drawing.Point(125, 85);
+            this.txt_Aciklama.Name = "txt_Aciklama";
+            this.txt_Aciklama.Size = new System.Drawing.Size(198, 83);
+            this.txt_Aciklama.TabIndex = 1;
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.textEdit6);
+            this.groupControl1.Controls.Add(this.txt_KasaAdi);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.textEdit7);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txt_Aciklama);
+            this.groupControl1.Controls.Add(this.txt_KasaKodu);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
@@ -154,14 +158,15 @@
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = " Kasa Bilgileri";
             // 
-            // textEdit1
+            // txt_KasaKodu
             // 
-            this.textEdit1.Location = new System.Drawing.Point(125, 31);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txt_KasaKodu.Location = new System.Drawing.Point(125, 31);
+            this.txt_KasaKodu.Name = "txt_KasaKodu";
+            this.txt_KasaKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.textEdit1.Size = new System.Drawing.Size(198, 20);
-            this.textEdit1.TabIndex = 1;
+            this.txt_KasaKodu.Size = new System.Drawing.Size(198, 20);
+            this.txt_KasaKodu.TabIndex = 1;
+            this.txt_KasaKodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Txt_KasaKodu_ButtonClick);
             // 
             // frm_KasaKarti
             // 
@@ -173,14 +178,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_KasaKarti";
             this.Text = "Kasa Açılış Kartı";
+            this.Load += new System.EventHandler(this.Frm_KasaKarti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Aciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaKodu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,11 +199,11 @@
         private DevExpress.XtraEditors.SimpleButton btn_Sil;
         private DevExpress.XtraEditors.SimpleButton btn_Guncelle;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit txt_KasaAdi;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.MemoEdit textEdit7;
+        private DevExpress.XtraEditors.MemoEdit txt_Aciklama;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.ButtonEdit textEdit1;
+        private DevExpress.XtraEditors.ButtonEdit txt_KasaKodu;
     }
 }

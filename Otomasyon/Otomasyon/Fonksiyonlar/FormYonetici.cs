@@ -69,5 +69,18 @@ namespace Otomasyon.Fonksiyonlar
             BankaModul.frm_BankaKarti form = new BankaModul.frm_BankaKarti();
             form.ShowDialog();
         }
+
+        public static void KasaKartiAc()
+        {
+            KasaModul.frm_KasaKarti form = new KasaModul.frm_KasaKarti();
+            form.ShowDialog();
+        }
+
+        public static void KasaListesiAc(bool secim)
+        {
+            KasaModul.frm_KasaListesi form = new KasaModul.frm_KasaListesi();
+            form.Secim = secim;
+            form.ShowDialog();
+        }
     }
 }

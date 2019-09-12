@@ -214,6 +214,7 @@
             this.btn_KasaKarti.Id = 14;
             this.btn_KasaKarti.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Kasa_Acilis_Karti;
             this.btn_KasaKarti.Name = "btn_KasaKarti";
+            this.btn_KasaKarti.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KasaKarti_ItemClick);
             // 
             // btn_KasaListesi
             // 
@@ -221,6 +222,7 @@
             this.btn_KasaListesi.Id = 15;
             this.btn_KasaListesi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Kasa_Liste32x32;
             this.btn_KasaListesi.Name = "btn_KasaListesi";
+            this.btn_KasaListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KasaListesi_ItemClick);
             // 
             // btn_KasaDevir
             // 

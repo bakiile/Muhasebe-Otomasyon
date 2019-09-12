@@ -111,6 +111,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StokDatabase.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Modul_Fatura\FaturaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\FaturaListesi.Designer.cs">
+      <DependentUpon>FaturaListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Fatura\SatisFaturasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Fatura\SatisFaturasi.Designer.cs">
+      <DependentUpon>SatisFaturasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modul_Kasa\KasaDevirIslem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Cari\CariListesi.resx">
       <DependentUpon>CariListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Fatura\FaturaListesi.resx">
+      <DependentUpon>FaturaListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Fatura\SatisFaturasi.resx">
+      <DependentUpon>SatisFaturasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Kasa\KasaDevirIslem.resx">
       <DependentUpon>KasaDevirIslem.cs</DependentUpon>
@@ -344,9 +362,7 @@
   <ItemGroup>
     <None Include="Resources\Fatura_SatisIade32x32.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modul_Fatura\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

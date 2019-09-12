@@ -242,7 +242,7 @@ namespace Otomasyon.CariModul
 
             foreach (Control control in groupControl3.Controls)
             {
-                if (control is DevExpress.XtraEditors.TextEdit || control is DevExpress.XtraEditors.ButtonEdit)
+                if (control is DevExpress.XtraEditors.TextEdit || control is DevExpress.XtraEditors.ButtonEdit || control is DevExpress.XtraEditors.MemoEdit)
                     control.Text = "";
             }
 
