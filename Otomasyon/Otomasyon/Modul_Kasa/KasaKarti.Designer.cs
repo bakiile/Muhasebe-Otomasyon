@@ -177,6 +177,7 @@
             this.Controls.Add(this.groupControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_KasaKarti";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kasa Açılış Kartı";
             this.Load += new System.EventHandler(this.Frm_KasaKarti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

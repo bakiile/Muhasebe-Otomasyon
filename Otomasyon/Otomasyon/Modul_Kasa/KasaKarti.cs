@@ -156,7 +156,8 @@ namespace Otomasyon.KasaModul
 
         private void Btn_Kaydet_Click(object sender, EventArgs e)
         {
-            Kaydet();
+            if (txt_KasaAdi.Text != "" && txt_KasaKodu.Text != "")
+                Kaydet();
         }
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)

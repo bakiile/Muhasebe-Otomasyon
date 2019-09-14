@@ -80,6 +80,26 @@ namespace Otomasyon.Fonksiyonlar
         {
             KasaModul.frm_KasaListesi form = new KasaModul.frm_KasaListesi();
             form.Secim = secim;
+            if (secim == false)
+            {
+                form.MdiParent = frm_Anasayfa.ActiveForm;
+                form.Show();
+            }
+            else
+            {
+                form.ShowDialog();
+            }
+        }
+
+        public static void KasaDevirIslemAc()
+        {
+            KasaModul.frm_KasaDevirIslem form = new KasaModul.frm_KasaDevirIslem();
+            form.ShowDialog();
+        }
+
+        public static void KasaTahsilatOdemeAc()
+        {
+            KasaModul.frm_KasaTahsilatOdeme form = new KasaModul.frm_KasaTahsilatOdeme();
             form.ShowDialog();
         }
     }

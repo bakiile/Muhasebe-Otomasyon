@@ -230,6 +230,7 @@
             this.btn_KasaDevir.Id = 16;
             this.btn_KasaDevir.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Kasa_Devir32x32;
             this.btn_KasaDevir.Name = "btn_KasaDevir";
+            this.btn_KasaDevir.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KasaDevir_ItemClick);
             // 
             // btn_KasaTahsilat
             // 
@@ -238,6 +239,7 @@
             this.btn_KasaTahsilat.ImageOptions.Image = global::Otomasyon.Properties.Resources.Kasa_Tahsilat32x321;
             this.btn_KasaTahsilat.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Kasa_Odeme32x32;
             this.btn_KasaTahsilat.Name = "btn_KasaTahsilat";
+            this.btn_KasaTahsilat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KasaTahsilat_ItemClick);
             // 
             // btn_SatisFaturasi
             // 

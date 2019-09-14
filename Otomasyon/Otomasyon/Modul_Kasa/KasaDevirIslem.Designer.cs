@@ -35,33 +35,33 @@
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_Tutar = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Tarih = new DevExpress.XtraEditors.DateEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit9 = new DevExpress.XtraEditors.MemoEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.rb_Cikis = new System.Windows.Forms.RadioButton();
+            this.rb_Giris = new System.Windows.Forms.RadioButton();
+            this.txt_Aciklama = new DevExpress.XtraEditors.MemoEdit();
+            this.txt_KasaAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_BelgeNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.ButtonEdit();
+            this.txt_KasaKodu = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tutar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Aciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_BelgeNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,7 @@
             this.btn_Cikis.Size = new System.Drawing.Size(94, 40);
             this.btn_Cikis.TabIndex = 7;
             this.btn_Cikis.Text = "Çıkış";
+            this.btn_Cikis.Click += new System.EventHandler(this.Btn_Cikis_Click);
             // 
             // btn_Sil
             // 
@@ -84,6 +85,7 @@
             this.btn_Sil.Size = new System.Drawing.Size(94, 40);
             this.btn_Sil.TabIndex = 6;
             this.btn_Sil.Text = "Sil";
+            this.btn_Sil.Click += new System.EventHandler(this.Btn_Sil_Click);
             // 
             // btn_Kaydet
             // 
@@ -93,6 +95,7 @@
             this.btn_Kaydet.Size = new System.Drawing.Size(94, 40);
             this.btn_Kaydet.TabIndex = 4;
             this.btn_Kaydet.Text = "Kaydet";
+            this.btn_Kaydet.Click += new System.EventHandler(this.Btn_Kaydet_Click);
             // 
             // groupControl3
             // 
@@ -116,6 +119,7 @@
             this.btn_Guncelle.Size = new System.Drawing.Size(94, 40);
             this.btn_Guncelle.TabIndex = 5;
             this.btn_Guncelle.Text = "Güncelle";
+            this.btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
             // 
             // labelControl9
             // 
@@ -125,12 +129,14 @@
             this.labelControl9.TabIndex = 0;
             this.labelControl9.Text = "Açıklama :";
             // 
-            // textEdit8
+            // txt_Tutar
             // 
-            this.textEdit8.Location = new System.Drawing.Point(300, 27);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Size = new System.Drawing.Size(145, 20);
-            this.textEdit8.TabIndex = 1;
+            this.txt_Tutar.Location = new System.Drawing.Point(300, 27);
+            this.txt_Tutar.Name = "txt_Tutar";
+            this.txt_Tutar.Properties.Mask.EditMask = "c";
+            this.txt_Tutar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_Tutar.Size = new System.Drawing.Size(145, 20);
+            this.txt_Tutar.TabIndex = 1;
             // 
             // labelControl8
             // 
@@ -171,20 +177,20 @@
             this.txt_Tarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txt_Tarih.Properties.Mask.EditMask = "";
             this.txt_Tarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txt_Tarih.Size = new System.Drawing.Size(145, 20);
+            this.txt_Tarih.Size = new System.Drawing.Size(157, 20);
             this.txt_Tarih.TabIndex = 1;
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.radioButton2);
-            this.groupControl2.Controls.Add(this.radioButton1);
+            this.groupControl2.Controls.Add(this.rb_Cikis);
+            this.groupControl2.Controls.Add(this.rb_Giris);
             this.groupControl2.Controls.Add(this.labelControl9);
-            this.groupControl2.Controls.Add(this.textEdit8);
+            this.groupControl2.Controls.Add(this.txt_Tutar);
             this.groupControl2.Controls.Add(this.labelControl8);
             this.groupControl2.Controls.Add(this.labelControl6);
             this.groupControl2.Controls.Add(this.labelControl7);
             this.groupControl2.Controls.Add(this.txt_Tarih);
-            this.groupControl2.Controls.Add(this.textEdit9);
+            this.groupControl2.Controls.Add(this.txt_Aciklama);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl2.Location = new System.Drawing.Point(0, 81);
             this.groupControl2.Name = "groupControl2";
@@ -192,19 +198,41 @@
             this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "İşlem Bilgileri";
             // 
-            // textEdit9
+            // rb_Cikis
             // 
-            this.textEdit9.Location = new System.Drawing.Point(74, 79);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Size = new System.Drawing.Size(371, 69);
-            this.textEdit9.TabIndex = 1;
+            this.rb_Cikis.AutoSize = true;
+            this.rb_Cikis.Location = new System.Drawing.Point(155, 56);
+            this.rb_Cikis.Name = "rb_Cikis";
+            this.rb_Cikis.Size = new System.Drawing.Size(76, 17);
+            this.rb_Cikis.TabIndex = 2;
+            this.rb_Cikis.Text = "Çıkış İşlemi";
+            this.rb_Cikis.UseVisualStyleBackColor = true;
             // 
-            // textEdit3
+            // rb_Giris
             // 
-            this.textEdit3.Location = new System.Drawing.Point(300, 49);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(145, 20);
-            this.textEdit3.TabIndex = 1;
+            this.rb_Giris.AutoSize = true;
+            this.rb_Giris.Checked = true;
+            this.rb_Giris.Location = new System.Drawing.Point(74, 56);
+            this.rb_Giris.Name = "rb_Giris";
+            this.rb_Giris.Size = new System.Drawing.Size(75, 17);
+            this.rb_Giris.TabIndex = 2;
+            this.rb_Giris.TabStop = true;
+            this.rb_Giris.Text = "Giriş İşlemi";
+            this.rb_Giris.UseVisualStyleBackColor = true;
+            // 
+            // txt_Aciklama
+            // 
+            this.txt_Aciklama.Location = new System.Drawing.Point(74, 79);
+            this.txt_Aciklama.Name = "txt_Aciklama";
+            this.txt_Aciklama.Size = new System.Drawing.Size(371, 69);
+            this.txt_Aciklama.TabIndex = 1;
+            // 
+            // txt_KasaAdi
+            // 
+            this.txt_KasaAdi.Location = new System.Drawing.Point(300, 49);
+            this.txt_KasaAdi.Name = "txt_KasaAdi";
+            this.txt_KasaAdi.Size = new System.Drawing.Size(145, 20);
+            this.txt_KasaAdi.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -222,12 +250,12 @@
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Kasa Kodu :";
             // 
-            // textEdit1
+            // txt_BelgeNo
             // 
-            this.textEdit1.Location = new System.Drawing.Point(144, 23);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(301, 20);
-            this.textEdit1.TabIndex = 1;
+            this.txt_BelgeNo.Location = new System.Drawing.Point(144, 23);
+            this.txt_BelgeNo.Name = "txt_BelgeNo";
+            this.txt_BelgeNo.Size = new System.Drawing.Size(301, 20);
+            this.txt_BelgeNo.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -237,51 +265,30 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Belge / Makbuz Numarası :";
             // 
-            // textEdit2
+            // txt_KasaKodu
             // 
-            this.textEdit2.Location = new System.Drawing.Point(74, 49);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txt_KasaKodu.Location = new System.Drawing.Point(74, 49);
+            this.txt_KasaKodu.Name = "txt_KasaKodu";
+            this.txt_KasaKodu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.textEdit2.Size = new System.Drawing.Size(145, 20);
-            this.textEdit2.TabIndex = 1;
+            this.txt_KasaKodu.Size = new System.Drawing.Size(157, 20);
+            this.txt_KasaKodu.TabIndex = 1;
+            this.txt_KasaKodu.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Txt_KasaKodu_ButtonClick);
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.textEdit3);
+            this.groupControl1.Controls.Add(this.txt_KasaAdi);
             this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.textEdit1);
+            this.groupControl1.Controls.Add(this.txt_BelgeNo);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.txt_KasaKodu);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(463, 81);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Kasa Bilgileri";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(74, 56);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(75, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Giriş İşlemi";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(155, 56);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.Text = "Çıkış İşlemi";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // frm_KasaDevirIslem
             // 
@@ -293,20 +300,21 @@
             this.Controls.Add(this.groupControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_KasaDevirIslem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kasa Devir İşlem";
             this.Load += new System.EventHandler(this.Frm_KasaDevirIslem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tutar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Aciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_BelgeNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_KasaKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -322,21 +330,21 @@
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.SimpleButton btn_Guncelle;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit txt_Tutar;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.DateEdit txt_Tarih;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private DevExpress.XtraEditors.MemoEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private System.Windows.Forms.RadioButton rb_Cikis;
+        private System.Windows.Forms.RadioButton rb_Giris;
+        private DevExpress.XtraEditors.MemoEdit txt_Aciklama;
+        private DevExpress.XtraEditors.TextEdit txt_KasaAdi;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txt_BelgeNo;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.ButtonEdit textEdit2;
+        private DevExpress.XtraEditors.ButtonEdit txt_KasaKodu;
         private DevExpress.XtraEditors.GroupControl groupControl1;
     }
 }

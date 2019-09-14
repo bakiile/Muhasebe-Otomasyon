@@ -63,5 +63,15 @@ namespace Otomasyon
         {
             Fonksiyonlar.FormYonetici.KasaKartiAc();
         }
+
+        private void Btn_KasaDevir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.KasaDevirIslemAc();
+        }
+
+        private void Btn_KasaTahsilat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.KasaTahsilatOdemeAc();
+        }
     }
 }

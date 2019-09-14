@@ -183,6 +183,7 @@
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_KasaListesi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KasaListesi";
             this.Load += new System.EventHandler(this.Frm_KasaListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_KasaKodu.Properties)).EndInit();
