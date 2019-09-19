@@ -44,5 +44,17 @@
         <elementListCompartment Id="3968fc23-68dd-4b5a-a177-73935926ebed" absoluteBounds="4.14, 1.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="c2011dab-7fa1-4fbe-9842-7e7f0dd1f208" isExpanded="false" absoluteBounds="1.75, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/VW_KASAHAREKETLERI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d809ca36-6e14-4103-9263-f83141e7f36a" absoluteBounds="1.7650000000000001, 4.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbbe337e-19ce-4440-bf95-97173466bb48" isExpanded="false" absoluteBounds="4.125, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/VW_KASADURUM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4cb68664-c146-4d3b-9a3b-a95370e61a47" absoluteBounds="4.14, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

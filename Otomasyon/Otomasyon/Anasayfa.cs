@@ -66,12 +66,17 @@ namespace Otomasyon
 
         private void Btn_KasaDevir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaDevirIslemAc();
+            Fonksiyonlar.FormYonetici.KasaDevirIslemAc(secim, -1);
         }
 
         private void Btn_KasaTahsilat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaTahsilatOdemeAc();
+            Fonksiyonlar.FormYonetici.KasaTahsilatOdemeAc(secim, -1);
+        }
+
+        private void Btn_KasaHareket_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Fonksiyonlar.FormYonetici.KasaHareketleriAc(secim);
         }
     }
 }

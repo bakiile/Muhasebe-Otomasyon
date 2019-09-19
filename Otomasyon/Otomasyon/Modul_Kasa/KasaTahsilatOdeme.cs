@@ -14,6 +14,7 @@ namespace Otomasyon.KasaModul
     public partial class frm_KasaTahsilatOdeme : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        public bool secim = false;
         int KasaID = -1;
         int islemID = -1;
         int CariHareketID = -1;
@@ -133,6 +134,7 @@ namespace Otomasyon.KasaModul
                 kasaHareket.EDITUSER = frm_Anasayfa.userID;
                 kasaHareket.TARIH = DateTime.Parse(txt_Tarih.Text);
                 kasaHareket.TUTAR = decimal.Parse(txt_Tutar.Text);
+                kasaHareket.ACIKLAMA = txt_Aciklama.Text;
 
                 if (Fonksiyonlar.Mesajlar.OnayMesaj() == DialogResult.Yes)
                 {
@@ -183,13 +185,13 @@ namespace Otomasyon.KasaModul
             }
         }
 
-        void Ac(int kasaHareketID)
+        public void Ac(int kasaHareketID)
         {
             try
             {
                 islemID = kasaHareketID;
                 Fonksiyonlar.TBL_KASAHAREKETLERI kasaHareket = db.TBL_KASAHAREKETLERI.First(t => t.ID == islemID);
-                CariHareketID = db.TBL_CARIHAREKETLERI.First(t => t.EVRAKTURU == kasaHareket.EVRAKTURU && t.EVRAKID == islemID).ID;
+                CariHareketID = db.TBL_CARIHAREKETLERI.First(t => t.EVRAKTURU == kasaHareket.EVRAKTURU && t.EVRAKID.Value == islemID).ID;
                 txt_BelgeNo.Text = kasaHareket.BELGENO.ToString();
                 txt_Aciklama.Text = kasaHareket.ACIKLAMA.ToString();
                 if (kasaHareket.EVRAKTURU.ToString() == "Kasa Tahsilat") txt_IslemTuru.SelectedIndex = 0;
@@ -198,6 +200,8 @@ namespace Otomasyon.KasaModul
                 txt_Tutar.Text = kasaHareket.TUTAR.Value.ToString();
                 KasaAc(kasaHareket.KASAID.Value);
                 CariAc(kasaHareket.CARIID.Value);
+                btn_Guncelle.Enabled = true;
+                btn_Sil.Enabled = true;
             }
             catch (Exception err)
             {
@@ -208,16 +212,32 @@ namespace Otomasyon.KasaModul
         }
         void KasaAc(int ID)
         {
-            KasaID = ID;
-            txt_KasaKodu.Text = db.TBL_KASALAR.First(t => t.KASAID == KasaID).KASAKODU.ToString();
-            txt_KasaAdi.Text = db.TBL_KASALAR.First(t => t.KASAID == KasaID).KASAADI.ToString();
+            try
+            {
+                KasaID = ID;
+                txt_KasaKodu.Text = db.TBL_KASALAR.First(t => t.KASAID == KasaID).KASAKODU.ToString();
+                txt_KasaAdi.Text = db.TBL_KASALAR.First(t => t.KASAID == KasaID).KASAADI.ToString();
+            }
+            catch (Exception err)
+            {
+                Fonksiyonlar.Mesajlar.HataMesaj(err);
+            }
+            
         }
 
         void CariAc(int ID)
         {
-            CariID = ID;
-            txt_CariKodu.Text = db.TBL_CARILER.First(t => t.CARIID == KasaID).CARIKODU.ToString();
-            txt_CariAdi.Text = db.TBL_CARILER.First(t => t.CARIID == KasaID).CARIADI.ToString();
+            try
+            {
+                CariID = ID;
+                txt_CariKodu.Text = db.TBL_CARILER.First(t => t.CARIID == CariID).CARIKODU.ToString();
+                txt_CariAdi.Text = db.TBL_CARILER.First(t => t.CARIID == CariID).CARIADI.ToString();
+            }
+            catch (Exception err)
+            {
+                Fonksiyonlar.Mesajlar.HataMesaj(err);
+            }
+            
         }
         void Temizle()
         {

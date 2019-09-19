@@ -243,8 +243,6 @@
             this.txt_Tarih.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txt_Tarih.Properties.EditFormat.FormatString = "";
             this.txt_Tarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txt_Tarih.Properties.Mask.EditMask = "";
-            this.txt_Tarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
             this.txt_Tarih.Size = new System.Drawing.Size(145, 20);
             this.txt_Tarih.TabIndex = 1;
             // 

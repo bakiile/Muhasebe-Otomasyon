@@ -14,6 +14,7 @@ namespace Otomasyon.KasaModul
     public partial class frm_KasaDevirIslem : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        public bool secim = false;
         int KasaID = -1;
         int islemID = -1;
 
@@ -127,6 +128,7 @@ namespace Otomasyon.KasaModul
                     db.TBL_KASAHAREKETLERI.DeleteOnSubmit(secilenHareket);
                     db.SubmitChanges();
                     Fonksiyonlar.Mesajlar.MesajGoster("Silme işlemi başarılı.");
+                    Temizle();
                 }
             }
             catch (Exception err)
@@ -142,19 +144,22 @@ namespace Otomasyon.KasaModul
             txt_KasaAdi.Text = db.TBL_KASALAR.First(t => t.KASAID == KasaID).KASAADI.ToString();
         }
 
-        void Ac(int ID)
+        public void Ac(int ID)
         {
             try
             {
+                
                 islemID = ID;
                 Fonksiyonlar.TBL_KASAHAREKETLERI hareket = db.TBL_KASAHAREKETLERI.First(t => t.ID == islemID);
-                txt_Aciklama.Text = hareket.ACIKLAMA.ToString();
-                txt_BelgeNo.Text = hareket.BELGENO.ToString();
+                txt_Aciklama.Text = hareket.ACIKLAMA;
+                txt_BelgeNo.Text = hareket.BELGENO;
                 KasaAc(hareket.KASAID.Value);
                 txt_Tarih.Text = hareket.TARIH.Value.ToShortDateString();
                 txt_Tutar.Text = hareket.TUTAR.ToString();
                 if (hareket.GCKODU.ToString() == "G") rb_Giris.Checked = true;
                 else if (hareket.GCKODU.ToString() == "C") rb_Cikis.Checked = true;
+                btn_Guncelle.Enabled = true;
+                btn_Sil.Enabled = true;
             }
             catch (Exception err)
             {

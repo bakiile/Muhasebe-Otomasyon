@@ -263,6 +263,16 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Kasa_Hareket32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Kasa_Hareket32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Kasa_Liste32x32 {
             get {
                 object obj = ResourceManager.GetObject("Kasa_Liste32x32", resourceCulture);

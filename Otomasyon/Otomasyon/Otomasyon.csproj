@@ -62,6 +62,11 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbStokDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbStokDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modul_Banka\BankaIslem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +133,12 @@
     </Compile>
     <Compile Include="Modul_Kasa\KasaDevirIslem.Designer.cs">
       <DependentUpon>KasaDevirIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Kasa\KasaHareketleri.Designer.cs">
+      <DependentUpon>KasaHareketleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_Kasa\KasaKarti.cs">
       <SubType>Form</SubType>
@@ -200,6 +211,9 @@
     <EmbeddedResource Include="Modul_Kasa\KasaDevirIslem.resx">
       <DependentUpon>KasaDevirIslem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Kasa\KasaHareketleri.resx">
+      <DependentUpon>KasaHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modul_Kasa\KasaKarti.resx">
       <DependentUpon>KasaKarti.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +244,17 @@
       <DependentUpon>StokListesi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="DbStokDataSet.xsc">
+      <DependentUpon>DbStokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbStokDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbStokDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbStokDataSet.xss">
+      <DependentUpon>DbStokDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Fonksiyonlar\StokDatabase.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>StokDatabase.designer.cs</LastGenOutput>
@@ -362,7 +387,9 @@
   <ItemGroup>
     <None Include="Resources\Fatura_SatisIade32x32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Kasa_Hareket32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

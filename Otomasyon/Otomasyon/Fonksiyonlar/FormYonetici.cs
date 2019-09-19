@@ -91,16 +91,37 @@ namespace Otomasyon.Fonksiyonlar
             }
         }
 
-        public static void KasaDevirIslemAc()
+        public static void KasaDevirIslemAc(bool secim, int hareketID)
         {
             KasaModul.frm_KasaDevirIslem form = new KasaModul.frm_KasaDevirIslem();
+            form.secim = secim;
+            if (secim)
+                form.Ac(hareketID);
             form.ShowDialog();
         }
 
-        public static void KasaTahsilatOdemeAc()
+        public static void KasaTahsilatOdemeAc(bool secim, int kasaHareketID)
         {
             KasaModul.frm_KasaTahsilatOdeme form = new KasaModul.frm_KasaTahsilatOdeme();
+            form.secim = secim;
+            if (secim)
+                form.Ac(kasaHareketID);
             form.ShowDialog();
+        }
+
+        public static void KasaHareketleriAc(bool secim)
+        {
+            Modul_Kasa.frm_KasaHareketleri form = new Modul_Kasa.frm_KasaHareketleri();
+            form.secim = secim;
+            if (secim == false)
+            {
+                form.MdiParent = frm_Anasayfa.ActiveForm;
+                form.Show();
+            }
+            else
+            {
+                form.ShowDialog();
+            }
         }
     }
 }

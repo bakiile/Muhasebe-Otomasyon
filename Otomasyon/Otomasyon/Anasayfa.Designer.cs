@@ -53,6 +53,7 @@
             this.btn_AlisIadeFaturasi = new DevExpress.XtraBars.BarButtonItem();
             this.btn_SatisIrsaliye = new DevExpress.XtraBars.BarButtonItem();
             this.btn_AlisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_KasaHareket = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Stok = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_Cari = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -98,9 +99,10 @@
             this.btn_AlisFaturasi,
             this.btn_AlisIadeFaturasi,
             this.btn_SatisIrsaliye,
-            this.btn_AlisIrsaliyesi});
+            this.btn_AlisIrsaliyesi,
+            this.btn_KasaHareket});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 24;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.tab_Stok,
@@ -284,6 +286,14 @@
             this.btn_AlisIrsaliyesi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Fatura_AlisIade32x32;
             this.btn_AlisIrsaliyesi.Name = "btn_AlisIrsaliyesi";
             // 
+            // btn_KasaHareket
+            // 
+            this.btn_KasaHareket.Caption = "Kasa Hareketleri";
+            this.btn_KasaHareket.Id = 24;
+            this.btn_KasaHareket.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Kasa_Hareket32x32;
+            this.btn_KasaHareket.Name = "btn_KasaHareket";
+            this.btn_KasaHareket.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KasaHareket_ItemClick);
+            // 
             // tab_Stok
             // 
             this.tab_Stok.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -350,6 +360,7 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_KasaListesi);
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_KasaDevir);
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_KasaTahsilat);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btn_KasaHareket);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Kasa İşlem Sayfası";
             // 
@@ -381,6 +392,7 @@
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            this.xtraTabbedMdiManager1.UseFormIconAsPageImage = DevExpress.Utils.DefaultBoolean.True;
             // 
             // frm_Anasayfa
             // 
@@ -441,6 +453,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_SatisIrsaliye;
         private DevExpress.XtraBars.BarButtonItem btn_AlisIrsaliyesi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem btn_KasaHareket;
     }
 }
 

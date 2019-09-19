@@ -138,6 +138,22 @@ namespace Otomasyon.Fonksiyonlar
 				return this.GetTable<TBL_CARIHAREKETLERI>();
 			}
 		}
+		
+		public System.Data.Linq.Table<VW_KASAHAREKETLERI> VW_KASAHAREKETLERI
+		{
+			get
+			{
+				return this.GetTable<VW_KASAHAREKETLERI>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VW_KASADURUM> VW_KASADURUM
+		{
+			get
+			{
+				return this.GetTable<VW_KASADURUM>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_GRUPLAR")]
@@ -2442,6 +2458,348 @@ namespace Otomasyon.Fonksiyonlar
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_KASAHAREKETLERI")]
+	public partial class VW_KASAHAREKETLERI
+	{
+		
+		private int _ID;
+		
+		private System.Nullable<int> _KASAID;
+		
+		private System.Nullable<int> _CARIID;
+		
+		private string _KASAKODU;
+		
+		private string _KASAADI;
+		
+		private string _CARIKODU;
+		
+		private string _CARIADI;
+		
+		private string _BELGENO;
+		
+		private string _EVRAKTURU;
+		
+		private System.Nullable<int> _EVRAKID;
+		
+		private System.Nullable<System.DateTime> _TARIH;
+		
+		private System.Nullable<decimal> _GIRIS;
+		
+		private System.Nullable<decimal> _CIKIS;
+		
+		private string _ACIKLAMA;
+		
+		public VW_KASAHAREKETLERI()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KASAID", DbType="Int")]
+		public System.Nullable<int> KASAID
+		{
+			get
+			{
+				return this._KASAID;
+			}
+			set
+			{
+				if ((this._KASAID != value))
+				{
+					this._KASAID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIID", DbType="Int")]
+		public System.Nullable<int> CARIID
+		{
+			get
+			{
+				return this._CARIID;
+			}
+			set
+			{
+				if ((this._CARIID != value))
+				{
+					this._CARIID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KASAKODU", DbType="VarChar(30)")]
+		public string KASAKODU
+		{
+			get
+			{
+				return this._KASAKODU;
+			}
+			set
+			{
+				if ((this._KASAKODU != value))
+				{
+					this._KASAKODU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KASAADI", DbType="VarChar(30)")]
+		public string KASAADI
+		{
+			get
+			{
+				return this._KASAADI;
+			}
+			set
+			{
+				if ((this._KASAADI != value))
+				{
+					this._KASAADI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIKODU", DbType="VarChar(15)")]
+		public string CARIKODU
+		{
+			get
+			{
+				return this._CARIKODU;
+			}
+			set
+			{
+				if ((this._CARIKODU != value))
+				{
+					this._CARIKODU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIADI", DbType="VarChar(25)")]
+		public string CARIADI
+		{
+			get
+			{
+				return this._CARIADI;
+			}
+			set
+			{
+				if ((this._CARIADI != value))
+				{
+					this._CARIADI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BELGENO", DbType="VarChar(30)")]
+		public string BELGENO
+		{
+			get
+			{
+				return this._BELGENO;
+			}
+			set
+			{
+				if ((this._BELGENO != value))
+				{
+					this._BELGENO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EVRAKTURU", DbType="VarChar(30)")]
+		public string EVRAKTURU
+		{
+			get
+			{
+				return this._EVRAKTURU;
+			}
+			set
+			{
+				if ((this._EVRAKTURU != value))
+				{
+					this._EVRAKTURU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EVRAKID", DbType="Int")]
+		public System.Nullable<int> EVRAKID
+		{
+			get
+			{
+				return this._EVRAKID;
+			}
+			set
+			{
+				if ((this._EVRAKID != value))
+				{
+					this._EVRAKID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TARIH", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TARIH
+		{
+			get
+			{
+				return this._TARIH;
+			}
+			set
+			{
+				if ((this._TARIH != value))
+				{
+					this._TARIH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIRIS", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> GIRIS
+		{
+			get
+			{
+				return this._GIRIS;
+			}
+			set
+			{
+				if ((this._GIRIS != value))
+				{
+					this._GIRIS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CIKIS", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> CIKIS
+		{
+			get
+			{
+				return this._CIKIS;
+			}
+			set
+			{
+				if ((this._CIKIS != value))
+				{
+					this._CIKIS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACIKLAMA", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string ACIKLAMA
+		{
+			get
+			{
+				return this._ACIKLAMA;
+			}
+			set
+			{
+				if ((this._ACIKLAMA != value))
+				{
+					this._ACIKLAMA = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_KASADURUM")]
+	public partial class VW_KASADURUM
+	{
+		
+		private System.Nullable<int> _KASAID;
+		
+		private System.Nullable<decimal> _GIRIS;
+		
+		private System.Nullable<decimal> _CIKIS;
+		
+		private System.Nullable<decimal> _BAKIYE;
+		
+		public VW_KASADURUM()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KASAID", DbType="Int")]
+		public System.Nullable<int> KASAID
+		{
+			get
+			{
+				return this._KASAID;
+			}
+			set
+			{
+				if ((this._KASAID != value))
+				{
+					this._KASAID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GIRIS", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> GIRIS
+		{
+			get
+			{
+				return this._GIRIS;
+			}
+			set
+			{
+				if ((this._GIRIS != value))
+				{
+					this._GIRIS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CIKIS", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> CIKIS
+		{
+			get
+			{
+				return this._CIKIS;
+			}
+			set
+			{
+				if ((this._CIKIS != value))
+				{
+					this._CIKIS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BAKIYE", DbType="Decimal(38,2)")]
+		public System.Nullable<decimal> BAKIYE
+		{
+			get
+			{
+				return this._BAKIYE;
+			}
+			set
+			{
+				if ((this._BAKIYE != value))
+				{
+					this._BAKIYE = value;
+				}
 			}
 		}
 	}
