@@ -14,6 +14,7 @@ namespace Otomasyon.KasaModul
     public partial class frm_KasaDevirIslem : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        Fonksiyonlar.FormYonetici formRouter = new Fonksiyonlar.FormYonetici();
         public bool secim = false;
         int KasaID = -1;
         int islemID = -1;
@@ -30,7 +31,7 @@ namespace Otomasyon.KasaModul
 
         private void Txt_KasaKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaListesiAc(true);
+            formRouter.KasaListesiAc(true);
             KasaID = frm_Anasayfa.AktarilanID;
 
             if (KasaID > -1)

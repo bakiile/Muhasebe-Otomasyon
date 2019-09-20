@@ -41,6 +41,9 @@
             this.KASAKODU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.KASAADI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ACIKLAMA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GIRIS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CIKIS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BAKIYE = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txt_KasaKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_KasaAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -115,7 +118,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(465, 64);
+            this.panelControl1.Size = new System.Drawing.Size(583, 64);
             this.panelControl1.TabIndex = 2;
             // 
             // gridControl1
@@ -124,7 +127,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 64);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(465, 219);
+            this.gridControl1.Size = new System.Drawing.Size(583, 219);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -135,7 +138,10 @@
             this.KASAID,
             this.KASAKODU,
             this.KASAADI,
-            this.ACIKLAMA});
+            this.ACIKLAMA,
+            this.GIRIS,
+            this.CIKIS,
+            this.BAKIYE});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -174,11 +180,38 @@
             this.ACIKLAMA.Visible = true;
             this.ACIKLAMA.VisibleIndex = 2;
             // 
+            // GIRIS
+            // 
+            this.GIRIS.Caption = "GİRİŞ";
+            this.GIRIS.FieldName = "GIRIS";
+            this.GIRIS.Name = "GIRIS";
+            this.GIRIS.OptionsColumn.AllowEdit = false;
+            this.GIRIS.Visible = true;
+            this.GIRIS.VisibleIndex = 3;
+            // 
+            // CIKIS
+            // 
+            this.CIKIS.Caption = "ÇIKIŞ";
+            this.CIKIS.FieldName = "CIKIS";
+            this.CIKIS.Name = "CIKIS";
+            this.CIKIS.OptionsColumn.AllowEdit = false;
+            this.CIKIS.Visible = true;
+            this.CIKIS.VisibleIndex = 4;
+            // 
+            // BAKIYE
+            // 
+            this.BAKIYE.Caption = "BAKİYE";
+            this.BAKIYE.FieldName = "BAKIYE";
+            this.BAKIYE.Name = "BAKIYE";
+            this.BAKIYE.OptionsColumn.AllowEdit = false;
+            this.BAKIYE.Visible = true;
+            this.BAKIYE.VisibleIndex = 5;
+            // 
             // frm_KasaListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 283);
+            this.ClientSize = new System.Drawing.Size(583, 283);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -211,5 +244,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn KASAKODU;
         private DevExpress.XtraGrid.Columns.GridColumn KASAADI;
         private DevExpress.XtraGrid.Columns.GridColumn ACIKLAMA;
+        private DevExpress.XtraGrid.Columns.GridColumn GIRIS;
+        private DevExpress.XtraGrid.Columns.GridColumn CIKIS;
+        private DevExpress.XtraGrid.Columns.GridColumn BAKIYE;
     }
 }

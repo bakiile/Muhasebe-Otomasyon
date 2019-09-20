@@ -31,7 +31,7 @@ namespace Otomasyon.KasaModul
         }
         void Listele()
         {
-            var liste = from t in db.TBL_KASALAR
+            var liste = from t in db.VW_KASALISTESI
                         select t;
             gridControl1.DataSource = liste;
         }

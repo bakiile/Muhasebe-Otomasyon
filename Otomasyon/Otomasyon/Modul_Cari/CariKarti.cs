@@ -14,6 +14,7 @@ namespace Otomasyon.CariModul
     public partial class frm_CariKarti : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        Fonksiyonlar.FormYonetici formRouter = new Fonksiyonlar.FormYonetici();
         int CariID = -1;
         int CariGrupID = -1;
         public frm_CariKarti()
@@ -28,7 +29,7 @@ namespace Otomasyon.CariModul
 
         private void Txt_CariKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.CariListesiAc(true);
+            formRouter.CariListesiAc(true);
             CariID = frm_Anasayfa.AktarilanID;
 
             if (CariID > -1)
@@ -38,7 +39,7 @@ namespace Otomasyon.CariModul
 
         private void Txt_CariGrupKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.CariGrupListesiAc(true);
+            formRouter.CariGrupListesiAc(true);
             CariGrupID = frm_Anasayfa.AktarilanID;
 
             if(CariGrupID > -1)

@@ -14,6 +14,7 @@ namespace Otomasyon.Modul_Kasa
     public partial class frm_KasaHareketleri : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        Fonksiyonlar.FormYonetici formRouter = new Fonksiyonlar.FormYonetici();
         int hareketID = -1;
         int evrakID = -1;
         int KasaID = -1;
@@ -26,7 +27,7 @@ namespace Otomasyon.Modul_Kasa
 
         private void TextEdit1_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaListesiAc(true);
+            formRouter.KasaListesiAc(true);
             KasaID = frm_Anasayfa.AktarilanID;
 
             if (KasaID > -1)
@@ -96,13 +97,13 @@ namespace Otomasyon.Modul_Kasa
 
         private void CtxDevirKarti_Click(object sender, EventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaDevirIslemAc(true, hareketID);
+            formRouter.KasaDevirIslemAc(true, hareketID);
             Listele();
         }
 
         private void CtxTahsilat_Click(object sender, EventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaTahsilatOdemeAc(true, hareketID);
+            formRouter.KasaTahsilatOdemeAc(true, hareketID);
             Listele();
         }
     }

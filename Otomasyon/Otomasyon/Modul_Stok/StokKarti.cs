@@ -15,6 +15,7 @@ namespace Otomasyon.StokModul
     public partial class frm_StokKarti : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        Fonksiyonlar.FormYonetici formRouter = new Fonksiyonlar.FormYonetici();
         OpenFileDialog Dosya = new OpenFileDialog();
         bool resimSecildimi = false;
         int StokID = -1;
@@ -31,7 +32,7 @@ namespace Otomasyon.StokModul
 
         private void Txt_StokKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.StokListesiAc(true);
+            formRouter.StokListesiAc(true);
             StokID = frm_Anasayfa.AktarilanID;
 
             if(StokID > -1)
@@ -47,7 +48,7 @@ namespace Otomasyon.StokModul
 
         private void Txt_GrupKodu_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.StokGrupListesiAc(true);
+            formRouter.StokGrupListesiAc(true);
             GrupID = frm_Anasayfa.AktarilanID;
 
             if (GrupID > -1)

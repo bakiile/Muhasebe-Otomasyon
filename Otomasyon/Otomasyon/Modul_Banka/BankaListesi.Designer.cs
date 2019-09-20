@@ -32,23 +32,29 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.BANKAID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BANKAADI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HESAPADI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HESAPNO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BAKIYE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.IBAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_Ara = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txt_BarkodNumarasi = new DevExpress.XtraEditors.TextEdit();
-            this.txt_StokKodu = new DevExpress.XtraEditors.TextEdit();
+            this.txt_IBAN = new DevExpress.XtraEditors.TextEdit();
+            this.txt_HesapNo = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.txt_StokAdi = new DevExpress.XtraEditors.TextEdit();
+            this.txt_HesapAdi = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_BarkodNumarasi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_StokKodu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_IBAN.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_StokAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapAdi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -75,9 +81,68 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.BANKAID,
+            this.BANKAADI,
+            this.HESAPADI,
+            this.HESAPNO,
+            this.BAKIYE,
+            this.IBAN});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.DoubleClick += new System.EventHandler(this.GridView1_DoubleClick);
+            // 
+            // BANKAID
+            // 
+            this.BANKAID.Caption = "BANKAID";
+            this.BANKAID.FieldName = "BANKAID";
+            this.BANKAID.Name = "BANKAID";
+            // 
+            // BANKAADI
+            // 
+            this.BANKAADI.Caption = "BANKA ADI";
+            this.BANKAADI.FieldName = "BANKAADI";
+            this.BANKAADI.Name = "BANKAADI";
+            this.BANKAADI.OptionsColumn.AllowEdit = false;
+            this.BANKAADI.Visible = true;
+            this.BANKAADI.VisibleIndex = 0;
+            // 
+            // HESAPADI
+            // 
+            this.HESAPADI.Caption = "HESAP ADI";
+            this.HESAPADI.FieldName = "HESAPADI";
+            this.HESAPADI.Name = "HESAPADI";
+            this.HESAPADI.OptionsColumn.AllowEdit = false;
+            this.HESAPADI.Visible = true;
+            this.HESAPADI.VisibleIndex = 1;
+            // 
+            // HESAPNO
+            // 
+            this.HESAPNO.Caption = "HESAP NUMARASI";
+            this.HESAPNO.FieldName = "HESAPNO";
+            this.HESAPNO.Name = "HESAPNO";
+            this.HESAPNO.OptionsColumn.AllowEdit = false;
+            this.HESAPNO.Visible = true;
+            this.HESAPNO.VisibleIndex = 3;
+            // 
+            // BAKIYE
+            // 
+            this.BAKIYE.Caption = "BAKİYE";
+            this.BAKIYE.FieldName = "BAKIYE";
+            this.BAKIYE.Name = "BAKIYE";
+            this.BAKIYE.OptionsColumn.AllowEdit = false;
+            this.BAKIYE.Visible = true;
+            this.BAKIYE.VisibleIndex = 4;
+            // 
+            // IBAN
+            // 
+            this.IBAN.Caption = "IBAN";
+            this.IBAN.FieldName = "IBAN";
+            this.IBAN.Name = "IBAN";
+            this.IBAN.OptionsColumn.AllowEdit = false;
+            this.IBAN.Visible = true;
+            this.IBAN.VisibleIndex = 2;
             // 
             // btn_Ara
             // 
@@ -89,6 +154,7 @@
             this.btn_Ara.Size = new System.Drawing.Size(98, 44);
             this.btn_Ara.TabIndex = 3;
             this.btn_Ara.Text = "Ara";
+            this.btn_Ara.Click += new System.EventHandler(this.Btn_Ara_Click);
             // 
             // labelControl3
             // 
@@ -126,25 +192,25 @@
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Hesap Adı / Türü:";
             // 
-            // txt_BarkodNumarasi
+            // txt_IBAN
             // 
-            this.txt_BarkodNumarasi.Location = new System.Drawing.Point(354, 34);
-            this.txt_BarkodNumarasi.Name = "txt_BarkodNumarasi";
-            this.txt_BarkodNumarasi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txt_BarkodNumarasi.Properties.Appearance.Options.UseFont = true;
-            this.txt_BarkodNumarasi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txt_BarkodNumarasi.Size = new System.Drawing.Size(165, 22);
-            this.txt_BarkodNumarasi.TabIndex = 2;
+            this.txt_IBAN.Location = new System.Drawing.Point(354, 34);
+            this.txt_IBAN.Name = "txt_IBAN";
+            this.txt_IBAN.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_IBAN.Properties.Appearance.Options.UseFont = true;
+            this.txt_IBAN.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txt_IBAN.Size = new System.Drawing.Size(165, 22);
+            this.txt_IBAN.TabIndex = 2;
             // 
-            // txt_StokKodu
+            // txt_HesapNo
             // 
-            this.txt_StokKodu.Location = new System.Drawing.Point(183, 34);
-            this.txt_StokKodu.Name = "txt_StokKodu";
-            this.txt_StokKodu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txt_StokKodu.Properties.Appearance.Options.UseFont = true;
-            this.txt_StokKodu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txt_StokKodu.Size = new System.Drawing.Size(165, 22);
-            this.txt_StokKodu.TabIndex = 1;
+            this.txt_HesapNo.Location = new System.Drawing.Point(183, 34);
+            this.txt_HesapNo.Name = "txt_HesapNo";
+            this.txt_HesapNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_HesapNo.Properties.Appearance.Options.UseFont = true;
+            this.txt_HesapNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txt_HesapNo.Size = new System.Drawing.Size(165, 22);
+            this.txt_HesapNo.TabIndex = 1;
             // 
             // panelControl1
             // 
@@ -157,24 +223,24 @@
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Controls.Add(this.txt_BarkodNumarasi);
-            this.panelControl1.Controls.Add(this.txt_StokKodu);
-            this.panelControl1.Controls.Add(this.txt_StokAdi);
+            this.panelControl1.Controls.Add(this.txt_IBAN);
+            this.panelControl1.Controls.Add(this.txt_HesapNo);
+            this.panelControl1.Controls.Add(this.txt_HesapAdi);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(636, 71);
             this.panelControl1.TabIndex = 2;
             // 
-            // txt_StokAdi
+            // txt_HesapAdi
             // 
-            this.txt_StokAdi.Location = new System.Drawing.Point(12, 34);
-            this.txt_StokAdi.Name = "txt_StokAdi";
-            this.txt_StokAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txt_StokAdi.Properties.Appearance.Options.UseFont = true;
-            this.txt_StokAdi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txt_StokAdi.Size = new System.Drawing.Size(165, 22);
-            this.txt_StokAdi.TabIndex = 0;
+            this.txt_HesapAdi.Location = new System.Drawing.Point(12, 34);
+            this.txt_HesapAdi.Name = "txt_HesapAdi";
+            this.txt_HesapAdi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txt_HesapAdi.Properties.Appearance.Options.UseFont = true;
+            this.txt_HesapAdi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txt_HesapAdi.Size = new System.Drawing.Size(165, 22);
+            this.txt_HesapAdi.TabIndex = 0;
             // 
             // frm_BankaListesi
             // 
@@ -187,16 +253,17 @@
             this.MaximizeBox = false;
             this.Name = "frm_BankaListesi";
             this.Text = "Banka Listesi";
+            this.Load += new System.EventHandler(this.Frm_BankaListesi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_BarkodNumarasi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_StokKodu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_IBAN.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_StokAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapAdi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,9 +277,15 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txt_BarkodNumarasi;
-        private DevExpress.XtraEditors.TextEdit txt_StokKodu;
+        private DevExpress.XtraEditors.TextEdit txt_IBAN;
+        private DevExpress.XtraEditors.TextEdit txt_HesapNo;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.TextEdit txt_StokAdi;
+        private DevExpress.XtraEditors.TextEdit txt_HesapAdi;
+        private DevExpress.XtraGrid.Columns.GridColumn BANKAID;
+        private DevExpress.XtraGrid.Columns.GridColumn BANKAADI;
+        private DevExpress.XtraGrid.Columns.GridColumn HESAPADI;
+        private DevExpress.XtraGrid.Columns.GridColumn HESAPNO;
+        private DevExpress.XtraGrid.Columns.GridColumn BAKIYE;
+        private DevExpress.XtraGrid.Columns.GridColumn IBAN;
     }
 }

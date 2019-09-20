@@ -188,6 +188,7 @@
             this.btn_BankaListesi.Id = 10;
             this.btn_BankaListesi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Banka_Liste32x32;
             this.btn_BankaListesi.Name = "btn_BankaListesi";
+            this.btn_BankaListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_BankaListesi_ItemClick);
             // 
             // btn_ParaTransferi
             // 

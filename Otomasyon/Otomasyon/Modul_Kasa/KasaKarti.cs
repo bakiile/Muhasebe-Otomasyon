@@ -14,6 +14,7 @@ namespace Otomasyon.KasaModul
     public partial class frm_KasaKarti : DevExpress.XtraEditors.XtraForm
     {
         Fonksiyonlar.StokDatabaseDataContext db = new Fonksiyonlar.StokDatabaseDataContext();
+        Fonksiyonlar.FormYonetici formRouter = new Fonksiyonlar.FormYonetici();
         int KasaID = -1;
         public frm_KasaKarti()
         {
@@ -115,7 +116,7 @@ namespace Otomasyon.KasaModul
         {
             try
             {
-                Fonksiyonlar.FormYonetici.KasaListesiAc(true);
+                formRouter.KasaListesiAc(true);
                 KasaID = frm_Anasayfa.AktarilanID;
                 Fonksiyonlar.TBL_KASALAR kasa = db.TBL_KASALAR.First(t => t.KASAID == KasaID);
                 txt_KasaKodu.Text = kasa.KASAKODU.ToString();

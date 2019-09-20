@@ -11,6 +11,7 @@ namespace Otomasyon
 {
     public partial class frm_Anasayfa : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        Fonksiyonlar.FormYonetici formRouter = new Fonksiyonlar.FormYonetici();
         public static int userID = -1;
         public static int AktarilanID = -1;
         bool secim = false;
@@ -21,62 +22,69 @@ namespace Otomasyon
 
         private void Btn_StokListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.StokListesiAc(secim);
+            formRouter.StokListesiAc(secim);
         }
 
         private void Btn_StokGruplari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.StokGrupListesiAc(secim);
+            formRouter.StokGrupListesiAc(secim);
         }
 
         private void Btn_StokKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.StokKartiAc();
+            formRouter.StokKartiAc();
         }
 
         private void Btn_CariGruplari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.CariGrupListesiAc(secim);
+            formRouter.CariGrupListesiAc(secim);
         }
 
         private void Btn_CariKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.CariKartiAc();
+            formRouter.CariKartiAc();
         }
 
         private void Btn_CariListele_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.CariListesiAc(secim);
+            formRouter.CariListesiAc(secim);
         }
 
         private void Btn_BankaKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.BankaKartiAc();
+            formRouter.BankaKartiAc();
+        }
+
+        private void Btn_BankaListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.BankaListesiAc(secim);
         }
 
         private void Btn_KasaListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaListesiAc(secim);
+            formRouter.KasaListesiAc(secim);
         }
 
         private void Btn_KasaKarti_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaKartiAc();
+            formRouter.KasaKartiAc();
         }
 
         private void Btn_KasaDevir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaDevirIslemAc(secim, -1);
+            formRouter.KasaDevirIslemAc(secim, -1);
         }
 
         private void Btn_KasaTahsilat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaTahsilatOdemeAc(secim, -1);
+            formRouter.KasaTahsilatOdemeAc(secim, -1);
         }
 
         private void Btn_KasaHareket_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Fonksiyonlar.FormYonetici.KasaHareketleriAc(secim);
+            formRouter.KasaHareketleriAc(secim);
         }
+
+        
     }
 }
