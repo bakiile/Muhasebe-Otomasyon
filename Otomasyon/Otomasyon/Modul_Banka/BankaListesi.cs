@@ -24,12 +24,15 @@ namespace Otomasyon.BankaModul
 
         private void Btn_Ara_Click(object sender, EventArgs e)
         {
-
+            var liste = from t in db.VW_BANKALISTESI
+                        where t.HESAPADI.Contains(txt_HesapAdi.Text) && t.HESAPNO.Contains(txt_HesapNo.Text) && t.IBAN.Contains(txt_IBAN.Text)
+                        select t;
+            gridControl1.DataSource = liste;
         }
 
         void Listele()
         {
-            var liste = from t in db.TBL_BANKALAR
+            var liste = from t in db.VW_BANKALISTESI
                         select t;
             gridControl1.DataSource = liste;
         }

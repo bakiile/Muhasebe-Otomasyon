@@ -186,4 +186,41 @@
       <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.VW_BANKADURUM" Member="VW_BANKADURUM">
+    <Type Name="VW_BANKADURUM">
+      <Column Name="BANKAID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKIYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_BANKALISTESI" Member="VW_BANKALISTESI">
+    <Type Name="VW_BANKALISTESI">
+      <Column Name="BANKAID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HESAPNO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="IBAN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="BANKAADI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HESAPADI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+      <Column Name="BAKIYE" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_BANKAHAREKETLERI" Member="VW_BANKAHAREKETLERI">
+    <Type Name="VW_BANKAHAREKETLERI">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BANKAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARIID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BELGENO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EVRAKTURU" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EVRAKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TUTAR" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GIRIS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HESAPNO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="HESAPADI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

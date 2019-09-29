@@ -85,6 +85,28 @@ namespace Otomasyon.Fonksiyonlar
                 form.ShowDialog();
             }
         }
+        
+        public void BankaIslemAc(bool ac, int ID)
+        {
+            BankaModul.frm_BankaIslem form = new BankaModul.frm_BankaIslem();
+            if (ac) form.Ac(ID);
+            form.ShowDialog();
+        }
+
+        public void BankaParaTransferAc(bool ac, int ID)
+        {
+            BankaModul.frm_ParaTransferi form = new BankaModul.frm_ParaTransferi();
+            if (ac) form.Ac(ID);
+            form.ShowDialog();
+        }
+
+        public void BankaHareketleriAc(bool ac, int ID)
+        {
+            Modul_Banka.frm_BankaHareketleri form = new Modul_Banka.frm_BankaHareketleri();
+            form.MdiParent = frm_Anasayfa.ActiveForm;
+            if (ac) form.BankaAc(ID);
+            form.Show();
+        }
 
         public void KasaKartiAc()
         {

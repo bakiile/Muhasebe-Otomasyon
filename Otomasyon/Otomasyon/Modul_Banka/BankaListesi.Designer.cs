@@ -46,6 +46,8 @@
             this.txt_HesapNo = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txt_HesapAdi = new DevExpress.XtraEditors.TextEdit();
+            this.GIRIS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CIKIS = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -87,7 +89,9 @@
             this.HESAPADI,
             this.HESAPNO,
             this.BAKIYE,
-            this.IBAN});
+            this.IBAN,
+            this.GIRIS,
+            this.CIKIS});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
@@ -98,6 +102,7 @@
             this.BANKAID.Caption = "BANKAID";
             this.BANKAID.FieldName = "BANKAID";
             this.BANKAID.Name = "BANKAID";
+            this.BANKAID.OptionsColumn.AllowEdit = false;
             // 
             // BANKAADI
             // 
@@ -242,6 +247,24 @@
             this.txt_HesapAdi.Size = new System.Drawing.Size(165, 22);
             this.txt_HesapAdi.TabIndex = 0;
             // 
+            // GIRIS
+            // 
+            this.GIRIS.Caption = "GIRIS";
+            this.GIRIS.FieldName = "GIRIS";
+            this.GIRIS.Name = "GIRIS";
+            this.GIRIS.OptionsColumn.AllowEdit = false;
+            this.GIRIS.Visible = true;
+            this.GIRIS.VisibleIndex = 5;
+            // 
+            // CIKIS
+            // 
+            this.CIKIS.Caption = "CIKIS";
+            this.CIKIS.FieldName = "CIKIS";
+            this.CIKIS.Name = "CIKIS";
+            this.CIKIS.OptionsColumn.AllowEdit = false;
+            this.CIKIS.Visible = true;
+            this.CIKIS.VisibleIndex = 6;
+            // 
             // frm_BankaListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +310,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn HESAPNO;
         private DevExpress.XtraGrid.Columns.GridColumn BAKIYE;
         private DevExpress.XtraGrid.Columns.GridColumn IBAN;
+        private DevExpress.XtraGrid.Columns.GridColumn GIRIS;
+        private DevExpress.XtraGrid.Columns.GridColumn CIKIS;
     }
 }

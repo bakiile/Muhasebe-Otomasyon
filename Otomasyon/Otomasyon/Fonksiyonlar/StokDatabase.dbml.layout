@@ -74,5 +74,23 @@
         <elementListCompartment Id="c81c93b3-d7fd-47a9-bcdd-c568bf81610f" absoluteBounds="6.3900000000000006, 1.21, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="6bb61b8a-cf96-422a-a8ca-f46e01e5481d" isExpanded="false" absoluteBounds="6.375, 2.25, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/VW_BANKADURUM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3288208f-a866-41e4-9e3a-bd55f3cc8968" absoluteBounds="6.39, 2.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0992dc2a-ffcd-4fb7-b6d4-db839303efcb" isExpanded="false" absoluteBounds="6.375, 3, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/VW_BANKALISTESI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07348d2d-6c17-403b-83d0-2f26af975055" absoluteBounds="6.39, 3.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c709c38-ef11-4bee-86b6-95a7d5726662" isExpanded="false" absoluteBounds="6.375, 3.75, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/VW_BANKAHAREKETLERI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="829e74e2-feb8-43df-8686-5c237d13da32" absoluteBounds="6.39, 4.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

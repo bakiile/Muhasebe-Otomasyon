@@ -42,6 +42,7 @@
     <Reference Include="DevExpress.XtraEditors.v19.1" />
     <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,6 +67,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DbStokDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Banka\BankaHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Banka\BankaHareketleri.Designer.cs">
+      <DependentUpon>BankaHareketleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_Banka\BankaIslem.cs">
       <SubType>Form</SubType>
@@ -180,6 +187,9 @@
     </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Banka\BankaHareketleri.resx">
+      <DependentUpon>BankaHareketleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Banka\BankaIslem.resx">
       <DependentUpon>BankaIslem.cs</DependentUpon>
@@ -389,6 +399,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Kasa_Hareket32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Liste16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok_Hareket16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Kart16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Grup16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Liste16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cari_Hareket16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Havale16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Liste16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Islem16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banka_Hareket16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Karti16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Liste16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Devir16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Tahsilat16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kasa_Hareket16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

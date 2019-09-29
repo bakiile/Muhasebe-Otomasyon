@@ -31,43 +31,44 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BankaIslem));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.txt_Tutar = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.txt_Aciklama = new DevExpress.XtraEditors.MemoEdit();
+            this.txt_Tarih = new DevExpress.XtraEditors.DateEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_HesapNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txt_BelgeNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_HesapAdi = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.btn_Cikis = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Kaydet = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Sil = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Guncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tutar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Aciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_BelgeNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapAdi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -83,12 +84,12 @@
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.groupControl4);
-            this.groupControl2.Controls.Add(this.textEdit1);
+            this.groupControl2.Controls.Add(this.txt_Tutar);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Controls.Add(this.labelControl2);
-            this.groupControl2.Controls.Add(this.textEdit2);
             this.groupControl2.Controls.Add(this.labelControl3);
-            this.groupControl2.Controls.Add(this.memoEdit1);
+            this.groupControl2.Controls.Add(this.txt_Aciklama);
+            this.groupControl2.Controls.Add(this.txt_Tarih);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(192, 2);
             this.groupControl2.Name = "groupControl2";
@@ -96,12 +97,47 @@
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "İşlem Bilgileri";
             // 
-            // textEdit1
+            // groupControl4
             // 
-            this.textEdit1.Location = new System.Drawing.Point(59, 111);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(179, 20);
-            this.textEdit1.TabIndex = 11;
+            this.groupControl4.Controls.Add(this.radioButton2);
+            this.groupControl4.Controls.Add(this.radioButton1);
+            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl4.Location = new System.Drawing.Point(2, 20);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(248, 52);
+            this.groupControl4.TabIndex = 14;
+            this.groupControl4.Text = "İşlem Türü";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(132, 26);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(76, 17);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.Text = "Çıkış İşlemi";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(51, 26);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(75, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Giriş İşlemi";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // txt_Tutar
+            // 
+            this.txt_Tutar.Location = new System.Drawing.Point(59, 111);
+            this.txt_Tutar.Name = "txt_Tutar";
+            this.txt_Tutar.Properties.Mask.EditMask = "c";
+            this.txt_Tutar.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txt_Tutar.Size = new System.Drawing.Size(179, 20);
+            this.txt_Tutar.TabIndex = 11;
             // 
             // labelControl1
             // 
@@ -119,13 +155,6 @@
             this.labelControl2.TabIndex = 9;
             this.labelControl2.Text = "Tarih :";
             // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(59, 85);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(179, 20);
-            this.textEdit2.TabIndex = 12;
-            // 
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(17, 114);
@@ -134,21 +163,39 @@
             this.labelControl3.TabIndex = 10;
             this.labelControl3.Text = "Tutar :";
             // 
-            // memoEdit1
+            // txt_Aciklama
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(59, 137);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(179, 85);
-            this.memoEdit1.TabIndex = 13;
+            this.txt_Aciklama.Location = new System.Drawing.Point(59, 137);
+            this.txt_Aciklama.Name = "txt_Aciklama";
+            this.txt_Aciklama.Size = new System.Drawing.Size(179, 85);
+            this.txt_Aciklama.TabIndex = 13;
+            // 
+            // txt_Tarih
+            // 
+            this.txt_Tarih.EditValue = null;
+            this.txt_Tarih.Location = new System.Drawing.Point(59, 85);
+            this.txt_Tarih.Name = "txt_Tarih";
+            this.txt_Tarih.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_Tarih.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt_Tarih.Properties.DisplayFormat.FormatString = "";
+            this.txt_Tarih.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txt_Tarih.Properties.EditFormat.FormatString = "";
+            this.txt_Tarih.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txt_Tarih.Properties.Mask.EditMask = "";
+            this.txt_Tarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txt_Tarih.Size = new System.Drawing.Size(179, 20);
+            this.txt_Tarih.TabIndex = 12;
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.textEdit3);
-            this.groupControl1.Controls.Add(this.textEdit5);
+            this.groupControl1.Controls.Add(this.txt_HesapNo);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.textEdit4);
+            this.groupControl1.Controls.Add(this.txt_BelgeNo);
             this.groupControl1.Controls.Add(this.labelControl5);
+            this.groupControl1.Controls.Add(this.txt_HesapAdi);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
@@ -156,19 +203,13 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Hesap Bilgileri";
             // 
-            // textEdit3
+            // txt_HesapNo
             // 
-            this.textEdit3.Location = new System.Drawing.Point(10, 167);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(161, 20);
-            this.textEdit3.TabIndex = 5;
-            // 
-            // textEdit5
-            // 
-            this.textEdit5.Location = new System.Drawing.Point(10, 111);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(161, 20);
-            this.textEdit5.TabIndex = 5;
+            this.txt_HesapNo.Location = new System.Drawing.Point(10, 167);
+            this.txt_HesapNo.Name = "txt_HesapNo";
+            this.txt_HesapNo.Properties.ReadOnly = true;
+            this.txt_HesapNo.Size = new System.Drawing.Size(161, 20);
+            this.txt_HesapNo.TabIndex = 5;
             // 
             // labelControl4
             // 
@@ -186,12 +227,12 @@
             this.labelControl6.TabIndex = 4;
             this.labelControl6.Text = "Hesap Numarası :";
             // 
-            // textEdit4
+            // txt_BelgeNo
             // 
-            this.textEdit4.Location = new System.Drawing.Point(10, 56);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(161, 20);
-            this.textEdit4.TabIndex = 6;
+            this.txt_BelgeNo.Location = new System.Drawing.Point(10, 56);
+            this.txt_BelgeNo.Name = "txt_BelgeNo";
+            this.txt_BelgeNo.Size = new System.Drawing.Size(161, 20);
+            this.txt_BelgeNo.TabIndex = 6;
             // 
             // labelControl5
             // 
@@ -200,6 +241,17 @@
             this.labelControl5.Size = new System.Drawing.Size(87, 13);
             this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "Hesap Adı / Türü :";
+            // 
+            // txt_HesapAdi
+            // 
+            this.txt_HesapAdi.Location = new System.Drawing.Point(10, 111);
+            this.txt_HesapAdi.Name = "txt_HesapAdi";
+            this.txt_HesapAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txt_HesapAdi.Properties.ReadOnly = true;
+            this.txt_HesapAdi.Size = new System.Drawing.Size(161, 20);
+            this.txt_HesapAdi.TabIndex = 5;
+            this.txt_HesapAdi.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Txt_HesapAdi_ButtonClick);
             // 
             // groupControl3
             // 
@@ -222,6 +274,7 @@
             this.btn_Cikis.Size = new System.Drawing.Size(94, 40);
             this.btn_Cikis.TabIndex = 11;
             this.btn_Cikis.Text = "Çıkış";
+            this.btn_Cikis.Click += new System.EventHandler(this.Btn_Cikis_Click);
             // 
             // btn_Kaydet
             // 
@@ -231,6 +284,7 @@
             this.btn_Kaydet.Size = new System.Drawing.Size(94, 40);
             this.btn_Kaydet.TabIndex = 8;
             this.btn_Kaydet.Text = "Kaydet";
+            this.btn_Kaydet.Click += new System.EventHandler(this.Btn_Kaydet_Click);
             // 
             // btn_Sil
             // 
@@ -241,6 +295,7 @@
             this.btn_Sil.Size = new System.Drawing.Size(94, 40);
             this.btn_Sil.TabIndex = 10;
             this.btn_Sil.Text = "Sil";
+            this.btn_Sil.Click += new System.EventHandler(this.Btn_Sil_Click);
             // 
             // btn_Guncelle
             // 
@@ -251,39 +306,7 @@
             this.btn_Guncelle.Size = new System.Drawing.Size(94, 40);
             this.btn_Guncelle.TabIndex = 9;
             this.btn_Guncelle.Text = "Güncelle";
-            // 
-            // groupControl4
-            // 
-            this.groupControl4.Controls.Add(this.radioButton2);
-            this.groupControl4.Controls.Add(this.radioButton1);
-            this.groupControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl4.Location = new System.Drawing.Point(2, 20);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(248, 52);
-            this.groupControl4.TabIndex = 14;
-            this.groupControl4.Text = "İşlem Türü";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(51, 26);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(75, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Giriş İşlemi";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(132, 26);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 17);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Çıkış İşlemi";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btn_Guncelle.Click += new System.EventHandler(this.Btn_Guncelle_Click);
             // 
             // frm_BankaIslem
             // 
@@ -297,25 +320,27 @@
             this.Name = "frm_BankaIslem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Banka İşlem";
+            this.Load += new System.EventHandler(this.Frm_BankaIslem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tutar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Aciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Tarih.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_BelgeNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_HesapAdi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -324,17 +349,15 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit txt_BelgeNo;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txt_Tutar;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.MemoEdit txt_Aciklama;
+        private DevExpress.XtraEditors.TextEdit txt_HesapNo;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.GroupControl groupControl3;
@@ -345,5 +368,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Kaydet;
         private DevExpress.XtraEditors.SimpleButton btn_Sil;
         private DevExpress.XtraEditors.SimpleButton btn_Guncelle;
+        private DevExpress.XtraEditors.DateEdit txt_Tarih;
+        private DevExpress.XtraEditors.ButtonEdit txt_HesapAdi;
     }
 }

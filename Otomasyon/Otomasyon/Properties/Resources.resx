@@ -121,8 +121,8 @@
   <data name="Stok_Kartı16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Kartı16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kasa_Odeme32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kasa_Odeme32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Satis_Faturasi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Satis_Faturasi1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Banka_Islem32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banka_Islem32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,17 +145,20 @@
   <data name="Kasa_Acilis_Karti" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kasa_Acilis_Karti.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Stok_Hareket16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok_Hareket16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cari_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cari_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stok_Kartı32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Kartı32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Banka_Kartı32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banka_Kartı32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cari_Grup16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Grup16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fatura_SatisIade32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fatura_SatisIade32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Kasa_Tahsilat16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Tahsilat16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Stok_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stok_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,23 +169,35 @@
   <data name="Kasa_Tahsilat32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kasa_Tahsilat32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Kasa_Devir16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Devir16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Kasa_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kasa_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Banka_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banka_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banka_Liste16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Liste16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kasa_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cari_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cari_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Satis_Iade_Faturasi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Satis_Iade_Faturasi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banka_Havale16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Havale16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stok_Grup16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok_Grup16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fatura_Alis32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fatura_Alis32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Stok32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stok32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Kasa_Odeme32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Odeme32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kasa_Karti16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Karti16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fatura_AlisIade32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fatura_AlisIade32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,26 +205,47 @@
   <data name="Banka32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banka32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Banka_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banka_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fatura_SatisIade32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fatura_SatisIade32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stok32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kasa_Liste16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Liste16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kaydet24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kaydet24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Stok_Grup16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stok_Grup16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cari_Liste16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Liste16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Stok_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Stok_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banka_Liste32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Liste32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banka_Kartı32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Kartı32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Satis_Faturasi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Satis_Faturasi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cari32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cari32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banka_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Satis_Faturasi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Satis_Faturasi1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cari_Grup32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Grup32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cari_Hareket16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Hareket16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stok_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Satis_Iade_Faturasi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Satis_Iade_Faturasi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banka_Hareket16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Hareket16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kapat24x24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kapat24x24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,19 +253,28 @@
   <data name="Banka_Kartı16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banka_Kartı16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Banka_Islem16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banka_Islem16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stok_Liste16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stok_Liste16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fatura32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fatura32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cari_Kart16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari_Kart16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Kasa_Tahsilat32x321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Kasa_Tahsilat32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cari_Grup32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cari_Grup32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cari32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cari32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Banka_Havale32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Banka_Havale32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kasa_Hareket32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kasa_Hareket32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Kasa_Hareket16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kasa_Hareket16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

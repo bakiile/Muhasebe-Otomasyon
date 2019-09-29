@@ -73,6 +73,16 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Banka_Hareket16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Banka_Hareket16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Banka_Hareket32x32 {
             get {
                 object obj = ResourceManager.GetObject("Banka_Hareket32x32", resourceCulture);
@@ -83,9 +93,29 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Banka_Havale16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Banka_Havale16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Banka_Havale32x32 {
             get {
                 object obj = ResourceManager.GetObject("Banka_Havale32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banka_Islem16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Banka_Islem16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +153,16 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Banka_Liste16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Banka_Liste16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Banka_Liste32x32 {
             get {
                 object obj = ResourceManager.GetObject("Banka_Liste32x32", resourceCulture);
@@ -143,9 +183,29 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Cari_Grup16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Grup16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Cari_Grup32x32 {
             get {
                 object obj = ResourceManager.GetObject("Cari_Grup32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cari_Hareket16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Hareket16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +223,29 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Cari_Kart16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Kart16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Cari_Kart32x32 {
             get {
                 object obj = ResourceManager.GetObject("Cari_Kart32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cari_Liste16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Cari_Liste16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +333,16 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Kasa_Devir16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Kasa_Devir16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Kasa_Devir32x32 {
             get {
                 object obj = ResourceManager.GetObject("Kasa_Devir32x32", resourceCulture);
@@ -263,9 +353,39 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Kasa_Hareket16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Kasa_Hareket16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Kasa_Hareket32x32 {
             get {
                 object obj = ResourceManager.GetObject("Kasa_Hareket32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kasa_Karti16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Kasa_Karti16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kasa_Liste16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Kasa_Liste16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +406,16 @@ namespace Otomasyon.Properties {
         internal static System.Drawing.Bitmap Kasa_Odeme32x32 {
             get {
                 object obj = ResourceManager.GetObject("Kasa_Odeme32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kasa_Tahsilat16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Kasa_Tahsilat16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,6 +523,16 @@ namespace Otomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Stok_Hareket16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Stok_Hareket16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Stok_Hareket32x32 {
             get {
                 object obj = ResourceManager.GetObject("Stok_Hareket32x32", resourceCulture);
@@ -416,6 +556,16 @@ namespace Otomasyon.Properties {
         internal static System.Drawing.Bitmap Stok_Kartı32x32 {
             get {
                 object obj = ResourceManager.GetObject("Stok_Kartı32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stok_Liste16x16 {
+            get {
+                object obj = ResourceManager.GetObject("Stok_Liste16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

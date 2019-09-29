@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Anasayfa));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btn_StokKarti = new DevExpress.XtraBars.BarButtonItem();
             this.btn_StokGruplari = new DevExpress.XtraBars.BarButtonItem();
@@ -66,8 +67,33 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBtn_StokKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_StokListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_StokGruplari = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_StokHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBtn_CariKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_CariGruplari = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_CariListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_CariHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBtn_BankaKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_ParaTransferi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_BankaListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_BankaIslemi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_BankaHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBtn_KasaKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_KasaListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_KasaDevirIslem = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_KasaTahsilatOdeme = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_KasaHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -196,6 +222,7 @@
             this.btn_ParaTransferi.Id = 11;
             this.btn_ParaTransferi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Banka_Havale32x32;
             this.btn_ParaTransferi.Name = "btn_ParaTransferi";
+            this.btn_ParaTransferi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_ParaTransferi_ItemClick);
             // 
             // btn_BankaIslemi
             // 
@@ -203,6 +230,7 @@
             this.btn_BankaIslemi.Id = 12;
             this.btn_BankaIslemi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Banka_Islem32x32;
             this.btn_BankaIslemi.Name = "btn_BankaIslemi";
+            this.btn_BankaIslemi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_BankaIslemi_ItemClick);
             // 
             // btn_BankaHareketleri
             // 
@@ -210,6 +238,7 @@
             this.btn_BankaHareketleri.Id = 13;
             this.btn_BankaHareketleri.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Banka_Hareket32x32;
             this.btn_BankaHareketleri.Name = "btn_BankaHareketleri";
+            this.btn_BankaHareketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_BankaHareketleri_ItemClick);
             // 
             // btn_KasaKarti
             // 
@@ -395,14 +424,229 @@
             this.xtraTabbedMdiManager1.MdiParent = this;
             this.xtraTabbedMdiManager1.UseFormIconAsPageImage = DevExpress.Utils.DefaultBoolean.True;
             // 
+            // navBarControl1
+            // 
+            this.navBarControl1.ActiveGroup = this.navBarGroup2;
+            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup1,
+            this.navBarGroup2,
+            this.navBarGroup3,
+            this.navBarGroup4,
+            this.navBarGroup5});
+            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBtn_StokKarti,
+            this.navBtn_StokListesi,
+            this.navBtn_StokGruplari,
+            this.navBtn_StokHareketleri,
+            this.navBtn_CariKarti,
+            this.navBtn_CariGruplari,
+            this.navBtn_CariListesi,
+            this.navBtn_CariHareketleri,
+            this.navBtn_BankaKarti,
+            this.navBtn_ParaTransferi,
+            this.navBtn_BankaListesi,
+            this.navBtn_BankaIslemi,
+            this.navBtn_BankaHareketleri,
+            this.navBtn_KasaKarti,
+            this.navBtn_KasaListesi,
+            this.navBtn_KasaDevirIslem,
+            this.navBtn_KasaTahsilatOdeme,
+            this.navBtn_KasaHareketleri});
+            this.navBarControl1.Location = new System.Drawing.Point(0, 162);
+            this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 140;
+            this.navBarControl1.Size = new System.Drawing.Size(140, 250);
+            this.navBarControl1.TabIndex = 2;
+            this.navBarControl1.Text = "navBarControl1";
+            this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("DevExpress Style");
+            // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "Stok";
+            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokGruplari),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokHareketleri)});
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBtn_StokKarti
+            // 
+            this.navBtn_StokKarti.Caption = "Stok Açılış Kartı";
+            this.navBtn_StokKarti.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Kartı16x16;
+            this.navBtn_StokKarti.Name = "navBtn_StokKarti";
+            this.navBtn_StokKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokKarti_LinkClicked);
+            // 
+            // navBtn_StokListesi
+            // 
+            this.navBtn_StokListesi.Caption = "Stok Listesi";
+            this.navBtn_StokListesi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Liste16x16;
+            this.navBtn_StokListesi.Name = "navBtn_StokListesi";
+            this.navBtn_StokListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokListesi_LinkClicked);
+            // 
+            // navBtn_StokGruplari
+            // 
+            this.navBtn_StokGruplari.Caption = "Stok Grupları";
+            this.navBtn_StokGruplari.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Grup16x16;
+            this.navBtn_StokGruplari.Name = "navBtn_StokGruplari";
+            this.navBtn_StokGruplari.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokGruplari_LinkClicked);
+            // 
+            // navBtn_StokHareketleri
+            // 
+            this.navBtn_StokHareketleri.Caption = "Stok Hareketleri";
+            this.navBtn_StokHareketleri.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Hareket16x16;
+            this.navBtn_StokHareketleri.Name = "navBtn_StokHareketleri";
+            this.navBtn_StokHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokHareketleri_LinkClicked);
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Cari";
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_CariKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_CariGruplari),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_CariListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_CariHareketleri)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // navBtn_CariKarti
+            // 
+            this.navBtn_CariKarti.Caption = "Cari Açılış Kartı";
+            this.navBtn_CariKarti.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Cari_Kart16x16;
+            this.navBtn_CariKarti.Name = "navBtn_CariKarti";
+            this.navBtn_CariKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_CariKarti_LinkClicked);
+            // 
+            // navBtn_CariGruplari
+            // 
+            this.navBtn_CariGruplari.Caption = "Cari Grupları";
+            this.navBtn_CariGruplari.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Cari_Grup16x16;
+            this.navBtn_CariGruplari.Name = "navBtn_CariGruplari";
+            this.navBtn_CariGruplari.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_CariGruplari_LinkClicked);
+            // 
+            // navBtn_CariListesi
+            // 
+            this.navBtn_CariListesi.Caption = "Cari Listesi";
+            this.navBtn_CariListesi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Cari_Liste16x16;
+            this.navBtn_CariListesi.Name = "navBtn_CariListesi";
+            this.navBtn_CariListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_CariListesi_LinkClicked);
+            // 
+            // navBtn_CariHareketleri
+            // 
+            this.navBtn_CariHareketleri.Caption = "CariHareketleri";
+            this.navBtn_CariHareketleri.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Cari_Hareket16x16;
+            this.navBtn_CariHareketleri.Name = "navBtn_CariHareketleri";
+            this.navBtn_CariHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_CariHareketleri_LinkClicked);
+            // 
+            // navBarGroup3
+            // 
+            this.navBarGroup3.Caption = "Banka";
+            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_BankaKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_ParaTransferi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_BankaListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_BankaIslemi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_BankaHareketleri)});
+            this.navBarGroup3.Name = "navBarGroup3";
+            this.navBarGroup3.TopVisibleLinkIndex = 1;
+            // 
+            // navBtn_BankaKarti
+            // 
+            this.navBtn_BankaKarti.Caption = "Banka Açılış Kartı";
+            this.navBtn_BankaKarti.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Banka_Kartı16x16;
+            this.navBtn_BankaKarti.Name = "navBtn_BankaKarti";
+            this.navBtn_BankaKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_BankaKarti_LinkClicked);
+            // 
+            // navBtn_ParaTransferi
+            // 
+            this.navBtn_ParaTransferi.Caption = "Para Transferi";
+            this.navBtn_ParaTransferi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Banka_Havale16x16;
+            this.navBtn_ParaTransferi.Name = "navBtn_ParaTransferi";
+            this.navBtn_ParaTransferi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_ParaTransferi_LinkClicked);
+            // 
+            // navBtn_BankaListesi
+            // 
+            this.navBtn_BankaListesi.Caption = "Banka Listesi";
+            this.navBtn_BankaListesi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Banka_Liste16x16;
+            this.navBtn_BankaListesi.Name = "navBtn_BankaListesi";
+            this.navBtn_BankaListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_BankaListesi_LinkClicked);
+            // 
+            // navBtn_BankaIslemi
+            // 
+            this.navBtn_BankaIslemi.Caption = "Banka İşlemi";
+            this.navBtn_BankaIslemi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Banka_Islem16x16;
+            this.navBtn_BankaIslemi.Name = "navBtn_BankaIslemi";
+            this.navBtn_BankaIslemi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_BankaIslemi_LinkClicked);
+            // 
+            // navBtn_BankaHareketleri
+            // 
+            this.navBtn_BankaHareketleri.Caption = "Banka Hareketleri";
+            this.navBtn_BankaHareketleri.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Banka_Hareket16x16;
+            this.navBtn_BankaHareketleri.Name = "navBtn_BankaHareketleri";
+            this.navBtn_BankaHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_BankaHareketleri_LinkClicked);
+            // 
+            // navBarGroup4
+            // 
+            this.navBarGroup4.Caption = "Kasa";
+            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_KasaKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_KasaListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_KasaDevirIslem),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_KasaTahsilatOdeme),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_KasaHareketleri)});
+            this.navBarGroup4.Name = "navBarGroup4";
+            this.navBarGroup4.TopVisibleLinkIndex = 1;
+            // 
+            // navBtn_KasaKarti
+            // 
+            this.navBtn_KasaKarti.Caption = "Kasa Açılış Kartı";
+            this.navBtn_KasaKarti.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Kasa_Karti16x16;
+            this.navBtn_KasaKarti.Name = "navBtn_KasaKarti";
+            this.navBtn_KasaKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_KasaKarti_LinkClicked);
+            // 
+            // navBtn_KasaListesi
+            // 
+            this.navBtn_KasaListesi.Caption = "Kasa Listesi";
+            this.navBtn_KasaListesi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Kasa_Liste16x16;
+            this.navBtn_KasaListesi.Name = "navBtn_KasaListesi";
+            this.navBtn_KasaListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_KasaListesi_LinkClicked);
+            // 
+            // navBtn_KasaDevirIslem
+            // 
+            this.navBtn_KasaDevirIslem.Caption = "Kasa Devir / İşlem";
+            this.navBtn_KasaDevirIslem.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Kasa_Devir16x16;
+            this.navBtn_KasaDevirIslem.Name = "navBtn_KasaDevirIslem";
+            this.navBtn_KasaDevirIslem.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_KasaDevirIslem_LinkClicked);
+            // 
+            // navBtn_KasaTahsilatOdeme
+            // 
+            this.navBtn_KasaTahsilatOdeme.Caption = "Kasa Tahsilat / Ödeme";
+            this.navBtn_KasaTahsilatOdeme.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Kasa_Tahsilat16x16;
+            this.navBtn_KasaTahsilatOdeme.Name = "navBtn_KasaTahsilatOdeme";
+            this.navBtn_KasaTahsilatOdeme.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_KasaTahsilatOdeme_LinkClicked);
+            // 
+            // navBtn_KasaHareketleri
+            // 
+            this.navBtn_KasaHareketleri.Caption = "Kasa Hareketleri";
+            this.navBtn_KasaHareketleri.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Kasa_Hareket16x16;
+            this.navBtn_KasaHareketleri.Name = "navBtn_KasaHareketleri";
+            this.navBtn_KasaHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_KasaHareketleri_LinkClicked);
+            // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "Fatura";
+            this.navBarGroup5.Name = "navBarGroup5";
+            // 
             // frm_Anasayfa
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 414);
+            this.ClientSize = new System.Drawing.Size(758, 412);
+            this.Controls.Add(this.navBarControl1);
             this.Controls.Add(this.ribbonControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frm_Anasayfa";
             this.Ribbon = this.ribbonControl1;
@@ -411,6 +655,7 @@
             this.Text = "Anasayfa";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,6 +700,30 @@
         private DevExpress.XtraBars.BarButtonItem btn_AlisIrsaliyesi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem btn_KasaHareket;
+        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_StokKarti;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_StokListesi;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_StokGruplari;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_StokHareketleri;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_CariKarti;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_CariGruplari;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_CariListesi;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_CariHareketleri;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_BankaKarti;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_ParaTransferi;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_BankaListesi;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_BankaIslemi;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_BankaHareketleri;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_KasaKarti;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_KasaListesi;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_KasaDevirIslem;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_KasaTahsilatOdeme;
+        private DevExpress.XtraNavBar.NavBarItem navBtn_KasaHareketleri;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
     }
 }
 
