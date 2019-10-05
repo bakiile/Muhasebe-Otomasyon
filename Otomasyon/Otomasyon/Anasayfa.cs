@@ -20,6 +20,7 @@ namespace Otomasyon
             InitializeComponent();
         }
 
+        
         #region Stok Butonlari
 
         private void Btn_StokListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -198,7 +199,42 @@ namespace Otomasyon
             formRouter.KasaHareketleriAc(secim);
         }
 
+
         #endregion
 
+        private void Btn_KullaniciCek_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.KullaniciCekAc(secim,-1);
+        }
+
+        private void Btn_MusteriCeki_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.MusteriCekAc(secim, -1);
+        }
+
+        private void Btn_BankayaCekCikis_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.BankayaCekCikisiAc();
+        }
+
+        private void Btn_CariyeCekCikis_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.CariyeCekCikisiAc();
+        }
+
+        private void Btn_CekListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.CekListesiAc(secim);
+        }
+
+        private void Frm_Anasayfa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Btn_SatisFaturasi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.SatisFaturasiAc(secim, -1);
+        }
     }
 }

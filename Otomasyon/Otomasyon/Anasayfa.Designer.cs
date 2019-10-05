@@ -55,6 +55,11 @@
             this.btn_SatisIrsaliye = new DevExpress.XtraBars.BarButtonItem();
             this.btn_AlisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
             this.btn_KasaHareket = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_KullaniciCek = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_MusteriCeki = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_BankayaCekCikis = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_CariyeCekCikis = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_CekListesi = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Stok = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_Cari = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -66,18 +71,20 @@
             this.btn_Fatura = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBtn_StokKarti = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBtn_StokListesi = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBtn_StokGruplari = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBtn_StokHareketleri = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBtn_CariKarti = new DevExpress.XtraNavBar.NavBarItem();
             this.navBtn_CariGruplari = new DevExpress.XtraNavBar.NavBarItem();
             this.navBtn_CariListesi = new DevExpress.XtraNavBar.NavBarItem();
             this.navBtn_CariHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBtn_StokKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_StokListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_StokGruplari = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBtn_StokHareketleri = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBtn_BankaKarti = new DevExpress.XtraNavBar.NavBarItem();
             this.navBtn_ParaTransferi = new DevExpress.XtraNavBar.NavBarItem();
@@ -91,6 +98,7 @@
             this.navBtn_KasaTahsilatOdeme = new DevExpress.XtraNavBar.NavBarItem();
             this.navBtn_KasaHareketleri = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -126,17 +134,23 @@
             this.btn_AlisIadeFaturasi,
             this.btn_SatisIrsaliye,
             this.btn_AlisIrsaliyesi,
-            this.btn_KasaHareket});
+            this.btn_KasaHareket,
+            this.btn_KullaniciCek,
+            this.btn_MusteriCeki,
+            this.btn_BankayaCekCikis,
+            this.btn_CariyeCekCikis,
+            this.btn_CekListesi});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 25;
+            this.ribbonControl1.MaxItemId = 30;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.tab_Stok,
             this.tab_Cari,
             this.ribbonPage1,
             this.ribbonPage2,
-            this.btn_Fatura});
-            this.ribbonControl1.Size = new System.Drawing.Size(758, 162);
+            this.btn_Fatura,
+            this.ribbonPage3});
+            this.ribbonControl1.Size = new System.Drawing.Size(903, 162);
             // 
             // btn_StokKarti
             // 
@@ -279,6 +293,7 @@
             this.btn_SatisFaturasi.Id = 18;
             this.btn_SatisFaturasi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Satis_Faturasi;
             this.btn_SatisFaturasi.Name = "btn_SatisFaturasi";
+            this.btn_SatisFaturasi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_SatisFaturasi_ItemClick);
             // 
             // btn_SatisIadeFaturasi
             // 
@@ -323,6 +338,51 @@
             this.btn_KasaHareket.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Kasa_Hareket32x32;
             this.btn_KasaHareket.Name = "btn_KasaHareket";
             this.btn_KasaHareket.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KasaHareket_ItemClick);
+            // 
+            // btn_KullaniciCek
+            // 
+            this.btn_KullaniciCek.Caption = "Kullanıcı Çek";
+            this.btn_KullaniciCek.Id = 25;
+            this.btn_KullaniciCek.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Cek_Kendi32x32;
+            this.btn_KullaniciCek.LargeWidth = 70;
+            this.btn_KullaniciCek.Name = "btn_KullaniciCek";
+            this.btn_KullaniciCek.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KullaniciCek_ItemClick);
+            // 
+            // btn_MusteriCeki
+            // 
+            this.btn_MusteriCeki.Caption = "Müşteri Çeki";
+            this.btn_MusteriCeki.Id = 26;
+            this.btn_MusteriCeki.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Cek_Musteri32x32;
+            this.btn_MusteriCeki.LargeWidth = 70;
+            this.btn_MusteriCeki.Name = "btn_MusteriCeki";
+            this.btn_MusteriCeki.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_MusteriCeki_ItemClick);
+            // 
+            // btn_BankayaCekCikis
+            // 
+            this.btn_BankayaCekCikis.Caption = "Bankaya Çek Çıkışı";
+            this.btn_BankayaCekCikis.Id = 27;
+            this.btn_BankayaCekCikis.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Cek_Bankaya32x32;
+            this.btn_BankayaCekCikis.LargeWidth = 70;
+            this.btn_BankayaCekCikis.Name = "btn_BankayaCekCikis";
+            this.btn_BankayaCekCikis.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_BankayaCekCikis_ItemClick);
+            // 
+            // btn_CariyeCekCikis
+            // 
+            this.btn_CariyeCekCikis.Caption = "Cariye Çek Çıkışı";
+            this.btn_CariyeCekCikis.Id = 28;
+            this.btn_CariyeCekCikis.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Cek_Cariye32x32;
+            this.btn_CariyeCekCikis.LargeWidth = 70;
+            this.btn_CariyeCekCikis.Name = "btn_CariyeCekCikis";
+            this.btn_CariyeCekCikis.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CariyeCekCikis_ItemClick);
+            // 
+            // btn_CekListesi
+            // 
+            this.btn_CekListesi.Caption = "Çek Listesi";
+            this.btn_CekListesi.Id = 29;
+            this.btn_CekListesi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Cek_MusteriLst32x32;
+            this.btn_CekListesi.LargeWidth = 70;
+            this.btn_CekListesi.Name = "btn_CekListesi";
+            this.btn_CekListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CekListesi_ItemClick);
             // 
             // tab_Stok
             // 
@@ -419,6 +479,24 @@
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "İrsaliye İşlem Faturası";
             // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7});
+            this.ribbonPage3.ImageOptions.Image = global::Otomasyon.Properties.Resources.Cek32x32;
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "Çek İşlemleri";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.btn_KullaniciCek);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btn_MusteriCeki);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btn_BankayaCekCikis);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btn_CariyeCekCikis);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btn_CekListesi);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Çek İşlem Sayfası";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
@@ -456,48 +534,10 @@
             this.navBarControl1.Location = new System.Drawing.Point(0, 162);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 140;
-            this.navBarControl1.Size = new System.Drawing.Size(140, 250);
+            this.navBarControl1.Size = new System.Drawing.Size(140, 348);
             this.navBarControl1.TabIndex = 2;
             this.navBarControl1.Text = "navBarControl1";
             this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinNavigationPaneViewInfoRegistrator("DevExpress Style");
-            // 
-            // navBarGroup1
-            // 
-            this.navBarGroup1.Caption = "Stok";
-            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokKarti),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokListesi),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokGruplari),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokHareketleri)});
-            this.navBarGroup1.Name = "navBarGroup1";
-            // 
-            // navBtn_StokKarti
-            // 
-            this.navBtn_StokKarti.Caption = "Stok Açılış Kartı";
-            this.navBtn_StokKarti.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Kartı16x16;
-            this.navBtn_StokKarti.Name = "navBtn_StokKarti";
-            this.navBtn_StokKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokKarti_LinkClicked);
-            // 
-            // navBtn_StokListesi
-            // 
-            this.navBtn_StokListesi.Caption = "Stok Listesi";
-            this.navBtn_StokListesi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Liste16x16;
-            this.navBtn_StokListesi.Name = "navBtn_StokListesi";
-            this.navBtn_StokListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokListesi_LinkClicked);
-            // 
-            // navBtn_StokGruplari
-            // 
-            this.navBtn_StokGruplari.Caption = "Stok Grupları";
-            this.navBtn_StokGruplari.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Grup16x16;
-            this.navBtn_StokGruplari.Name = "navBtn_StokGruplari";
-            this.navBtn_StokGruplari.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokGruplari_LinkClicked);
-            // 
-            // navBtn_StokHareketleri
-            // 
-            this.navBtn_StokHareketleri.Caption = "Stok Hareketleri";
-            this.navBtn_StokHareketleri.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Hareket16x16;
-            this.navBtn_StokHareketleri.Name = "navBtn_StokHareketleri";
-            this.navBtn_StokHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokHareketleri_LinkClicked);
             // 
             // navBarGroup2
             // 
@@ -537,6 +577,44 @@
             this.navBtn_CariHareketleri.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Cari_Hareket16x16;
             this.navBtn_CariHareketleri.Name = "navBtn_CariHareketleri";
             this.navBtn_CariHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_CariHareketleri_LinkClicked);
+            // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "Stok";
+            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokGruplari),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBtn_StokHareketleri)});
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBtn_StokKarti
+            // 
+            this.navBtn_StokKarti.Caption = "Stok Açılış Kartı";
+            this.navBtn_StokKarti.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Kartı16x16;
+            this.navBtn_StokKarti.Name = "navBtn_StokKarti";
+            this.navBtn_StokKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokKarti_LinkClicked);
+            // 
+            // navBtn_StokListesi
+            // 
+            this.navBtn_StokListesi.Caption = "Stok Listesi";
+            this.navBtn_StokListesi.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Liste16x16;
+            this.navBtn_StokListesi.Name = "navBtn_StokListesi";
+            this.navBtn_StokListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokListesi_LinkClicked);
+            // 
+            // navBtn_StokGruplari
+            // 
+            this.navBtn_StokGruplari.Caption = "Stok Grupları";
+            this.navBtn_StokGruplari.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Grup16x16;
+            this.navBtn_StokGruplari.Name = "navBtn_StokGruplari";
+            this.navBtn_StokGruplari.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokGruplari_LinkClicked);
+            // 
+            // navBtn_StokHareketleri
+            // 
+            this.navBtn_StokHareketleri.Caption = "Stok Hareketleri";
+            this.navBtn_StokHareketleri.ImageOptions.SmallImage = global::Otomasyon.Properties.Resources.Stok_Hareket16x16;
+            this.navBtn_StokHareketleri.Name = "navBtn_StokHareketleri";
+            this.navBtn_StokHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBtn_StokHareketleri_LinkClicked);
             // 
             // navBarGroup3
             // 
@@ -637,13 +715,18 @@
             this.navBarGroup5.Caption = "Fatura";
             this.navBarGroup5.Name = "navBarGroup5";
             // 
+            // ribbonPage4
+            // 
+            this.ribbonPage4.Name = "ribbonPage4";
+            this.ribbonPage4.Text = "ribbonPage4";
+            // 
             // frm_Anasayfa
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 412);
+            this.ClientSize = new System.Drawing.Size(903, 510);
             this.Controls.Add(this.navBarControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -653,6 +736,8 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Anasayfa_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
@@ -724,6 +809,14 @@
         private DevExpress.XtraNavBar.NavBarItem navBtn_KasaTahsilatOdeme;
         private DevExpress.XtraNavBar.NavBarItem navBtn_KasaHareketleri;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.BarButtonItem btn_KullaniciCek;
+        private DevExpress.XtraBars.BarButtonItem btn_MusteriCeki;
+        private DevExpress.XtraBars.BarButtonItem btn_BankayaCekCikis;
+        private DevExpress.XtraBars.BarButtonItem btn_CariyeCekCikis;
+        private DevExpress.XtraBars.BarButtonItem btn_CekListesi;
     }
 }
 

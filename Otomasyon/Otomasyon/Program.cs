@@ -19,7 +19,7 @@ namespace Otomasyon
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new frm_Anasayfa());
+            Application.Run(new frm_Login());
         }
     }
 }

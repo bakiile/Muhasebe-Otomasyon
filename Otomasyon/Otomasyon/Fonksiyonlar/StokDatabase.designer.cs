@@ -57,14 +57,28 @@ namespace Otomasyon.Fonksiyonlar
     partial void InsertTBL_BANKALAR(TBL_BANKALAR instance);
     partial void UpdateTBL_BANKALAR(TBL_BANKALAR instance);
     partial void DeleteTBL_BANKALAR(TBL_BANKALAR instance);
+    partial void InsertTBL_BORDROLAR(TBL_BORDROLAR instance);
+    partial void UpdateTBL_BORDROLAR(TBL_BORDROLAR instance);
+    partial void DeleteTBL_BORDROLAR(TBL_BORDROLAR instance);
+    partial void InsertTBL_CEKLER(TBL_CEKLER instance);
+    partial void UpdateTBL_CEKLER(TBL_CEKLER instance);
+    partial void DeleteTBL_CEKLER(TBL_CEKLER instance);
+    partial void InsertTBL_STOKHAREKETLERI(TBL_STOKHAREKETLERI instance);
+    partial void UpdateTBL_STOKHAREKETLERI(TBL_STOKHAREKETLERI instance);
+    partial void DeleteTBL_STOKHAREKETLERI(TBL_STOKHAREKETLERI instance);
+    partial void InsertTBL_IRSALIYELER(TBL_IRSALIYELER instance);
+    partial void UpdateTBL_IRSALIYELER(TBL_IRSALIYELER instance);
+    partial void DeleteTBL_IRSALIYELER(TBL_IRSALIYELER instance);
+    partial void InsertTBL_FATURALAR(TBL_FATURALAR instance);
+    partial void UpdateTBL_FATURALAR(TBL_FATURALAR instance);
+    partial void DeleteTBL_FATURALAR(TBL_FATURALAR instance);
     #endregion
 		
-		public StokDatabaseDataContext() : 
-				base(global::Otomasyon.Properties.Settings.Default.DbStokConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
-		
+        public StokDatabaseDataContext() :
+                base(global::Otomasyon.Properties.Settings.Default.cs1 + Otomasyon.Properties.Settings.Default.cs_Server + Otomasyon.Properties.Settings.Default.cs2+ Otomasyon.Properties.Settings.Default.cs_Database + Otomasyon.Properties.Settings.Default.cs3 + Otomasyon.Properties.Settings.Default.cs_UserID + Otomasyon.Properties.Settings.Default.cs4 + Otomasyon.Properties.Settings.Default.cs_Password)
+        {
+
+        }
 		public StokDatabaseDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
@@ -206,6 +220,46 @@ namespace Otomasyon.Fonksiyonlar
 			get
 			{
 				return this.GetTable<VW_BANKAHAREKETLERI>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_BORDROLAR> TBL_BORDROLAR
+		{
+			get
+			{
+				return this.GetTable<TBL_BORDROLAR>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_CEKLER> TBL_CEKLER
+		{
+			get
+			{
+				return this.GetTable<TBL_CEKLER>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_STOKHAREKETLERI> TBL_STOKHAREKETLERI
+		{
+			get
+			{
+				return this.GetTable<TBL_STOKHAREKETLERI>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_IRSALIYELER> TBL_IRSALIYELER
+		{
+			get
+			{
+				return this.GetTable<TBL_IRSALIYELER>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_FATURALAR> TBL_FATURALAR
+		{
+			get
+			{
+				return this.GetTable<TBL_FATURALAR>();
 			}
 		}
 	}
@@ -4214,6 +4268,1996 @@ namespace Otomasyon.Fonksiyonlar
 				{
 					this._HESAPADI = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_BORDROLAR")]
+	public partial class TBL_BORDROLAR : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _BORDROID;
+		
+		private string _NUMARA;
+		
+		private System.Nullable<int> _CARIID;
+		
+		private System.Nullable<System.DateTime> _TARIH;
+		
+		private string _ACIKLAMA;
+		
+		private System.Nullable<int> _SAVEUSER;
+		
+		private System.Nullable<System.DateTime> _SAVEDATE;
+		
+		private System.Nullable<int> _EDITUSER;
+		
+		private System.Nullable<System.DateTime> _EDITDATE;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnBORDROIDChanging(int value);
+    partial void OnBORDROIDChanged();
+    partial void OnNUMARAChanging(string value);
+    partial void OnNUMARAChanged();
+    partial void OnCARIIDChanging(System.Nullable<int> value);
+    partial void OnCARIIDChanged();
+    partial void OnTARIHChanging(System.Nullable<System.DateTime> value);
+    partial void OnTARIHChanged();
+    partial void OnACIKLAMAChanging(string value);
+    partial void OnACIKLAMAChanged();
+    partial void OnSAVEUSERChanging(System.Nullable<int> value);
+    partial void OnSAVEUSERChanged();
+    partial void OnSAVEDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnSAVEDATEChanged();
+    partial void OnEDITUSERChanging(System.Nullable<int> value);
+    partial void OnEDITUSERChanged();
+    partial void OnEDITDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnEDITDATEChanged();
+    #endregion
+		
+		public TBL_BORDROLAR()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BORDROID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int BORDROID
+		{
+			get
+			{
+				return this._BORDROID;
+			}
+			set
+			{
+				if ((this._BORDROID != value))
+				{
+					this.OnBORDROIDChanging(value);
+					this.SendPropertyChanging();
+					this._BORDROID = value;
+					this.SendPropertyChanged("BORDROID");
+					this.OnBORDROIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NUMARA", DbType="VarChar(30)")]
+		public string NUMARA
+		{
+			get
+			{
+				return this._NUMARA;
+			}
+			set
+			{
+				if ((this._NUMARA != value))
+				{
+					this.OnNUMARAChanging(value);
+					this.SendPropertyChanging();
+					this._NUMARA = value;
+					this.SendPropertyChanged("NUMARA");
+					this.OnNUMARAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIID", DbType="Int")]
+		public System.Nullable<int> CARIID
+		{
+			get
+			{
+				return this._CARIID;
+			}
+			set
+			{
+				if ((this._CARIID != value))
+				{
+					this.OnCARIIDChanging(value);
+					this.SendPropertyChanging();
+					this._CARIID = value;
+					this.SendPropertyChanged("CARIID");
+					this.OnCARIIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TARIH", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TARIH
+		{
+			get
+			{
+				return this._TARIH;
+			}
+			set
+			{
+				if ((this._TARIH != value))
+				{
+					this.OnTARIHChanging(value);
+					this.SendPropertyChanging();
+					this._TARIH = value;
+					this.SendPropertyChanged("TARIH");
+					this.OnTARIHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACIKLAMA", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string ACIKLAMA
+		{
+			get
+			{
+				return this._ACIKLAMA;
+			}
+			set
+			{
+				if ((this._ACIKLAMA != value))
+				{
+					this.OnACIKLAMAChanging(value);
+					this.SendPropertyChanging();
+					this._ACIKLAMA = value;
+					this.SendPropertyChanged("ACIKLAMA");
+					this.OnACIKLAMAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEUSER", DbType="Int")]
+		public System.Nullable<int> SAVEUSER
+		{
+			get
+			{
+				return this._SAVEUSER;
+			}
+			set
+			{
+				if ((this._SAVEUSER != value))
+				{
+					this.OnSAVEUSERChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEUSER = value;
+					this.SendPropertyChanged("SAVEUSER");
+					this.OnSAVEUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SAVEDATE
+		{
+			get
+			{
+				return this._SAVEDATE;
+			}
+			set
+			{
+				if ((this._SAVEDATE != value))
+				{
+					this.OnSAVEDATEChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEDATE = value;
+					this.SendPropertyChanged("SAVEDATE");
+					this.OnSAVEDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITUSER", DbType="Int")]
+		public System.Nullable<int> EDITUSER
+		{
+			get
+			{
+				return this._EDITUSER;
+			}
+			set
+			{
+				if ((this._EDITUSER != value))
+				{
+					this.OnEDITUSERChanging(value);
+					this.SendPropertyChanging();
+					this._EDITUSER = value;
+					this.SendPropertyChanged("EDITUSER");
+					this.OnEDITUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> EDITDATE
+		{
+			get
+			{
+				return this._EDITDATE;
+			}
+			set
+			{
+				if ((this._EDITDATE != value))
+				{
+					this.OnEDITDATEChanging(value);
+					this.SendPropertyChanging();
+					this._EDITDATE = value;
+					this.SendPropertyChanged("EDITDATE");
+					this.OnEDITDATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_CEKLER")]
+	public partial class TBL_CEKLER : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _CEKID;
+		
+		private string _BELGENO;
+		
+		private string _CEKNO;
+		
+		private string _ASILBORCLU;
+		
+		private string _TIP;
+		
+		private System.Nullable<int> _ALINANCARIID;
+		
+		private System.Nullable<int> _VERILENCARIID;
+		
+		private string _ACKODU;
+		
+		private System.Nullable<System.DateTime> _VADETARIHI;
+		
+		private string _BANKA;
+		
+		private string _SUBE;
+		
+		private string _HESAPNO;
+		
+		private System.Nullable<decimal> _TUTAR;
+		
+		private string _ACIKLAMA;
+		
+		private System.Nullable<System.DateTime> _VERILENBANKATARIHI;
+		
+		private string _VERILENBANKABELGENO;
+		
+		private System.Nullable<System.DateTime> _VERILENCARITARIHI;
+		
+		private string _VERILENCARIBELGENO;
+		
+		private System.Nullable<int> _VERILENBANKAID;
+		
+		private string _DURUM;
+		
+		private string _TAHSIL;
+		
+		private System.Nullable<int> _BORDROID;
+		
+		private System.Nullable<System.DateTime> _TARIH;
+		
+		private System.Nullable<int> _SAVEUSER;
+		
+		private System.Nullable<System.DateTime> _SAVEDATE;
+		
+		private System.Nullable<int> _EDITUSER;
+		
+		private System.Nullable<System.DateTime> _EDITDATE;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnCEKIDChanging(int value);
+    partial void OnCEKIDChanged();
+    partial void OnBELGENOChanging(string value);
+    partial void OnBELGENOChanged();
+    partial void OnCEKNOChanging(string value);
+    partial void OnCEKNOChanged();
+    partial void OnASILBORCLUChanging(string value);
+    partial void OnASILBORCLUChanged();
+    partial void OnTIPChanging(string value);
+    partial void OnTIPChanged();
+    partial void OnALINANCARIIDChanging(System.Nullable<int> value);
+    partial void OnALINANCARIIDChanged();
+    partial void OnVERILENCARIIDChanging(System.Nullable<int> value);
+    partial void OnVERILENCARIIDChanged();
+    partial void OnACKODUChanging(string value);
+    partial void OnACKODUChanged();
+    partial void OnVADETARIHIChanging(System.Nullable<System.DateTime> value);
+    partial void OnVADETARIHIChanged();
+    partial void OnBANKAChanging(string value);
+    partial void OnBANKAChanged();
+    partial void OnSUBEChanging(string value);
+    partial void OnSUBEChanged();
+    partial void OnHESAPNOChanging(string value);
+    partial void OnHESAPNOChanged();
+    partial void OnTUTARChanging(System.Nullable<decimal> value);
+    partial void OnTUTARChanged();
+    partial void OnACIKLAMAChanging(string value);
+    partial void OnACIKLAMAChanged();
+    partial void OnVERILENBANKATARIHIChanging(System.Nullable<System.DateTime> value);
+    partial void OnVERILENBANKATARIHIChanged();
+    partial void OnVERILENBANKABELGENOChanging(string value);
+    partial void OnVERILENBANKABELGENOChanged();
+    partial void OnVERILENCARITARIHIChanging(System.Nullable<System.DateTime> value);
+    partial void OnVERILENCARITARIHIChanged();
+    partial void OnVERILENCARIBELGENOChanging(string value);
+    partial void OnVERILENCARIBELGENOChanged();
+    partial void OnVERILENBANKAIDChanging(System.Nullable<int> value);
+    partial void OnVERILENBANKAIDChanged();
+    partial void OnDURUMChanging(string value);
+    partial void OnDURUMChanged();
+    partial void OnTAHSILChanging(string value);
+    partial void OnTAHSILChanged();
+    partial void OnBORDROIDChanging(System.Nullable<int> value);
+    partial void OnBORDROIDChanged();
+    partial void OnTARIHChanging(System.Nullable<System.DateTime> value);
+    partial void OnTARIHChanged();
+    partial void OnSAVEUSERChanging(System.Nullable<int> value);
+    partial void OnSAVEUSERChanged();
+    partial void OnSAVEDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnSAVEDATEChanged();
+    partial void OnEDITUSERChanging(System.Nullable<int> value);
+    partial void OnEDITUSERChanged();
+    partial void OnEDITDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnEDITDATEChanged();
+    #endregion
+		
+		public TBL_CEKLER()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CEKID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int CEKID
+		{
+			get
+			{
+				return this._CEKID;
+			}
+			set
+			{
+				if ((this._CEKID != value))
+				{
+					this.OnCEKIDChanging(value);
+					this.SendPropertyChanging();
+					this._CEKID = value;
+					this.SendPropertyChanged("CEKID");
+					this.OnCEKIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BELGENO", DbType="VarChar(30)")]
+		public string BELGENO
+		{
+			get
+			{
+				return this._BELGENO;
+			}
+			set
+			{
+				if ((this._BELGENO != value))
+				{
+					this.OnBELGENOChanging(value);
+					this.SendPropertyChanging();
+					this._BELGENO = value;
+					this.SendPropertyChanged("BELGENO");
+					this.OnBELGENOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CEKNO", DbType="VarChar(30)")]
+		public string CEKNO
+		{
+			get
+			{
+				return this._CEKNO;
+			}
+			set
+			{
+				if ((this._CEKNO != value))
+				{
+					this.OnCEKNOChanging(value);
+					this.SendPropertyChanging();
+					this._CEKNO = value;
+					this.SendPropertyChanged("CEKNO");
+					this.OnCEKNOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ASILBORCLU", DbType="VarChar(50)")]
+		public string ASILBORCLU
+		{
+			get
+			{
+				return this._ASILBORCLU;
+			}
+			set
+			{
+				if ((this._ASILBORCLU != value))
+				{
+					this.OnASILBORCLUChanging(value);
+					this.SendPropertyChanging();
+					this._ASILBORCLU = value;
+					this.SendPropertyChanged("ASILBORCLU");
+					this.OnASILBORCLUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIP", DbType="VarChar(50)")]
+		public string TIP
+		{
+			get
+			{
+				return this._TIP;
+			}
+			set
+			{
+				if ((this._TIP != value))
+				{
+					this.OnTIPChanging(value);
+					this.SendPropertyChanging();
+					this._TIP = value;
+					this.SendPropertyChanged("TIP");
+					this.OnTIPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ALINANCARIID", DbType="Int")]
+		public System.Nullable<int> ALINANCARIID
+		{
+			get
+			{
+				return this._ALINANCARIID;
+			}
+			set
+			{
+				if ((this._ALINANCARIID != value))
+				{
+					this.OnALINANCARIIDChanging(value);
+					this.SendPropertyChanging();
+					this._ALINANCARIID = value;
+					this.SendPropertyChanged("ALINANCARIID");
+					this.OnALINANCARIIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERILENCARIID", DbType="Int")]
+		public System.Nullable<int> VERILENCARIID
+		{
+			get
+			{
+				return this._VERILENCARIID;
+			}
+			set
+			{
+				if ((this._VERILENCARIID != value))
+				{
+					this.OnVERILENCARIIDChanging(value);
+					this.SendPropertyChanging();
+					this._VERILENCARIID = value;
+					this.SendPropertyChanged("VERILENCARIID");
+					this.OnVERILENCARIIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACKODU", DbType="VarChar(1)")]
+		public string ACKODU
+		{
+			get
+			{
+				return this._ACKODU;
+			}
+			set
+			{
+				if ((this._ACKODU != value))
+				{
+					this.OnACKODUChanging(value);
+					this.SendPropertyChanging();
+					this._ACKODU = value;
+					this.SendPropertyChanged("ACKODU");
+					this.OnACKODUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VADETARIHI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> VADETARIHI
+		{
+			get
+			{
+				return this._VADETARIHI;
+			}
+			set
+			{
+				if ((this._VADETARIHI != value))
+				{
+					this.OnVADETARIHIChanging(value);
+					this.SendPropertyChanging();
+					this._VADETARIHI = value;
+					this.SendPropertyChanged("VADETARIHI");
+					this.OnVADETARIHIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BANKA", DbType="VarChar(50)")]
+		public string BANKA
+		{
+			get
+			{
+				return this._BANKA;
+			}
+			set
+			{
+				if ((this._BANKA != value))
+				{
+					this.OnBANKAChanging(value);
+					this.SendPropertyChanging();
+					this._BANKA = value;
+					this.SendPropertyChanged("BANKA");
+					this.OnBANKAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SUBE", DbType="VarChar(50)")]
+		public string SUBE
+		{
+			get
+			{
+				return this._SUBE;
+			}
+			set
+			{
+				if ((this._SUBE != value))
+				{
+					this.OnSUBEChanging(value);
+					this.SendPropertyChanging();
+					this._SUBE = value;
+					this.SendPropertyChanged("SUBE");
+					this.OnSUBEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HESAPNO", DbType="VarChar(50)")]
+		public string HESAPNO
+		{
+			get
+			{
+				return this._HESAPNO;
+			}
+			set
+			{
+				if ((this._HESAPNO != value))
+				{
+					this.OnHESAPNOChanging(value);
+					this.SendPropertyChanging();
+					this._HESAPNO = value;
+					this.SendPropertyChanged("HESAPNO");
+					this.OnHESAPNOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TUTAR", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> TUTAR
+		{
+			get
+			{
+				return this._TUTAR;
+			}
+			set
+			{
+				if ((this._TUTAR != value))
+				{
+					this.OnTUTARChanging(value);
+					this.SendPropertyChanging();
+					this._TUTAR = value;
+					this.SendPropertyChanged("TUTAR");
+					this.OnTUTARChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACIKLAMA", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string ACIKLAMA
+		{
+			get
+			{
+				return this._ACIKLAMA;
+			}
+			set
+			{
+				if ((this._ACIKLAMA != value))
+				{
+					this.OnACIKLAMAChanging(value);
+					this.SendPropertyChanging();
+					this._ACIKLAMA = value;
+					this.SendPropertyChanged("ACIKLAMA");
+					this.OnACIKLAMAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERILENBANKATARIHI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> VERILENBANKATARIHI
+		{
+			get
+			{
+				return this._VERILENBANKATARIHI;
+			}
+			set
+			{
+				if ((this._VERILENBANKATARIHI != value))
+				{
+					this.OnVERILENBANKATARIHIChanging(value);
+					this.SendPropertyChanging();
+					this._VERILENBANKATARIHI = value;
+					this.SendPropertyChanged("VERILENBANKATARIHI");
+					this.OnVERILENBANKATARIHIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERILENBANKABELGENO", DbType="VarChar(30)")]
+		public string VERILENBANKABELGENO
+		{
+			get
+			{
+				return this._VERILENBANKABELGENO;
+			}
+			set
+			{
+				if ((this._VERILENBANKABELGENO != value))
+				{
+					this.OnVERILENBANKABELGENOChanging(value);
+					this.SendPropertyChanging();
+					this._VERILENBANKABELGENO = value;
+					this.SendPropertyChanged("VERILENBANKABELGENO");
+					this.OnVERILENBANKABELGENOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERILENCARITARIHI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> VERILENCARITARIHI
+		{
+			get
+			{
+				return this._VERILENCARITARIHI;
+			}
+			set
+			{
+				if ((this._VERILENCARITARIHI != value))
+				{
+					this.OnVERILENCARITARIHIChanging(value);
+					this.SendPropertyChanging();
+					this._VERILENCARITARIHI = value;
+					this.SendPropertyChanged("VERILENCARITARIHI");
+					this.OnVERILENCARITARIHIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERILENCARIBELGENO", DbType="VarChar(30)")]
+		public string VERILENCARIBELGENO
+		{
+			get
+			{
+				return this._VERILENCARIBELGENO;
+			}
+			set
+			{
+				if ((this._VERILENCARIBELGENO != value))
+				{
+					this.OnVERILENCARIBELGENOChanging(value);
+					this.SendPropertyChanging();
+					this._VERILENCARIBELGENO = value;
+					this.SendPropertyChanged("VERILENCARIBELGENO");
+					this.OnVERILENCARIBELGENOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERILENBANKAID", DbType="Int")]
+		public System.Nullable<int> VERILENBANKAID
+		{
+			get
+			{
+				return this._VERILENBANKAID;
+			}
+			set
+			{
+				if ((this._VERILENBANKAID != value))
+				{
+					this.OnVERILENBANKAIDChanging(value);
+					this.SendPropertyChanging();
+					this._VERILENBANKAID = value;
+					this.SendPropertyChanged("VERILENBANKAID");
+					this.OnVERILENBANKAIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DURUM", DbType="VarChar(50)")]
+		public string DURUM
+		{
+			get
+			{
+				return this._DURUM;
+			}
+			set
+			{
+				if ((this._DURUM != value))
+				{
+					this.OnDURUMChanging(value);
+					this.SendPropertyChanging();
+					this._DURUM = value;
+					this.SendPropertyChanged("DURUM");
+					this.OnDURUMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TAHSIL", DbType="VarChar(50)")]
+		public string TAHSIL
+		{
+			get
+			{
+				return this._TAHSIL;
+			}
+			set
+			{
+				if ((this._TAHSIL != value))
+				{
+					this.OnTAHSILChanging(value);
+					this.SendPropertyChanging();
+					this._TAHSIL = value;
+					this.SendPropertyChanged("TAHSIL");
+					this.OnTAHSILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BORDROID", DbType="Int")]
+		public System.Nullable<int> BORDROID
+		{
+			get
+			{
+				return this._BORDROID;
+			}
+			set
+			{
+				if ((this._BORDROID != value))
+				{
+					this.OnBORDROIDChanging(value);
+					this.SendPropertyChanging();
+					this._BORDROID = value;
+					this.SendPropertyChanged("BORDROID");
+					this.OnBORDROIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TARIH", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TARIH
+		{
+			get
+			{
+				return this._TARIH;
+			}
+			set
+			{
+				if ((this._TARIH != value))
+				{
+					this.OnTARIHChanging(value);
+					this.SendPropertyChanging();
+					this._TARIH = value;
+					this.SendPropertyChanged("TARIH");
+					this.OnTARIHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEUSER", DbType="Int")]
+		public System.Nullable<int> SAVEUSER
+		{
+			get
+			{
+				return this._SAVEUSER;
+			}
+			set
+			{
+				if ((this._SAVEUSER != value))
+				{
+					this.OnSAVEUSERChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEUSER = value;
+					this.SendPropertyChanged("SAVEUSER");
+					this.OnSAVEUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SAVEDATE
+		{
+			get
+			{
+				return this._SAVEDATE;
+			}
+			set
+			{
+				if ((this._SAVEDATE != value))
+				{
+					this.OnSAVEDATEChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEDATE = value;
+					this.SendPropertyChanged("SAVEDATE");
+					this.OnSAVEDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITUSER", DbType="Int")]
+		public System.Nullable<int> EDITUSER
+		{
+			get
+			{
+				return this._EDITUSER;
+			}
+			set
+			{
+				if ((this._EDITUSER != value))
+				{
+					this.OnEDITUSERChanging(value);
+					this.SendPropertyChanging();
+					this._EDITUSER = value;
+					this.SendPropertyChanged("EDITUSER");
+					this.OnEDITUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> EDITDATE
+		{
+			get
+			{
+				return this._EDITDATE;
+			}
+			set
+			{
+				if ((this._EDITDATE != value))
+				{
+					this.OnEDITDATEChanging(value);
+					this.SendPropertyChanging();
+					this._EDITDATE = value;
+					this.SendPropertyChanged("EDITDATE");
+					this.OnEDITDATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_STOKHAREKETLERI")]
+	public partial class TBL_STOKHAREKETLERI : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private System.Nullable<int> _FATURAID;
+		
+		private System.Nullable<int> _IRSALIYEID;
+		
+		private string _STOKKODU;
+		
+		private string _GCKODU;
+		
+		private System.Nullable<int> _MIKTAR;
+		
+		private System.Nullable<decimal> _BIRIMFIYAT;
+		
+		private System.Nullable<decimal> _KDV;
+		
+		private string _TIPI;
+		
+		private System.Nullable<int> _SAVEUSER;
+		
+		private System.Nullable<System.DateTime> _SAVEDATE;
+		
+		private System.Nullable<int> _EDITUSER;
+		
+		private System.Nullable<System.DateTime> _EDITDATE;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnFATURAIDChanging(System.Nullable<int> value);
+    partial void OnFATURAIDChanged();
+    partial void OnIRSALIYEIDChanging(System.Nullable<int> value);
+    partial void OnIRSALIYEIDChanged();
+    partial void OnSTOKKODUChanging(string value);
+    partial void OnSTOKKODUChanged();
+    partial void OnGCKODUChanging(string value);
+    partial void OnGCKODUChanged();
+    partial void OnMIKTARChanging(System.Nullable<int> value);
+    partial void OnMIKTARChanged();
+    partial void OnBIRIMFIYATChanging(System.Nullable<decimal> value);
+    partial void OnBIRIMFIYATChanged();
+    partial void OnKDVChanging(System.Nullable<decimal> value);
+    partial void OnKDVChanged();
+    partial void OnTIPIChanging(string value);
+    partial void OnTIPIChanged();
+    partial void OnSAVEUSERChanging(System.Nullable<int> value);
+    partial void OnSAVEUSERChanged();
+    partial void OnSAVEDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnSAVEDATEChanged();
+    partial void OnEDITUSERChanging(System.Nullable<int> value);
+    partial void OnEDITUSERChanged();
+    partial void OnEDITDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnEDITDATEChanged();
+    #endregion
+		
+		public TBL_STOKHAREKETLERI()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FATURAID", DbType="Int")]
+		public System.Nullable<int> FATURAID
+		{
+			get
+			{
+				return this._FATURAID;
+			}
+			set
+			{
+				if ((this._FATURAID != value))
+				{
+					this.OnFATURAIDChanging(value);
+					this.SendPropertyChanging();
+					this._FATURAID = value;
+					this.SendPropertyChanged("FATURAID");
+					this.OnFATURAIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IRSALIYEID", DbType="Int")]
+		public System.Nullable<int> IRSALIYEID
+		{
+			get
+			{
+				return this._IRSALIYEID;
+			}
+			set
+			{
+				if ((this._IRSALIYEID != value))
+				{
+					this.OnIRSALIYEIDChanging(value);
+					this.SendPropertyChanging();
+					this._IRSALIYEID = value;
+					this.SendPropertyChanged("IRSALIYEID");
+					this.OnIRSALIYEIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOKKODU", DbType="NVarChar(30)")]
+		public string STOKKODU
+		{
+			get
+			{
+				return this._STOKKODU;
+			}
+			set
+			{
+				if ((this._STOKKODU != value))
+				{
+					this.OnSTOKKODUChanging(value);
+					this.SendPropertyChanging();
+					this._STOKKODU = value;
+					this.SendPropertyChanged("STOKKODU");
+					this.OnSTOKKODUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GCKODU", DbType="NVarChar(1)")]
+		public string GCKODU
+		{
+			get
+			{
+				return this._GCKODU;
+			}
+			set
+			{
+				if ((this._GCKODU != value))
+				{
+					this.OnGCKODUChanging(value);
+					this.SendPropertyChanging();
+					this._GCKODU = value;
+					this.SendPropertyChanged("GCKODU");
+					this.OnGCKODUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MIKTAR", DbType="Int")]
+		public System.Nullable<int> MIKTAR
+		{
+			get
+			{
+				return this._MIKTAR;
+			}
+			set
+			{
+				if ((this._MIKTAR != value))
+				{
+					this.OnMIKTARChanging(value);
+					this.SendPropertyChanging();
+					this._MIKTAR = value;
+					this.SendPropertyChanged("MIKTAR");
+					this.OnMIKTARChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BIRIMFIYAT", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> BIRIMFIYAT
+		{
+			get
+			{
+				return this._BIRIMFIYAT;
+			}
+			set
+			{
+				if ((this._BIRIMFIYAT != value))
+				{
+					this.OnBIRIMFIYATChanging(value);
+					this.SendPropertyChanging();
+					this._BIRIMFIYAT = value;
+					this.SendPropertyChanged("BIRIMFIYAT");
+					this.OnBIRIMFIYATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KDV", DbType="Decimal(8,2)")]
+		public System.Nullable<decimal> KDV
+		{
+			get
+			{
+				return this._KDV;
+			}
+			set
+			{
+				if ((this._KDV != value))
+				{
+					this.OnKDVChanging(value);
+					this.SendPropertyChanging();
+					this._KDV = value;
+					this.SendPropertyChanged("KDV");
+					this.OnKDVChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPI", DbType="NVarChar(20)")]
+		public string TIPI
+		{
+			get
+			{
+				return this._TIPI;
+			}
+			set
+			{
+				if ((this._TIPI != value))
+				{
+					this.OnTIPIChanging(value);
+					this.SendPropertyChanging();
+					this._TIPI = value;
+					this.SendPropertyChanged("TIPI");
+					this.OnTIPIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEUSER", DbType="Int")]
+		public System.Nullable<int> SAVEUSER
+		{
+			get
+			{
+				return this._SAVEUSER;
+			}
+			set
+			{
+				if ((this._SAVEUSER != value))
+				{
+					this.OnSAVEUSERChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEUSER = value;
+					this.SendPropertyChanged("SAVEUSER");
+					this.OnSAVEUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SAVEDATE
+		{
+			get
+			{
+				return this._SAVEDATE;
+			}
+			set
+			{
+				if ((this._SAVEDATE != value))
+				{
+					this.OnSAVEDATEChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEDATE = value;
+					this.SendPropertyChanged("SAVEDATE");
+					this.OnSAVEDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITUSER", DbType="Int")]
+		public System.Nullable<int> EDITUSER
+		{
+			get
+			{
+				return this._EDITUSER;
+			}
+			set
+			{
+				if ((this._EDITUSER != value))
+				{
+					this.OnEDITUSERChanging(value);
+					this.SendPropertyChanging();
+					this._EDITUSER = value;
+					this.SendPropertyChanged("EDITUSER");
+					this.OnEDITUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> EDITDATE
+		{
+			get
+			{
+				return this._EDITDATE;
+			}
+			set
+			{
+				if ((this._EDITDATE != value))
+				{
+					this.OnEDITDATEChanging(value);
+					this.SendPropertyChanging();
+					this._EDITDATE = value;
+					this.SendPropertyChanged("EDITDATE");
+					this.OnEDITDATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_IRSALIYELER")]
+	public partial class TBL_IRSALIYELER : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IRSALIYEID;
+		
+		private string _IRSALIYESERI;
+		
+		private string _IRSALIYENO;
+		
+		private System.Nullable<int> _FATURAID;
+		
+		private string _CARIKODU;
+		
+		private System.Nullable<System.DateTime> _TARIHI;
+		
+		private string _ACIKLAMA;
+		
+		private System.Nullable<int> _SAVEUSER;
+		
+		private System.Nullable<System.DateTime> _SAVEDATE;
+		
+		private System.Nullable<int> _EDITUSER;
+		
+		private System.Nullable<System.DateTime> _EDITDATE;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIRSALIYEIDChanging(int value);
+    partial void OnIRSALIYEIDChanged();
+    partial void OnIRSALIYESERIChanging(string value);
+    partial void OnIRSALIYESERIChanged();
+    partial void OnIRSALIYENOChanging(string value);
+    partial void OnIRSALIYENOChanged();
+    partial void OnFATURAIDChanging(System.Nullable<int> value);
+    partial void OnFATURAIDChanged();
+    partial void OnCARIKODUChanging(string value);
+    partial void OnCARIKODUChanged();
+    partial void OnTARIHIChanging(System.Nullable<System.DateTime> value);
+    partial void OnTARIHIChanged();
+    partial void OnACIKLAMAChanging(string value);
+    partial void OnACIKLAMAChanged();
+    partial void OnSAVEUSERChanging(System.Nullable<int> value);
+    partial void OnSAVEUSERChanged();
+    partial void OnSAVEDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnSAVEDATEChanged();
+    partial void OnEDITUSERChanging(System.Nullable<int> value);
+    partial void OnEDITUSERChanged();
+    partial void OnEDITDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnEDITDATEChanged();
+    #endregion
+		
+		public TBL_IRSALIYELER()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IRSALIYEID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IRSALIYEID
+		{
+			get
+			{
+				return this._IRSALIYEID;
+			}
+			set
+			{
+				if ((this._IRSALIYEID != value))
+				{
+					this.OnIRSALIYEIDChanging(value);
+					this.SendPropertyChanging();
+					this._IRSALIYEID = value;
+					this.SendPropertyChanged("IRSALIYEID");
+					this.OnIRSALIYEIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IRSALIYESERI", DbType="NVarChar(5)")]
+		public string IRSALIYESERI
+		{
+			get
+			{
+				return this._IRSALIYESERI;
+			}
+			set
+			{
+				if ((this._IRSALIYESERI != value))
+				{
+					this.OnIRSALIYESERIChanging(value);
+					this.SendPropertyChanging();
+					this._IRSALIYESERI = value;
+					this.SendPropertyChanged("IRSALIYESERI");
+					this.OnIRSALIYESERIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IRSALIYENO", DbType="NVarChar(15)")]
+		public string IRSALIYENO
+		{
+			get
+			{
+				return this._IRSALIYENO;
+			}
+			set
+			{
+				if ((this._IRSALIYENO != value))
+				{
+					this.OnIRSALIYENOChanging(value);
+					this.SendPropertyChanging();
+					this._IRSALIYENO = value;
+					this.SendPropertyChanged("IRSALIYENO");
+					this.OnIRSALIYENOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FATURAID", DbType="Int")]
+		public System.Nullable<int> FATURAID
+		{
+			get
+			{
+				return this._FATURAID;
+			}
+			set
+			{
+				if ((this._FATURAID != value))
+				{
+					this.OnFATURAIDChanging(value);
+					this.SendPropertyChanging();
+					this._FATURAID = value;
+					this.SendPropertyChanged("FATURAID");
+					this.OnFATURAIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIKODU", DbType="NVarChar(30)")]
+		public string CARIKODU
+		{
+			get
+			{
+				return this._CARIKODU;
+			}
+			set
+			{
+				if ((this._CARIKODU != value))
+				{
+					this.OnCARIKODUChanging(value);
+					this.SendPropertyChanging();
+					this._CARIKODU = value;
+					this.SendPropertyChanged("CARIKODU");
+					this.OnCARIKODUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TARIHI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TARIHI
+		{
+			get
+			{
+				return this._TARIHI;
+			}
+			set
+			{
+				if ((this._TARIHI != value))
+				{
+					this.OnTARIHIChanging(value);
+					this.SendPropertyChanging();
+					this._TARIHI = value;
+					this.SendPropertyChanged("TARIHI");
+					this.OnTARIHIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACIKLAMA", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string ACIKLAMA
+		{
+			get
+			{
+				return this._ACIKLAMA;
+			}
+			set
+			{
+				if ((this._ACIKLAMA != value))
+				{
+					this.OnACIKLAMAChanging(value);
+					this.SendPropertyChanging();
+					this._ACIKLAMA = value;
+					this.SendPropertyChanged("ACIKLAMA");
+					this.OnACIKLAMAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEUSER", DbType="Int")]
+		public System.Nullable<int> SAVEUSER
+		{
+			get
+			{
+				return this._SAVEUSER;
+			}
+			set
+			{
+				if ((this._SAVEUSER != value))
+				{
+					this.OnSAVEUSERChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEUSER = value;
+					this.SendPropertyChanged("SAVEUSER");
+					this.OnSAVEUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SAVEDATE
+		{
+			get
+			{
+				return this._SAVEDATE;
+			}
+			set
+			{
+				if ((this._SAVEDATE != value))
+				{
+					this.OnSAVEDATEChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEDATE = value;
+					this.SendPropertyChanged("SAVEDATE");
+					this.OnSAVEDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITUSER", DbType="Int")]
+		public System.Nullable<int> EDITUSER
+		{
+			get
+			{
+				return this._EDITUSER;
+			}
+			set
+			{
+				if ((this._EDITUSER != value))
+				{
+					this.OnEDITUSERChanging(value);
+					this.SendPropertyChanging();
+					this._EDITUSER = value;
+					this.SendPropertyChanged("EDITUSER");
+					this.OnEDITUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> EDITDATE
+		{
+			get
+			{
+				return this._EDITDATE;
+			}
+			set
+			{
+				if ((this._EDITDATE != value))
+				{
+					this.OnEDITDATEChanging(value);
+					this.SendPropertyChanging();
+					this._EDITDATE = value;
+					this.SendPropertyChanged("EDITDATE");
+					this.OnEDITDATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_FATURALAR")]
+	public partial class TBL_FATURALAR : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _FATURAID;
+		
+		private string _FATURATURU;
+		
+		private string _FATURASERI;
+		
+		private string _FATURANO;
+		
+		private System.Nullable<int> _IRSALIYEID;
+		
+		private string _CARIKODU;
+		
+		private System.Nullable<System.DateTime> _TARIHI;
+		
+		private string _ACIKLAMA;
+		
+		private System.Nullable<decimal> _GENELTOPLAM;
+		
+		private string _ODEMEYERI;
+		
+		private System.Nullable<int> _ODEMEYERIID;
+		
+		private System.Nullable<int> _SAVEUSER;
+		
+		private System.Nullable<System.DateTime> _SAVEDATE;
+		
+		private System.Nullable<int> _EDITUSER;
+		
+		private System.Nullable<System.DateTime> _EDITDATE;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnFATURAIDChanging(int value);
+    partial void OnFATURAIDChanged();
+    partial void OnFATURATURUChanging(string value);
+    partial void OnFATURATURUChanged();
+    partial void OnFATURASERIChanging(string value);
+    partial void OnFATURASERIChanged();
+    partial void OnFATURANOChanging(string value);
+    partial void OnFATURANOChanged();
+    partial void OnIRSALIYEIDChanging(System.Nullable<int> value);
+    partial void OnIRSALIYEIDChanged();
+    partial void OnCARIKODUChanging(string value);
+    partial void OnCARIKODUChanged();
+    partial void OnTARIHIChanging(System.Nullable<System.DateTime> value);
+    partial void OnTARIHIChanged();
+    partial void OnACIKLAMAChanging(string value);
+    partial void OnACIKLAMAChanged();
+    partial void OnGENELTOPLAMChanging(System.Nullable<decimal> value);
+    partial void OnGENELTOPLAMChanged();
+    partial void OnODEMEYERIChanging(string value);
+    partial void OnODEMEYERIChanged();
+    partial void OnODEMEYERIIDChanging(System.Nullable<int> value);
+    partial void OnODEMEYERIIDChanged();
+    partial void OnSAVEUSERChanging(System.Nullable<int> value);
+    partial void OnSAVEUSERChanged();
+    partial void OnSAVEDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnSAVEDATEChanged();
+    partial void OnEDITUSERChanging(System.Nullable<int> value);
+    partial void OnEDITUSERChanged();
+    partial void OnEDITDATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnEDITDATEChanged();
+    #endregion
+		
+		public TBL_FATURALAR()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FATURAID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int FATURAID
+		{
+			get
+			{
+				return this._FATURAID;
+			}
+			set
+			{
+				if ((this._FATURAID != value))
+				{
+					this.OnFATURAIDChanging(value);
+					this.SendPropertyChanging();
+					this._FATURAID = value;
+					this.SendPropertyChanged("FATURAID");
+					this.OnFATURAIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FATURATURU", DbType="NVarChar(25)")]
+		public string FATURATURU
+		{
+			get
+			{
+				return this._FATURATURU;
+			}
+			set
+			{
+				if ((this._FATURATURU != value))
+				{
+					this.OnFATURATURUChanging(value);
+					this.SendPropertyChanging();
+					this._FATURATURU = value;
+					this.SendPropertyChanged("FATURATURU");
+					this.OnFATURATURUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FATURASERI", DbType="NVarChar(5)")]
+		public string FATURASERI
+		{
+			get
+			{
+				return this._FATURASERI;
+			}
+			set
+			{
+				if ((this._FATURASERI != value))
+				{
+					this.OnFATURASERIChanging(value);
+					this.SendPropertyChanging();
+					this._FATURASERI = value;
+					this.SendPropertyChanged("FATURASERI");
+					this.OnFATURASERIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FATURANO", DbType="NVarChar(15)")]
+		public string FATURANO
+		{
+			get
+			{
+				return this._FATURANO;
+			}
+			set
+			{
+				if ((this._FATURANO != value))
+				{
+					this.OnFATURANOChanging(value);
+					this.SendPropertyChanging();
+					this._FATURANO = value;
+					this.SendPropertyChanged("FATURANO");
+					this.OnFATURANOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IRSALIYEID", DbType="Int")]
+		public System.Nullable<int> IRSALIYEID
+		{
+			get
+			{
+				return this._IRSALIYEID;
+			}
+			set
+			{
+				if ((this._IRSALIYEID != value))
+				{
+					this.OnIRSALIYEIDChanging(value);
+					this.SendPropertyChanging();
+					this._IRSALIYEID = value;
+					this.SendPropertyChanged("IRSALIYEID");
+					this.OnIRSALIYEIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIKODU", DbType="NVarChar(30)")]
+		public string CARIKODU
+		{
+			get
+			{
+				return this._CARIKODU;
+			}
+			set
+			{
+				if ((this._CARIKODU != value))
+				{
+					this.OnCARIKODUChanging(value);
+					this.SendPropertyChanging();
+					this._CARIKODU = value;
+					this.SendPropertyChanged("CARIKODU");
+					this.OnCARIKODUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TARIHI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TARIHI
+		{
+			get
+			{
+				return this._TARIHI;
+			}
+			set
+			{
+				if ((this._TARIHI != value))
+				{
+					this.OnTARIHIChanging(value);
+					this.SendPropertyChanging();
+					this._TARIHI = value;
+					this.SendPropertyChanged("TARIHI");
+					this.OnTARIHIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACIKLAMA", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string ACIKLAMA
+		{
+			get
+			{
+				return this._ACIKLAMA;
+			}
+			set
+			{
+				if ((this._ACIKLAMA != value))
+				{
+					this.OnACIKLAMAChanging(value);
+					this.SendPropertyChanging();
+					this._ACIKLAMA = value;
+					this.SendPropertyChanged("ACIKLAMA");
+					this.OnACIKLAMAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GENELTOPLAM", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> GENELTOPLAM
+		{
+			get
+			{
+				return this._GENELTOPLAM;
+			}
+			set
+			{
+				if ((this._GENELTOPLAM != value))
+				{
+					this.OnGENELTOPLAMChanging(value);
+					this.SendPropertyChanging();
+					this._GENELTOPLAM = value;
+					this.SendPropertyChanged("GENELTOPLAM");
+					this.OnGENELTOPLAMChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ODEMEYERI", DbType="NVarChar(10)")]
+		public string ODEMEYERI
+		{
+			get
+			{
+				return this._ODEMEYERI;
+			}
+			set
+			{
+				if ((this._ODEMEYERI != value))
+				{
+					this.OnODEMEYERIChanging(value);
+					this.SendPropertyChanging();
+					this._ODEMEYERI = value;
+					this.SendPropertyChanged("ODEMEYERI");
+					this.OnODEMEYERIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ODEMEYERIID", DbType="Int")]
+		public System.Nullable<int> ODEMEYERIID
+		{
+			get
+			{
+				return this._ODEMEYERIID;
+			}
+			set
+			{
+				if ((this._ODEMEYERIID != value))
+				{
+					this.OnODEMEYERIIDChanging(value);
+					this.SendPropertyChanging();
+					this._ODEMEYERIID = value;
+					this.SendPropertyChanged("ODEMEYERIID");
+					this.OnODEMEYERIIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEUSER", DbType="Int")]
+		public System.Nullable<int> SAVEUSER
+		{
+			get
+			{
+				return this._SAVEUSER;
+			}
+			set
+			{
+				if ((this._SAVEUSER != value))
+				{
+					this.OnSAVEUSERChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEUSER = value;
+					this.SendPropertyChanged("SAVEUSER");
+					this.OnSAVEUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SAVEDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> SAVEDATE
+		{
+			get
+			{
+				return this._SAVEDATE;
+			}
+			set
+			{
+				if ((this._SAVEDATE != value))
+				{
+					this.OnSAVEDATEChanging(value);
+					this.SendPropertyChanging();
+					this._SAVEDATE = value;
+					this.SendPropertyChanged("SAVEDATE");
+					this.OnSAVEDATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITUSER", DbType="Int")]
+		public System.Nullable<int> EDITUSER
+		{
+			get
+			{
+				return this._EDITUSER;
+			}
+			set
+			{
+				if ((this._EDITUSER != value))
+				{
+					this.OnEDITUSERChanging(value);
+					this.SendPropertyChanging();
+					this._EDITUSER = value;
+					this.SendPropertyChanged("EDITUSER");
+					this.OnEDITUSERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EDITDATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> EDITDATE
+		{
+			get
+			{
+				return this._EDITDATE;
+			}
+			set
+			{
+				if ((this._EDITDATE != value))
+				{
+					this.OnEDITDATEChanging(value);
+					this.SendPropertyChanging();
+					this._EDITDATE = value;
+					this.SendPropertyChanged("EDITDATE");
+					this.OnEDITDATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

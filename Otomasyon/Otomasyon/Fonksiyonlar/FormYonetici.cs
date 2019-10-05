@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace Otomasyon.Fonksiyonlar
 {
@@ -161,5 +163,63 @@ namespace Otomasyon.Fonksiyonlar
                 form.ShowDialog();
             }
         }
+
+        public void KullaniciCekAc(bool ac, int ID)
+        {
+            Modul_Cek.frm_KullaniciCek form = new Modul_Cek.frm_KullaniciCek();
+
+            if (ac) form.Ac(ID);
+            form.ShowDialog();
+        }
+
+        public void MusteriCekAc(bool ac, int ID)
+        {
+            Modul_Cek.frm_MusteriCek form = new Modul_Cek.frm_MusteriCek();
+
+            if (ac) form.Ac(ID);
+            form.ShowDialog();
+        }
+
+        public void CariyeCekCikisiAc()
+        {
+            Modul_Cek.frm_CariyeCekCikisi form = new Modul_Cek.frm_CariyeCekCikisi();
+            form.ShowDialog();
+        }
+
+        public void BankayaCekCikisiAc()
+        {
+            Modul_Cek.frm_BankayaCekCikisi form = new Modul_Cek.frm_BankayaCekCikisi();
+            form.ShowDialog();
+        }
+
+        public void CekListesiAc(bool secim)
+        {
+            Modul_Cek.frm_CekListesi form = new Modul_Cek.frm_CekListesi();
+            form.secim = secim;
+            if (secim)
+            {
+                form.ShowDialog();
+            }
+            else
+            {
+                form.MdiParent = frm_Anasayfa.ActiveForm;
+                form.Show();
+            }
+        }
+
+        public void SatisFaturasiAc(bool secim, int FaturaID)
+        {
+            Modul_Fatura.frm_SatisFaturasi form = new Modul_Fatura.frm_SatisFaturasi();
+            if (secim)
+            {
+                form.ShowDialog();
+            }
+            else
+            {
+                form.MdiParent = frm_Anasayfa.ActiveForm;
+                form.Show();
+            }
+        }
+
     }
 }

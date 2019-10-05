@@ -48,13 +48,13 @@
             this.EVRAKTUR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ACIKLAMA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menu_BankaIslemDuzenle = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_ParaTransferDuzenle = new System.Windows.Forms.ToolStripMenuItem();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.txt_HesapAdi = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menu_BankaIslemDuzenle = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_ParaTransferDuzenle = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Bakiye.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_Cikis.Properties)).BeginInit();
@@ -62,12 +62,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_HesapNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_HesapAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -230,6 +230,31 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_BankaIslemDuzenle,
+            this.menu_ParaTransferDuzenle});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(236, 48);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip1_Opening);
+            // 
+            // menu_BankaIslemDuzenle
+            // 
+            this.menu_BankaIslemDuzenle.Enabled = false;
+            this.menu_BankaIslemDuzenle.Name = "menu_BankaIslemDuzenle";
+            this.menu_BankaIslemDuzenle.Size = new System.Drawing.Size(235, 22);
+            this.menu_BankaIslemDuzenle.Text = "Banka İşlemini Düzenle";
+            this.menu_BankaIslemDuzenle.Click += new System.EventHandler(this.Menu_BankaIslemDuzenle_Click);
+            // 
+            // menu_ParaTransferDuzenle
+            // 
+            this.menu_ParaTransferDuzenle.Enabled = false;
+            this.menu_ParaTransferDuzenle.Name = "menu_ParaTransferDuzenle";
+            this.menu_ParaTransferDuzenle.Size = new System.Drawing.Size(235, 22);
+            this.menu_ParaTransferDuzenle.Text = "Banka Para Transferini Düzenle";
+            this.menu_ParaTransferDuzenle.Click += new System.EventHandler(this.Menu_ParaTransferDuzenle_Click);
+            // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(13, 26);
@@ -246,7 +271,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(693, 352);
             this.groupControl2.TabIndex = 8;
-            this.groupControl2.Text = "Kasa Hareket Listesi";
+            this.groupControl2.Text = "Banka Hareket Listesi";
             // 
             // txt_HesapAdi
             // 
@@ -276,32 +301,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(693, 86);
             this.groupControl1.TabIndex = 7;
-            this.groupControl1.Text = "Banka Bilgileri";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_BankaIslemDuzenle,
-            this.menu_ParaTransferDuzenle});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(236, 70);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuStrip1_Opening);
-            // 
-            // menu_BankaIslemDuzenle
-            // 
-            this.menu_BankaIslemDuzenle.Enabled = false;
-            this.menu_BankaIslemDuzenle.Name = "menu_BankaIslemDuzenle";
-            this.menu_BankaIslemDuzenle.Size = new System.Drawing.Size(235, 22);
-            this.menu_BankaIslemDuzenle.Text = "Banka İşlemini Düzenle";
-            this.menu_BankaIslemDuzenle.Click += new System.EventHandler(this.Menu_BankaIslemDuzenle_Click);
-            // 
-            // menu_ParaTransferDuzenle
-            // 
-            this.menu_ParaTransferDuzenle.Enabled = false;
-            this.menu_ParaTransferDuzenle.Name = "menu_ParaTransferDuzenle";
-            this.menu_ParaTransferDuzenle.Size = new System.Drawing.Size(235, 22);
-            this.menu_ParaTransferDuzenle.Text = "Banka Para Transferini Düzenle";
-            this.menu_ParaTransferDuzenle.Click += new System.EventHandler(this.Menu_ParaTransferDuzenle_Click);
+            this.groupControl1.Text = "Hesap Bilgileri";
             // 
             // frm_BankaHareketleri
             // 
@@ -322,13 +322,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_HesapNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txt_HesapAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

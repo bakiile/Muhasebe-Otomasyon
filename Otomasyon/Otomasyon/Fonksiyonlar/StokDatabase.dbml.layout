@@ -92,5 +92,35 @@
         <elementListCompartment Id="829e74e2-feb8-43df-8686-5c237d13da32" absoluteBounds="6.39, 4.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="ef9feb71-0c30-4d7e-939b-8f5cf7b2c7cc" isExpanded="false" absoluteBounds="1.75, 5, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_BORDROLAR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="afdd0b72-d5bb-4b7f-aba8-85bc01252675" absoluteBounds="1.7650000000000001, 5.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a5182a1-c4fd-4644-b052-b739f7feaacc" isExpanded="false" absoluteBounds="1.75, 4.375, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_CEKLER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2444372-c2fd-42c2-b289-7607619595be" absoluteBounds="1.7650000000000001, 4.835, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b08ec243-14bd-48fa-92cf-6981721f1e26" isExpanded="false" absoluteBounds="4.125, 4.5, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_STOKHAREKETLERI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9927f0ef-4eaf-486b-b6b3-c82d85497bfb" absoluteBounds="4.14, 4.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a02d4ffc-2624-4b6e-8852-c870133f602e" isExpanded="false" absoluteBounds="1.75, 5.75, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_IRSALIYELER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d6c9dc6-15f4-44ef-8941-32a23f2c22a6" absoluteBounds="1.7650000000000001, 6.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ba3a824-42de-4def-9246-2493c98965b6" isExpanded="false" absoluteBounds="6.375, 4.5, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_FATURALAR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a2d299e-5d10-4e77-bb9b-d386cca6435b" absoluteBounds="6.39, 4.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

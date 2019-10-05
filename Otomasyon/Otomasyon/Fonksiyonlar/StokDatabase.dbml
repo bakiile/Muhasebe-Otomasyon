@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DbStok" Class="StokDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-SDVHSF8\SQLEXPRESS;Initial Catalog=DbStok;Integrated Security=True" SettingsObjectName="Otomasyon.Properties.Settings" SettingsPropertyName="DbStokConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TBL_GRUPLAR" Member="TBL_GRUPLAR">
     <Type Name="TBL_GRUPLAR">
       <Column Name="GRUPID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -221,6 +220,101 @@
       <Column Name="CIKIS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="HESAPNO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="HESAPADI" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_BORDROLAR" Member="TBL_BORDROLAR">
+    <Type Name="TBL_BORDROLAR">
+      <Column Name="BORDROID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMARA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CARIID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_CEKLER" Member="TBL_CEKLER">
+    <Type Name="TBL_CEKLER">
+      <Column Name="CEKID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BELGENO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CEKNO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ASILBORCLU" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ALINANCARIID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VERILENCARIID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACKODU" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="VADETARIHI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BANKA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SUBE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HESAPNO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TUTAR" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="VERILENBANKATARIHI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VERILENBANKABELGENO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="VERILENCARITARIHI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VERILENCARIBELGENO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="VERILENBANKAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DURUM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TAHSIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BORDROID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_STOKHAREKETLERI" Member="TBL_STOKHAREKETLERI">
+    <Type Name="TBL_STOKHAREKETLERI">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FATURAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IRSALIYEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOKKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GCKODU" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="MIKTAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BIRIMFIYAT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="KDV" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="TIPI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_IRSALIYELER" Member="TBL_IRSALIYELER">
+    <Type Name="TBL_IRSALIYELER">
+      <Column Name="IRSALIYEID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IRSALIYESERI" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="IRSALIYENO" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="FATURAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARIKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TARIHI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_FATURALAR" Member="TBL_FATURALAR">
+    <Type Name="TBL_FATURALAR">
+      <Column Name="FATURAID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FATURATURU" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FATURASERI" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="FATURANO" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="IRSALIYEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CARIKODU" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="TARIHI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GENELTOPLAM" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ODEMEYERI" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ODEMEYERIID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAVEUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

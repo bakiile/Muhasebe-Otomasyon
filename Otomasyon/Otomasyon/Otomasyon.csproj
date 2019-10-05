@@ -63,10 +63,22 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="DbStokDataSet.Designer.cs">
+    <Compile Include="Baglanti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baglanti.Designer.cs">
+      <DependentUpon>Baglanti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetler.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DbStokDataSet.xsd</DependentUpon>
+      <DependentUpon>DataSetler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_Banka\BankaHareketleri.cs">
       <SubType>Form</SubType>
@@ -122,6 +134,36 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StokDatabase.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Cek\BankayaCekCikisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Cek\BankayaCekCikisi.Designer.cs">
+      <DependentUpon>BankayaCekCikisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Cek\CariyeCekCikisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Cek\CariyeCekCikisi.Designer.cs">
+      <DependentUpon>CariyeCekCikisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Cek\CekListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Cek\CekListesi.Designer.cs">
+      <DependentUpon>CekListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Cek\KullaniciCek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Cek\KullaniciCek.Designer.cs">
+      <DependentUpon>KullaniciCek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modul_Cek\MusteriCek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modul_Cek\MusteriCek.Designer.cs">
+      <DependentUpon>MusteriCek.cs</DependentUpon>
     </Compile>
     <Compile Include="Modul_Fatura\FaturaListesi.cs">
       <SubType>Form</SubType>
@@ -188,6 +230,12 @@
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Baglanti.resx">
+      <DependentUpon>Baglanti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modul_Banka\BankaHareketleri.resx">
       <DependentUpon>BankaHareketleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +259,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Cari\CariListesi.resx">
       <DependentUpon>CariListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Cek\BankayaCekCikisi.resx">
+      <DependentUpon>BankayaCekCikisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Cek\CariyeCekCikisi.resx">
+      <DependentUpon>CariyeCekCikisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Cek\CekListesi.resx">
+      <DependentUpon>CekListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Cek\KullaniciCek.resx">
+      <DependentUpon>KullaniciCek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modul_Cek\MusteriCek.resx">
+      <DependentUpon>MusteriCek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modul_Fatura\FaturaListesi.resx">
       <DependentUpon>FaturaListesi.cs</DependentUpon>
@@ -253,17 +316,17 @@
     <EmbeddedResource Include="Modul_Stok\StokListesi.resx">
       <DependentUpon>StokListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
-    <None Include="DbStokDataSet.xsc">
-      <DependentUpon>DbStokDataSet.xsd</DependentUpon>
+    <None Include="app.config" />
+    <None Include="DataSetler.xsc">
+      <DependentUpon>DataSetler.xsd</DependentUpon>
     </None>
-    <None Include="DbStokDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DbStokDataSet.Designer.cs</LastGenOutput>
+    <None Include="DataSetler.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetler.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DbStokDataSet.xss">
-      <DependentUpon>DbStokDataSet.xsd</DependentUpon>
+    <None Include="DataSetler.xss">
+      <DependentUpon>DataSetler.xsd</DependentUpon>
     </None>
     <None Include="Fonksiyonlar\StokDatabase.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -444,6 +507,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Kasa_Hareket16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cek32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cek_Musteri32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cek_Kendi32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cek_MusteriLst32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cek_Bankaya32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cek_Cariye32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
