@@ -110,16 +110,28 @@
         <elementListCompartment Id="9927f0ef-4eaf-486b-b6b3-c82d85497bfb" absoluteBounds="4.14, 4.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a02d4ffc-2624-4b6e-8852-c870133f602e" isExpanded="false" absoluteBounds="1.75, 5.75, 2, 0.45">
+    <classShape Id="a02d4ffc-2624-4b6e-8852-c870133f602e" isExpanded="false" absoluteBounds="1.75, 5.625, 2, 0.45">
       <DataClassMoniker Name="/StokDatabaseDataContext/TBL_IRSALIYELER" />
       <nestedChildShapes>
-        <elementListCompartment Id="5d6c9dc6-15f4-44ef-8941-32a23f2c22a6" absoluteBounds="1.7650000000000001, 6.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5d6c9dc6-15f4-44ef-8941-32a23f2c22a6" absoluteBounds="1.7650000000000001, 6.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="8ba3a824-42de-4def-9246-2493c98965b6" isExpanded="false" absoluteBounds="6.375, 4.5, 2, 0.45">
       <DataClassMoniker Name="/StokDatabaseDataContext/TBL_FATURALAR" />
       <nestedChildShapes>
         <elementListCompartment Id="6a2d299e-5d10-4e77-bb9b-d386cca6435b" absoluteBounds="6.39, 4.96, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0bbb60af-195b-4a22-9c32-d7d3401773c9" isExpanded="false" absoluteBounds="4.125, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/VW_KALEMLER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fcbdbbdb-1c04-46ed-a815-0857227dc763" absoluteBounds="4.14, 5.71, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4123dc1e-cdbe-489c-9be3-9823c335f26c" isExpanded="false" absoluteBounds="4.125, 6, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/TBL_KULLANICILAR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="210928b3-4570-46f2-bcaa-35251c749dae" absoluteBounds="4.14, 6.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

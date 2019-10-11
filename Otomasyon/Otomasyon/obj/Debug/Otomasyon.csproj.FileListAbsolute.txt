@@ -104,7 +104,6 @@ C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasy
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Cek.frm_CekListesi.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Cek.frm_KullaniciCek.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Cek.frm_MusteriCek.resources
-C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Fatura.FaturaListesi.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Fatura.frm_SatisFaturasi.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.KasaModul.frm_KasaDevirIslem.resources
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Kasa.frm_KasaHareketleri.resources
@@ -121,3 +120,6 @@ C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasy
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.csproj.CopyComplete
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.exe
 C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.pdb
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Fatura.frm_FaturaListesi.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Kullanici.frm_KullaniciPaneli.resources
+C:\Users\Enessrkc\Documents\GitHub\Cari_Hesap_Takip_Otomasyonu\Otomasyon\Otomasyon\obj\Debug\Otomasyon.Modul_Kullanici.frm_KullaniciYonetim.resources

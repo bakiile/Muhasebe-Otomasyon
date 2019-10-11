@@ -118,5 +118,16 @@ namespace Otomasyon.Properties {
                 this["Database"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SDVHSF8\\SQLEXPRESS;Initial Catalog=DbStok;Integrated Security" +
+            "=True")]
+        public string DbStokConnectionString {
+            get {
+                return ((string)(this["DbStokConnectionString"]));
+            }
+        }
     }
 }

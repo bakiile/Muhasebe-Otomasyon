@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DbStok" Class="StokDatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-SDVHSF8\SQLEXPRESS;Initial Catalog=DbStok;Integrated Security=True" SettingsObjectName="Otomasyon.Properties.Settings" SettingsPropertyName="DbStokConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.TBL_GRUPLAR" Member="TBL_GRUPLAR">
     <Type Name="TBL_GRUPLAR">
       <Column Name="GRUPID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -315,6 +316,36 @@
       <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="EDITUSER" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_KALEMLER" Member="VW_KALEMLER">
+    <Type Name="VW_KALEMLER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="STOKID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FATURAID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IRSALIYEID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STOKKODU" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="STOKADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STOKBARKOD" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="STOKBIRIM" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="BIRIMFIYAT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="KDV" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="MIKTAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TOPLAM" Type="System.Decimal" DbType="Decimal(29,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_KULLANICILAR" Member="TBL_KULLANICILAR">
+    <Type Name="TBL_KULLANICILAR">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KULLANICIADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SIFRE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ISIM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SOYISIM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AKTIF" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KODU" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SAVEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LASTLOGIN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

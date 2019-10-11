@@ -207,9 +207,9 @@ namespace Otomasyon.Fonksiyonlar
             }
         }
 
-        public void SatisFaturasiAc(bool secim, int FaturaID)
+        public void SatisFaturasiAc(bool secim, int ID, bool Irsaliye)
         {
-            Modul_Fatura.frm_SatisFaturasi form = new Modul_Fatura.frm_SatisFaturasi();
+            Modul_Fatura.frm_SatisFaturasi form = new Modul_Fatura.frm_SatisFaturasi(secim,ID,Irsaliye);
             if (secim)
             {
                 form.ShowDialog();
@@ -221,5 +221,29 @@ namespace Otomasyon.Fonksiyonlar
             }
         }
 
+        public void FaturaListesiAc(bool secim)
+        {
+            Modul_Fatura.frm_FaturaListesi form = new Modul_Fatura.frm_FaturaListesi(secim);
+            if (secim)
+                form.ShowDialog();
+            else
+            {
+                form.MdiParent = frm_Anasayfa.ActiveForm;
+                form.Show();
+            }
+
+        }
+
+        public void KullaniciYonetimAc()
+        {
+            Modul_Kullanici.frm_KullaniciYonetim form = new Modul_Kullanici.frm_KullaniciYonetim();
+            form.ShowDialog();
+        }
+
+        public void KullaniciPaneliAc(bool ac, int ID)
+        {
+            Modul_Kullanici.frm_KullaniciPaneli form = new Modul_Kullanici.frm_KullaniciPaneli(ID, ac);
+            form.ShowDialog();
+        }
     }
 }

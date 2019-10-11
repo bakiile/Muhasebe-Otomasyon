@@ -60,6 +60,7 @@
             this.btn_BankayaCekCikis = new DevExpress.XtraBars.BarButtonItem();
             this.btn_CariyeCekCikis = new DevExpress.XtraBars.BarButtonItem();
             this.btn_CekListesi = new DevExpress.XtraBars.BarButtonItem();
+            this.barbtn_Kullanici = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Stok = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_Cari = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -99,6 +100,9 @@
             this.navBtn_KasaHareketleri = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.txt_Kullanici = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -139,9 +143,12 @@
             this.btn_MusteriCeki,
             this.btn_BankayaCekCikis,
             this.btn_CariyeCekCikis,
-            this.btn_CekListesi});
+            this.btn_CekListesi,
+            this.barbtn_Kullanici,
+            this.barButtonItem1,
+            this.txt_Kullanici});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 30;
+            this.ribbonControl1.MaxItemId = 33;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.tab_Stok,
@@ -150,7 +157,9 @@
             this.ribbonPage2,
             this.btn_Fatura,
             this.ribbonPage3});
+            this.ribbonControl1.QuickToolbarItemLinks.Add(this.barbtn_Kullanici);
             this.ribbonControl1.Size = new System.Drawing.Size(903, 162);
+            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btn_StokKarti
             // 
@@ -301,6 +310,7 @@
             this.btn_SatisIadeFaturasi.Id = 19;
             this.btn_SatisIadeFaturasi.ImageOptions.LargeImage = global::Otomasyon.Properties.Resources.Fatura_SatisIade32x32;
             this.btn_SatisIadeFaturasi.Name = "btn_SatisIadeFaturasi";
+            this.btn_SatisIadeFaturasi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_SatisIadeFaturasi_ItemClick);
             // 
             // btn_AlisFaturasi
             // 
@@ -383,6 +393,13 @@
             this.btn_CekListesi.LargeWidth = 70;
             this.btn_CekListesi.Name = "btn_CekListesi";
             this.btn_CekListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CekListesi_ItemClick);
+            // 
+            // barbtn_Kullanici
+            // 
+            this.barbtn_Kullanici.Caption = "barButtonItem1";
+            this.barbtn_Kullanici.Id = 30;
+            this.barbtn_Kullanici.Name = "barbtn_Kullanici";
+            this.barbtn_Kullanici.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Barbtn_Kullanici_ItemClick);
             // 
             // tab_Stok
             // 
@@ -720,6 +737,26 @@
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "ribbonPage4";
             // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonStatusBar1.ItemLinks.Add(this.txt_Kullanici);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(140, 479);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(763, 31);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Kullanıcı :";
+            this.barButtonItem1.Id = 31;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // txt_Kullanici
+            // 
+            this.txt_Kullanici.Id = 32;
+            this.txt_Kullanici.Name = "txt_Kullanici";
+            // 
             // frm_Anasayfa
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -727,6 +764,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 510);
+            this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.navBarControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -735,6 +773,7 @@
             this.Ribbon = this.ribbonControl1;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Anasayfa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Anasayfa_FormClosed);
@@ -817,6 +856,10 @@
         private DevExpress.XtraBars.BarButtonItem btn_BankayaCekCikis;
         private DevExpress.XtraBars.BarButtonItem btn_CariyeCekCikis;
         private DevExpress.XtraBars.BarButtonItem btn_CekListesi;
+        private DevExpress.XtraBars.BarButtonItem barbtn_Kullanici;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem txt_Kullanici;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
     }
 }
 

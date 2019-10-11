@@ -12,6 +12,8 @@ namespace Otomasyon
     public partial class frm_Anasayfa : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         Fonksiyonlar.FormYonetici formRouter = new Fonksiyonlar.FormYonetici();
+
+        public static Fonksiyonlar.TBL_KULLANICILAR Kullanici;
         public static int userID = -1;
         public static int AktarilanID = -1;
         bool secim = false;
@@ -20,7 +22,19 @@ namespace Otomasyon
             InitializeComponent();
         }
 
-        
+        public frm_Anasayfa(Fonksiyonlar.TBL_KULLANICILAR gelenKullanici)
+        {
+            InitializeComponent();
+            Kullanici = gelenKullanici;
+            userID = Kullanici.ID;
+            txt_Kullanici.Caption = Kullanici.KULLANICIADI;
+            if (Kullanici.KODU == "Normal")
+            {
+                barbtn_Kullanici.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            }
+        }
+
+
         #region Stok Butonlari
 
         private void Btn_StokListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -234,7 +248,17 @@ namespace Otomasyon
 
         private void Btn_SatisFaturasi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            formRouter.SatisFaturasiAc(secim, -1);
+            formRouter.SatisFaturasiAc(secim, -1, false);
+        }
+
+        private void Btn_SatisIadeFaturasi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.FaturaListesiAc(secim);
+        }
+
+        private void Barbtn_Kullanici_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            formRouter.KullaniciYonetimAc();
         }
     }
 }
