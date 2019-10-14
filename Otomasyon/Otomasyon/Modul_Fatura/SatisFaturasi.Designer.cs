@@ -86,6 +86,7 @@
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txt_AraToplam = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.btn_FaturaYazdir = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnl_HesapYeri)).BeginInit();
@@ -127,6 +128,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btn_FaturaYazdir);
             this.groupControl1.Controls.Add(this.btn_Cikis);
             this.groupControl1.Controls.Add(this.btn_Kaydet);
             this.groupControl1.Controls.Add(this.btn_Sil);
@@ -144,7 +146,7 @@
             // btn_Cikis
             // 
             this.btn_Cikis.ImageOptions.Image = global::Otomasyon.Properties.Resources.Kapat24x24;
-            this.btn_Cikis.Location = new System.Drawing.Point(847, 97);
+            this.btn_Cikis.Location = new System.Drawing.Point(847, 75);
             this.btn_Cikis.Name = "btn_Cikis";
             this.btn_Cikis.Size = new System.Drawing.Size(94, 40);
             this.btn_Cikis.TabIndex = 11;
@@ -154,7 +156,7 @@
             // btn_Kaydet
             // 
             this.btn_Kaydet.ImageOptions.Image = global::Otomasyon.Properties.Resources.Kaydet24x24;
-            this.btn_Kaydet.Location = new System.Drawing.Point(747, 45);
+            this.btn_Kaydet.Location = new System.Drawing.Point(747, 23);
             this.btn_Kaydet.Name = "btn_Kaydet";
             this.btn_Kaydet.Size = new System.Drawing.Size(94, 40);
             this.btn_Kaydet.TabIndex = 8;
@@ -165,7 +167,7 @@
             // 
             this.btn_Sil.Enabled = false;
             this.btn_Sil.ImageOptions.Image = global::Otomasyon.Properties.Resources.Sil24x24;
-            this.btn_Sil.Location = new System.Drawing.Point(747, 97);
+            this.btn_Sil.Location = new System.Drawing.Point(747, 75);
             this.btn_Sil.Name = "btn_Sil";
             this.btn_Sil.Size = new System.Drawing.Size(94, 40);
             this.btn_Sil.TabIndex = 10;
@@ -176,7 +178,7 @@
             // 
             this.btn_Guncelle.Enabled = false;
             this.btn_Guncelle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Guncelle.ImageOptions.Image")));
-            this.btn_Guncelle.Location = new System.Drawing.Point(847, 45);
+            this.btn_Guncelle.Location = new System.Drawing.Point(847, 23);
             this.btn_Guncelle.Name = "btn_Guncelle";
             this.btn_Guncelle.Size = new System.Drawing.Size(94, 40);
             this.btn_Guncelle.TabIndex = 9;
@@ -659,6 +661,15 @@
             this.labelControl17.TabIndex = 0;
             this.labelControl17.Text = "Ara Toplam :";
             // 
+            // btn_FaturaYazdir
+            // 
+            this.btn_FaturaYazdir.Location = new System.Drawing.Point(786, 120);
+            this.btn_FaturaYazdir.Name = "btn_FaturaYazdir";
+            this.btn_FaturaYazdir.Size = new System.Drawing.Size(130, 39);
+            this.btn_FaturaYazdir.TabIndex = 12;
+            this.btn_FaturaYazdir.Text = "Fatura Yazdır";
+            this.btn_FaturaYazdir.Click += new System.EventHandler(this.Btn_FaturaYazdir_Click);
+            // 
             // frm_SatisFaturasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,5 +788,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colKDV;
         private DevExpress.XtraGrid.Columns.GridColumn colTOPLAM;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btn_StokAc;
+        private DevExpress.XtraEditors.SimpleButton btn_FaturaYazdir;
     }
 }

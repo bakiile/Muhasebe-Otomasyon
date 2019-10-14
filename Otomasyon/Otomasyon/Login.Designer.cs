@@ -58,8 +58,9 @@
             // 
             this.txt_Sifre.Location = new System.Drawing.Point(148, 38);
             this.txt_Sifre.Name = "txt_Sifre";
+            this.txt_Sifre.Properties.PasswordChar = '*';
             this.txt_Sifre.Size = new System.Drawing.Size(166, 20);
-            this.txt_Sifre.TabIndex = 0;
+            this.txt_Sifre.TabIndex = 1;
             // 
             // label2
             // 
@@ -84,12 +85,13 @@
             this.btn_BaglantiAyar.Location = new System.Drawing.Point(225, 69);
             this.btn_BaglantiAyar.Name = "btn_BaglantiAyar";
             this.btn_BaglantiAyar.Size = new System.Drawing.Size(110, 34);
-            this.btn_BaglantiAyar.TabIndex = 2;
+            this.btn_BaglantiAyar.TabIndex = 3;
             this.btn_BaglantiAyar.Text = "Bağlantı Ayarları";
             this.btn_BaglantiAyar.Click += new System.EventHandler(this.Btn_BaglantiAyar_Click);
             // 
             // frm_Login
             // 
+            this.AcceptButton = this.btn_Giris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 119);

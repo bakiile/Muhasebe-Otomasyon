@@ -134,5 +134,11 @@
         <elementListCompartment Id="210928b3-4570-46f2-bcaa-35251c749dae" absoluteBounds="4.14, 6.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="cae986de-0f6f-49c1-b244-49116ae51e22" isExpanded="false" absoluteBounds="6.375, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/StokDatabaseDataContext/VW_FATURALAR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f20d5791-1a23-45da-b0fb-e113221a4b72" absoluteBounds="6.39, 5.71, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

@@ -212,6 +212,8 @@
             this.ClientSize = new System.Drawing.Size(612, 282);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frm_KullaniciYonetim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Yönetim";

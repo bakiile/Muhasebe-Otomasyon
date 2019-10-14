@@ -282,6 +282,14 @@ namespace Otomasyon.Fonksiyonlar
 				return this.GetTable<TBL_KULLANICILAR>();
 			}
 		}
+		
+		public System.Data.Linq.Table<VW_FATURALAR> VW_FATURALAR
+		{
+			get
+			{
+				return this.GetTable<VW_FATURALAR>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_GRUPLAR")]
@@ -6781,6 +6789,357 @@ namespace Otomasyon.Fonksiyonlar
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_FATURALAR")]
+	public partial class VW_FATURALAR
+	{
+		
+		private string _CARIKODU;
+		
+		private string _CARIADI;
+		
+		private string _VERGIDAIRESI;
+		
+		private string _VERGINO;
+		
+		private string _SEHIR;
+		
+		private string _ILCE;
+		
+		private string _ADRES;
+		
+		private string _FATURANO;
+		
+		private System.Nullable<System.DateTime> _TARIHI;
+		
+		private string _ACIKLAMA;
+		
+		private System.Nullable<decimal> _GENELTOPLAM;
+		
+		private string _STOKKODU;
+		
+		private string _STOKADI;
+		
+		private string _STOKBIRIM;
+		
+		private System.Nullable<decimal> _BIRIMFIYAT;
+		
+		private System.Nullable<decimal> _KDV;
+		
+		private string _STOKBARKOD;
+		
+		private System.Nullable<int> _MIKTAR;
+		
+		private System.Nullable<decimal> _TOPLAM;
+		
+		public VW_FATURALAR()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIKODU", DbType="NVarChar(30)")]
+		public string CARIKODU
+		{
+			get
+			{
+				return this._CARIKODU;
+			}
+			set
+			{
+				if ((this._CARIKODU != value))
+				{
+					this._CARIKODU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CARIADI", DbType="VarChar(25)")]
+		public string CARIADI
+		{
+			get
+			{
+				return this._CARIADI;
+			}
+			set
+			{
+				if ((this._CARIADI != value))
+				{
+					this._CARIADI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERGIDAIRESI", DbType="VarChar(50)")]
+		public string VERGIDAIRESI
+		{
+			get
+			{
+				return this._VERGIDAIRESI;
+			}
+			set
+			{
+				if ((this._VERGIDAIRESI != value))
+				{
+					this._VERGIDAIRESI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VERGINO", DbType="VarChar(25)")]
+		public string VERGINO
+		{
+			get
+			{
+				return this._VERGINO;
+			}
+			set
+			{
+				if ((this._VERGINO != value))
+				{
+					this._VERGINO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SEHIR", DbType="VarChar(50)")]
+		public string SEHIR
+		{
+			get
+			{
+				return this._SEHIR;
+			}
+			set
+			{
+				if ((this._SEHIR != value))
+				{
+					this._SEHIR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ILCE", DbType="VarChar(50)")]
+		public string ILCE
+		{
+			get
+			{
+				return this._ILCE;
+			}
+			set
+			{
+				if ((this._ILCE != value))
+				{
+					this._ILCE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ADRES", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string ADRES
+		{
+			get
+			{
+				return this._ADRES;
+			}
+			set
+			{
+				if ((this._ADRES != value))
+				{
+					this._ADRES = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FATURANO", DbType="NVarChar(15)")]
+		public string FATURANO
+		{
+			get
+			{
+				return this._FATURANO;
+			}
+			set
+			{
+				if ((this._FATURANO != value))
+				{
+					this._FATURANO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TARIHI", DbType="DateTime")]
+		public System.Nullable<System.DateTime> TARIHI
+		{
+			get
+			{
+				return this._TARIHI;
+			}
+			set
+			{
+				if ((this._TARIHI != value))
+				{
+					this._TARIHI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ACIKLAMA", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string ACIKLAMA
+		{
+			get
+			{
+				return this._ACIKLAMA;
+			}
+			set
+			{
+				if ((this._ACIKLAMA != value))
+				{
+					this._ACIKLAMA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GENELTOPLAM", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> GENELTOPLAM
+		{
+			get
+			{
+				return this._GENELTOPLAM;
+			}
+			set
+			{
+				if ((this._GENELTOPLAM != value))
+				{
+					this._GENELTOPLAM = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOKKODU", DbType="NVarChar(20)")]
+		public string STOKKODU
+		{
+			get
+			{
+				return this._STOKKODU;
+			}
+			set
+			{
+				if ((this._STOKKODU != value))
+				{
+					this._STOKKODU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOKADI", DbType="NVarChar(50)")]
+		public string STOKADI
+		{
+			get
+			{
+				return this._STOKADI;
+			}
+			set
+			{
+				if ((this._STOKADI != value))
+				{
+					this._STOKADI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOKBIRIM", DbType="NVarChar(15)")]
+		public string STOKBIRIM
+		{
+			get
+			{
+				return this._STOKBIRIM;
+			}
+			set
+			{
+				if ((this._STOKBIRIM != value))
+				{
+					this._STOKBIRIM = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BIRIMFIYAT", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> BIRIMFIYAT
+		{
+			get
+			{
+				return this._BIRIMFIYAT;
+			}
+			set
+			{
+				if ((this._BIRIMFIYAT != value))
+				{
+					this._BIRIMFIYAT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KDV", DbType="Decimal(8,2)")]
+		public System.Nullable<decimal> KDV
+		{
+			get
+			{
+				return this._KDV;
+			}
+			set
+			{
+				if ((this._KDV != value))
+				{
+					this._KDV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STOKBARKOD", DbType="NVarChar(20)")]
+		public string STOKBARKOD
+		{
+			get
+			{
+				return this._STOKBARKOD;
+			}
+			set
+			{
+				if ((this._STOKBARKOD != value))
+				{
+					this._STOKBARKOD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MIKTAR", DbType="Int")]
+		public System.Nullable<int> MIKTAR
+		{
+			get
+			{
+				return this._MIKTAR;
+			}
+			set
+			{
+				if ((this._MIKTAR != value))
+				{
+					this._MIKTAR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TOPLAM", DbType="Decimal(29,2)")]
+		public System.Nullable<decimal> TOPLAM
+		{
+			get
+			{
+				return this._TOPLAM;
+			}
+			set
+			{
+				if ((this._TOPLAM != value))
+				{
+					this._TOPLAM = value;
+				}
 			}
 		}
 	}

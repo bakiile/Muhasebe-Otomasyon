@@ -61,6 +61,8 @@
             this.btn_CariyeCekCikis = new DevExpress.XtraBars.BarButtonItem();
             this.btn_CekListesi = new DevExpress.XtraBars.BarButtonItem();
             this.barbtn_Kullanici = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.txt_Kullanici = new DevExpress.XtraBars.BarButtonItem();
             this.tab_Stok = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tab_Cari = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -74,6 +76,7 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
@@ -100,9 +103,6 @@
             this.navBtn_KasaHareketleri = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.txt_Kullanici = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
@@ -396,10 +396,21 @@
             // 
             // barbtn_Kullanici
             // 
-            this.barbtn_Kullanici.Caption = "barButtonItem1";
+            this.barbtn_Kullanici.Caption = "Kullanıcı Paneli";
             this.barbtn_Kullanici.Id = 30;
             this.barbtn_Kullanici.Name = "barbtn_Kullanici";
             this.barbtn_Kullanici.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Barbtn_Kullanici_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Kullanıcı :";
+            this.barButtonItem1.Id = 31;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // txt_Kullanici
+            // 
+            this.txt_Kullanici.Id = 32;
+            this.txt_Kullanici.Name = "txt_Kullanici";
             // 
             // tab_Stok
             // 
@@ -513,6 +524,15 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.btn_CekListesi);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Çek İşlem Sayfası";
+            // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonStatusBar1.ItemLinks.Add(this.txt_Kullanici);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(140, 479);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(763, 31);
             // 
             // xtraTabbedMdiManager1
             // 
@@ -736,26 +756,6 @@
             // 
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "ribbonPage4";
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonStatusBar1.ItemLinks.Add(this.txt_Kullanici);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(140, 479);
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(763, 31);
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Kullanıcı :";
-            this.barButtonItem1.Id = 31;
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // txt_Kullanici
-            // 
-            this.txt_Kullanici.Id = 32;
-            this.txt_Kullanici.Name = "txt_Kullanici";
             // 
             // frm_Anasayfa
             // 

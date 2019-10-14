@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Reflection;
+using DevExpress.XtraReports.UI;
 
 namespace Otomasyon.Modul_Fatura
 {
@@ -40,7 +42,7 @@ namespace Otomasyon.Modul_Fatura
 
         private void Btn_Guncelle_Click(object sender, EventArgs e)
         {
-
+            Guncelle();
         }
 
         private void Btn_Kaydet_Click(object sender, EventArgs e)
@@ -467,6 +469,59 @@ namespace Otomasyon.Modul_Fatura
                 OdemeYeri = txt_OdemeYeri.Text;
             else if (!txt_OdemeYeri.Enabled)
                 OdemeYeri = "";
+        }
+
+        private void Btn_FaturaYazdir_Click(object sender, EventArgs e)
+        {
+            var sorgu = db.VW_FATURALAR.Where(t => t.FATURANO == txt_FaturaNo.Text);
+            DataSet ds = new DataSet();
+            ds.Tables.Add(LINQToDataTable(sorgu));
+
+            rprSatisFaturasi rpr = new rprSatisFaturasi();
+            rpr.DataSource = ds;
+            rpr.ShowPreview();
+        }
+
+        public DataTable LINQToDataTable<T>(IEnumerable<T> Lnqlst)
+        {
+            DataTable dt = new DataTable();
+
+
+            PropertyInfo[] columns = null;
+
+            if (Lnqlst == null) return dt;
+
+            foreach (T Record in Lnqlst)
+            {
+
+                if (columns == null)
+                {
+                    columns = ((Type)Record.GetType()).GetProperties();
+                    foreach (PropertyInfo GetProperty in columns)
+                    {
+                        Type colType = GetProperty.PropertyType;
+
+                        if ((colType.IsGenericType) && (colType.GetGenericTypeDefinition()
+                        == typeof(Nullable<>)))
+                        {
+                            colType = colType.GetGenericArguments()[0];
+                        }
+
+                        dt.Columns.Add(new DataColumn(GetProperty.Name, colType));
+                    }
+                }
+
+                DataRow dr = dt.NewRow();
+
+                foreach (PropertyInfo pinfo in columns)
+                {
+                    dr[pinfo.Name] = pinfo.GetValue(Record, null) == null ? DBNull.Value : pinfo.GetValue
+                    (Record, null);
+                }
+
+                dt.Rows.Add(dr);
+            }
+            return dt;
         }
     }
 }
